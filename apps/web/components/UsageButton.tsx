@@ -19,7 +19,7 @@ export const UsageButton = memo(
 		const { sidebarCollapsed } = useDashboardContext();
 		if (subscribed) {
 			return (
-				<Tooltip position="right" content="Cap Pro">
+				<Tooltip position="right" content="RocStarr VideoShare Pro">
 					<Link
 						className="flex justify-center mx-auto w-full"
 						href="/dashboard/settings/workspace"
@@ -41,7 +41,7 @@ export const UsageButton = memo(
 								)}
 								icon={faCheck}
 							/>
-							{sidebarCollapsed ? null : <p className="text-white">Cap Pro</p>}
+							{sidebarCollapsed ? null : <p className="text-white">RocStarr VideoShare Pro</p>}
 						</Button>
 					</Link>
 				</Tooltip>

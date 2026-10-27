@@ -77,8 +77,8 @@ describe("createHowToSchema", () => {
 			totalTime: "PT2M",
 			steps: [
 				{
-					name: "Download and install Cap",
-					text: "Download Cap for free from cap.so/download.",
+					name: "Download and install RocStarr VideoShare",
+					text: "Download RocStarr VideoShare for free from cap.so/download.",
 				},
 				{
 					name: "Start recording",
@@ -98,12 +98,12 @@ describe("createHowToSchema", () => {
 	it("applies schema to how-to-screen-record page steps", () => {
 		const howToSteps = [
 			{
-				name: "Download and install Cap",
-				text: "Download Cap for free from cap.so/download for Mac or Windows.",
+				name: "Download and install RocStarr VideoShare",
+				text: "Download RocStarr VideoShare for free from cap.so/download for Mac or Windows.",
 			},
 			{
 				name: "Choose your recording settings",
-				text: "Open Cap and select your recording source.",
+				text: "Open RocStarr VideoShare and select your recording source.",
 			},
 			{
 				name: "Start recording your screen",
@@ -117,14 +117,14 @@ describe("createHowToSchema", () => {
 		const schema = createHowToSchema({
 			name: "How to Screen Record on Mac, Windows & Chrome",
 			description:
-				"Learn how to screen record with audio on Mac, Windows, or in your browser using Cap.",
+				"Learn how to screen record with audio on Mac, Windows, or in your browser using RocStarr VideoShare.",
 			totalTime: "PT2M",
 			steps: howToSteps,
 		});
 
 		expect(schema["@type"]).toBe("HowTo");
 		expect(schema.step).toHaveLength(4);
-		expect(schema.step[0]?.name).toBe("Download and install Cap");
+		expect(schema.step[0]?.name).toBe("Download and install RocStarr VideoShare");
 		expect(schema.step[3]?.position).toBe(4);
 	});
 });

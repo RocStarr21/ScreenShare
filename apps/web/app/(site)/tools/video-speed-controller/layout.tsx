@@ -15,7 +15,7 @@ export const metadata = {
 		description:
 			"Free browser-based tool to adjust video playback speed. Speed up or slow down videos without losing quality, all processed locally for privacy.",
 		url: "https://cap.so/tools/video-speed-controller",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "/og.png",

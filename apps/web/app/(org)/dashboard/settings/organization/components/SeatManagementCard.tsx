@@ -120,7 +120,7 @@ export function SeatManagementCard() {
 					</span>
 					{activeOrganization?.ownerIsPro && (
 						<span className="text-xs text-gray-10">
-							The organization owner is always on Cap Pro and doesn't use a
+							The organization owner is always on RocStarr VideoShare Pro and doesn't use a
 							seat.
 						</span>
 					)}

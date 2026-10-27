@@ -103,7 +103,7 @@ const RecordingModePicker = () => {
 					One app, every workflow
 				</h2>
 				<p className="text-base md:text-lg text-gray-10 max-w-[600px] mx-auto">
-					Whether you need speed, studio quality, or a quick screenshot — Cap
+					Whether you need speed, studio quality, or a quick screenshot — RocStarr VideoShare
 					has a mode for it.
 				</p>
 			</motion.div>

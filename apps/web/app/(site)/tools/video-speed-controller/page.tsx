@@ -6,7 +6,7 @@ import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
 	title:
-		"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+		"Video Speed Controller Online – Speed Up or Slow Down Videos Free | RocStarr VideoShare",
 	description:
 		"Free online video speed controller. Adjust playback from 0.25× to 3× without quality loss — processed locally in your browser for complete privacy. No uploads required.",
 	keywords: [
@@ -20,17 +20,17 @@ export const metadata: Metadata = {
 	],
 	openGraph: {
 		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | RocStarr VideoShare",
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads — works with MP4, WebM, MOV, AVI and MKV.",
 		url: "https://cap.so/tools/video-speed-controller",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "https://cap.so/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap Video Speed Controller — Free Online Video Speed Changer",
+				alt: "RocStarr VideoShare Video Speed Controller — Free Online Video Speed Changer",
 			},
 		],
 		locale: "en_US",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title:
-			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | Cap",
+			"Video Speed Controller Online – Speed Up or Slow Down Videos Free | RocStarr VideoShare",
 		description:
 			"Adjust video playback speed from 0.25× to 3× directly in your browser. Free, private, no uploads required.",
 		images: ["https://cap.so/og.png"],
@@ -53,7 +53,7 @@ const faqs = [
 	{
 		question: "How do I change the speed of a video online?",
 		answer:
-			"Open Cap's Video Speed Controller, drag and drop your video file (or click to browse), select your target speed from 0.25× to 3×, then click Speed Up or Slow Down Video. The entire process runs in your browser — your file never leaves your device. Once processing is complete, preview and download the result.",
+			"Open RocStarr VideoShare's Video Speed Controller, drag and drop your video file (or click to browse), select your target speed from 0.25× to 3×, then click Speed Up or Slow Down Video. The entire process runs in your browser — your file never leaves your device. Once processing is complete, preview and download the result.",
 	},
 	{
 		question: "What video formats does the speed controller support?",
@@ -95,7 +95,7 @@ const faqs = [
 const howToSteps = [
 	{
 		name: "Upload your video file",
-		text: "Open Cap's Video Speed Controller and drag and drop your video into the upload area, or click to browse your files. Supported formats include MP4, WebM, MOV, AVI, and MKV up to 500 MB.",
+		text: "Open RocStarr VideoShare's Video Speed Controller and drag and drop your video into the upload area, or click to browse your files. Supported formats include MP4, WebM, MOV, AVI, and MKV up to 500 MB.",
 	},
 	{
 		name: "Select your target speed",
@@ -125,7 +125,7 @@ const howToStructuredData = {
 	"@type": "HowTo",
 	name: "How to Change Video Speed Online",
 	description:
-		"Adjust the playback speed of any video for free using Cap's browser-based speed controller. No upload required.",
+		"Adjust the playback speed of any video for free using RocStarr VideoShare's browser-based speed controller. No upload required.",
 	step: howToSteps.map((step, index) => ({
 		"@type": "HowToStep",
 		position: index + 1,
@@ -189,10 +189,10 @@ export default function SpeedControllerPage() {
 		],
 		faqs,
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: "RocStarr VideoShare is the open source Loom alternative",
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. No speed adjustments needed — just hit record.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with RocStarr VideoShare. 100% open source and privacy focused. No speed adjustments needed — just hit record.",
+			buttonText: "Download RocStarr VideoShare Free",
 		},
 	};
 

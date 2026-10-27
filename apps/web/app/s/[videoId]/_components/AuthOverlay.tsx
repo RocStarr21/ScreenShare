@@ -1,4 +1,3 @@
-import { NODE_ENV } from "@cap/env";
 import { Button, Dialog, DialogContent, Input, LogoBadge } from "@cap/ui";
 import { faArrowLeft, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -30,6 +29,7 @@ export const AuthOverlay: React.FC<AuthOverlayProps> = ({
 	const [lastResendTime, setLastResendTime] = useState<number | null>(null);
 
 	const emailId = useId();
+	const { emailDeliveryAvailable } = usePublicEnv();
 	return (
 		<Dialog open={isOpen} onOpenChange={onClose}>
 			<DialogContent className="w-[90vw] bg-gray-3 relative sm:max-w-md p-6 rounded-xl">
@@ -54,12 +54,18 @@ export const AuthOverlay: React.FC<AuthOverlayProps> = ({
 
 					<div className="text-center">
 						<h1 className="text-xl font-semibold">
-							{step === 1 ? "Sign in to comment" : "Email sent"}
+							{step === 1
+								? "Sign in to comment"
+								: emailDeliveryAvailable
+									? "Email sent"
+									: "Enter your code"}
 						</h1>
 						<p className="text-base text-gray-9">
 							{step === 1
 								? "Join the conversation."
-								: "We sent a 6-digit code to your email."}
+								: emailDeliveryAvailable
+									? "We sent a 6-digit code to your email."
+									: "Email delivery isn't set up on this server, so the code was written to the server log."}
 						</p>
 					</div>
 
@@ -89,7 +95,7 @@ export const AuthOverlay: React.FC<AuthOverlayProps> = ({
 						)}
 						<p className="mt-6 text-xs text-center text-gray-9">
 							By entering your email, you acknowledge that you have both read
-							and agree to Cap's{" "}
+							and agree to RocStarr VideoShare's{" "}
 							<Link
 								href="/terms"
 								target="_blank"
@@ -183,7 +189,11 @@ const StepOne = ({
 								email_domain: normalizedEmail.split("@").at(1),
 								video_id: videoId,
 							});
-							toast.success("Email sent - check your inbox!");
+							toast.success(
+								publicEnv.emailDeliveryAvailable
+									? "Email sent - check your inbox!"
+									: "Code written to the server log",
+							);
 						} else {
 							toast.error("Error sending email - try again?");
 						}
@@ -219,9 +229,9 @@ const StepOne = ({
 				disabled={loading || emailSent}
 			>
 				{emailSent
-					? NODE_ENV === "development"
-						? "Email sent to your terminal"
-						: "Email sent to your inbox"
+					? publicEnv.emailDeliveryAvailable
+						? "Email sent to your inbox"
+						: "Code written to the server log"
 					: "Continue with Email"}
 			</Button>
 			{publicEnv.googleAuthAvailable && (

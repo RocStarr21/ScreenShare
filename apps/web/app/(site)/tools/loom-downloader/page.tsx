@@ -6,9 +6,9 @@ import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
 	title:
-		"Loom Video Downloader — Download Loom Videos Free + Migrate to Cap | Cap",
+		"Loom Video Downloader — Download Loom Videos Free + Migrate to RocStarr VideoShare | RocStarr VideoShare",
 	description:
-		"Download any Loom video for free with Cap's online Loom video downloader. Then migrate your entire Loom library to Cap — the open source Loom alternative — with 20% off using code MIGRATE20.",
+		"Download any Loom video for free with RocStarr VideoShare's online Loom video downloader. Then migrate your entire Loom library to RocStarr VideoShare — the open source Loom alternative — with 20% off using code MIGRATE20.",
 	keywords: [
 		"loom video downloader",
 		"download loom video",
@@ -28,26 +28,26 @@ export const metadata: Metadata = {
 		"switch from loom",
 	],
 	openGraph: {
-		title: "Loom Video Downloader — Free Download + Migrate to Cap",
+		title: "Loom Video Downloader — Free Download + Migrate to RocStarr VideoShare",
 		description:
-			"Download any Loom video for free. Then migrate your whole Loom library to Cap and save 20% with MIGRATE20. Built by Cap, the open source Loom alternative.",
+			"Download any Loom video for free. Then migrate your whole Loom library to RocStarr VideoShare and save 20% with MIGRATE20. Built by RocStarr VideoShare, the open source Loom alternative.",
 		url: "https://cap.so/tools/loom-downloader",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		type: "website",
 		images: [
 			{
 				url: "/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap — Free Loom Video Downloader",
+				alt: "RocStarr VideoShare — Free Loom Video Downloader",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Loom Video Downloader — Free Download + Migrate to Cap",
+		title: "Loom Video Downloader — Free Download + Migrate to RocStarr VideoShare",
 		description:
-			"Download any Loom video for free — then migrate your whole library to Cap with 20% off using MIGRATE20.",
+			"Download any Loom video for free — then migrate your whole library to RocStarr VideoShare with 20% off using MIGRATE20.",
 		images: ["/og.png"],
 	},
 	alternates: {
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
 const pageContent: ToolPageContent = {
 	title: "Loom Video Downloader",
 	description:
-		"Download any public Loom video as an MP4 — or skip the one-by-one downloads and migrate your whole Loom library to Cap with 20% off using code MIGRATE20.",
-	featuresTitle: "Download Loom videos, then move your whole library to Cap",
+		"Download any public Loom video as an MP4 — or skip the one-by-one downloads and migrate your whole Loom library to RocStarr VideoShare with 20% off using code MIGRATE20.",
+	featuresTitle: "Download Loom videos, then move your whole library to RocStarr VideoShare",
 	featuresDescription:
-		"Cap's Loom downloader is free, fast, and requires zero setup. When you're ready to leave Loom for good, Cap Pro's built-in <a href=\"/loom-alternative\">Loom video importer</a> moves your entire workspace in one click.",
+		"RocStarr VideoShare's Loom downloader is free, fast, and requires zero setup. When you're ready to leave Loom for good, RocStarr VideoShare Pro's built-in <a href=\"/loom-alternative\">Loom video importer</a> moves your entire workspace in one click.",
 	features: [
 		{
 			title: "Instant Downloads",
@@ -76,22 +76,22 @@ const pageContent: ToolPageContent = {
 		{
 			title: "100% Free to Download",
 			description:
-				"Completely free with no limits on downloads. Save as many Loom videos as you need — then switch to Cap to stop paying Loom's $18/user/month.",
+				"Completely free with no limits on downloads. Save as many Loom videos as you need — then switch to RocStarr VideoShare to stop paying Loom's $18/user/month.",
 		},
 		{
 			title: "Import Your Whole Loom Library",
 			description:
-				'Cap Pro includes a built-in <a href="/loom-alternative">Loom video importer</a> that transfers every Loom video you\'ve recorded — titles, transcripts, and chapters included — without manual re-uploads.',
+				'RocStarr VideoShare Pro includes a built-in <a href="/loom-alternative">Loom video importer</a> that transfers every Loom video you\'ve recorded — titles, transcripts, and chapters included — without manual re-uploads.',
 		},
 		{
 			title: "Half the Price of Loom",
 			description:
-				"Cap Pro starts from just $8.16/user/month vs Loom's $18/user/month. Use code <strong>MIGRATE20</strong> at checkout for an extra 20% off your first year.",
+				"RocStarr VideoShare Pro starts from just $8.16/user/month vs Loom's $18/user/month. Use code <strong>MIGRATE20</strong> at checkout for an extra 20% off your first year.",
 		},
 		{
 			title: "Open Source & Privacy-First",
 			description:
-				'Cap is the <a href="/">open source Loom alternative</a>. Bring your own S3 bucket, connect your own domain, and own 100% of your video data.',
+				'RocStarr VideoShare is the <a href="/">open source Loom alternative</a>. Bring your own S3 bucket, connect your own domain, and own 100% of your video data.',
 		},
 	],
 	faqs: [
@@ -108,17 +108,17 @@ const pageContent: ToolPageContent = {
 		{
 			question: "What is MIGRATE20 and how do I use it?",
 			answer:
-				'<strong>MIGRATE20</strong> is a 20% discount code for new Cap Pro subscribers who are switching from Loom. Just apply it at <a href="/pricing">checkout on the pricing page</a> to take 20% off your first year of Cap Pro — including the built-in Loom video importer.',
+				'<strong>MIGRATE20</strong> is a 20% discount code for new RocStarr VideoShare Pro subscribers who are switching from Loom. Just apply it at <a href="/pricing">checkout on the pricing page</a> to take 20% off your first year of RocStarr VideoShare Pro — including the built-in Loom video importer.',
 		},
 		{
-			question: "Can I import all my Loom videos into Cap at once?",
+			question: "Can I import all my Loom videos into RocStarr VideoShare at once?",
 			answer:
-				'Yes. Cap Pro\'s built-in <a href="/loom-alternative">Loom video importer</a> connects to your Loom workspace and transfers every video in one go — titles, transcripts, chapters, and all — without you having to download and re-upload anything manually.',
+				'Yes. RocStarr VideoShare Pro\'s built-in <a href="/loom-alternative">Loom video importer</a> connects to your Loom workspace and transfers every video in one go — titles, transcripts, chapters, and all — without you having to download and re-upload anything manually.',
 		},
 		{
-			question: "Why migrate from Loom to Cap?",
+			question: "Why migrate from Loom to RocStarr VideoShare?",
 			answer:
-				"Cap is the open source Loom alternative built for teams that care about data ownership and price. You get unlimited cloud storage, instant shareable links, AI captions, custom domains, and your own S3 bucket — all from $8.16/user/month vs Loom's $18/user/month. Use MIGRATE20 for an additional 20% off.",
+				"RocStarr VideoShare is the open source Loom alternative built for teams that care about data ownership and price. You get unlimited cloud storage, instant shareable links, AI captions, custom domains, and your own S3 bucket — all from $8.16/user/month vs Loom's $18/user/month. Use MIGRATE20 for an additional 20% off.",
 		},
 		{
 			question: "Can I download private Loom videos?",
@@ -136,19 +136,19 @@ const pageContent: ToolPageContent = {
 				"No. We never store, cache, or process your videos. Our server simply fetches the direct download URL from Loom and passes it to your browser. The video downloads directly from Loom's servers to your device.",
 		},
 		{
-			question: "What is Cap?",
+			question: "What is RocStarr VideoShare?",
 			answer:
-				'Cap is the <a href="/">open source alternative to Loom</a>. It\'s a privacy-focused screen recorder that lets you record, edit, and share videos instantly — with unlimited storage, custom domains, and a built-in Loom video importer. <a href="/download">Download Cap for free</a>.',
+				'RocStarr VideoShare is the <a href="/">open source alternative to Loom</a>. It\'s a privacy-focused screen recorder that lets you record, edit, and share videos instantly — with unlimited storage, custom domains, and a built-in Loom video importer. <a href="/download">Download RocStarr VideoShare for free</a>.',
 		},
 	],
 	cta: {
 		title: "Ready to leave Loom for good?",
 		description:
-			"Skip the one-by-one downloads. Cap Pro imports your entire Loom library in one click — and costs half what Loom charges. Use MIGRATE20 at checkout for an extra 20% off your first year.",
-		buttonText: "Migrate to Cap Pro — save 20%",
+			"Skip the one-by-one downloads. RocStarr VideoShare Pro imports your entire Loom library in one click — and costs half what Loom charges. Use MIGRATE20 at checkout for an extra 20% off your first year.",
+		buttonText: "Migrate to RocStarr VideoShare Pro — save 20%",
 		buttonHref:
 			"/pricing?promo=MIGRATE20&utm_source=loom-downloader&utm_campaign=migrate20",
-		secondaryButtonText: "Download Cap free",
+		secondaryButtonText: "Download RocStarr VideoShare free",
 		secondaryButtonHref: "/download",
 	},
 };

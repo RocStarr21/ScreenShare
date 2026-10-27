@@ -42,6 +42,11 @@ import { ThumbnailRequest } from "@/lib/Requests/ThumbnailRequest";
 import { uploadWithTarget } from "@/utils/upload-target";
 import { useUploadingContext } from "../../UploadingContext";
 import { sendProgressUpdate } from "../sendProgressUpdate";
+import {
+	type BlurredCamera,
+	createBlurredCamera,
+	isCameraBlurPreferred,
+} from "./camera-background-blur";
 import type { RecordingMode } from "./RecordingModeSelector";
 import {
 	canConvertToMp4InBrowser,
@@ -79,7 +84,17 @@ interface UseWebRecorderOptions {
 	onRecordingSurfaceDetected?: (mode: RecordingMode) => void;
 	onRecordingStart?: () => void;
 	onRecordingStop?: () => void;
+	noiseSuppression?: boolean;
+	captureSize?: { width: number; height: number };
+	countdownSeconds?: number;
 }
+
+const DEFAULT_CAPTURE_SIZE = { width: 1920, height: 1080 };
+
+const wait = (ms: number) =>
+	new Promise<void>((resolve) => {
+		setTimeout(resolve, ms);
+	});
 
 const INSTANT_UPLOAD_REQUEST_INTERVAL_MS = 1000;
 const INSTANT_CHUNK_GUARD_DELAY_MS = INSTANT_UPLOAD_REQUEST_INTERVAL_MS * 3;
@@ -130,6 +145,42 @@ const triggerBrowserDownload = (url: string, fileName: string) => {
 
 const recoveredToastId = (id: string) => `recovered-${id}`;
 
+const getRecordingStartErrorMessage = (error: unknown) => {
+	const name =
+		error instanceof DOMException
+			? error.name
+			: error instanceof Error
+				? error.name
+				: "";
+	const message = error instanceof Error ? error.message : "";
+
+	if (name === "NotAllowedError" || name === "SecurityError") {
+		return "Screen recording permission was blocked. Use Chrome or Edge, choose a screen/window/tab in the picker, and allow sharing.";
+	}
+
+	if (name === "NotFoundError") {
+		return "No screen, window, tab, or camera source was available to record.";
+	}
+
+	if (name === "NotReadableError" || name === "AbortError") {
+		return "The browser could not capture that source. Close other screen recorders, try a different tab/window, or use Chrome or Edge.";
+	}
+
+	if (name === "OverconstrainedError") {
+		return "The selected recording source does not support the requested capture settings. Try recording a browser tab or full screen.";
+	}
+
+	if (/permission|denied|disallowed/i.test(message)) {
+		return "Screen recording permission was denied. Allow screen sharing in the browser prompt and try again.";
+	}
+
+	if (/display|capture|getDisplayMedia|not supported/i.test(message)) {
+		return "This browser does not fully support screen capture. Open RocStarr VideoShare in Chrome or Edge and try again.";
+	}
+
+	return "Could not start recording. Open RocStarr VideoShare in Chrome or Edge, allow screen sharing, and try again.";
+};
+
 export const useWebRecorder = ({
 	organisationId,
 	selectedMicId,
@@ -142,8 +193,13 @@ export const useWebRecorder = ({
 	onRecordingSurfaceDetected,
 	onRecordingStart,
 	onRecordingStop,
+	noiseSuppression = true,
+	captureSize = DEFAULT_CAPTURE_SIZE,
+	countdownSeconds = 0,
 }: UseWebRecorderOptions) => {
 	const [phase, setPhase] = useState<RecorderPhase>("idle");
+	const [countdown, setCountdown] = useState<number | null>(null);
+	const cameraBlurRef = useRef<BlurredCamera | null>(null);
 	const [videoId, setVideoId] = useState<VideoId | null>(null);
 	const [hasAudioTrack, setHasAudioTrack] = useState(false);
 	const [isSettingUp, setIsSettingUp] = useState(false);
@@ -610,6 +666,8 @@ export const useWebRecorder = ({
 	);
 
 	const cleanupRecordingState = useCallback(async () => {
+		cameraBlurRef.current?.stop();
+		cameraBlurRef.current = null;
 		cleanupStreams();
 		clearTimer();
 		resetRecorder();
@@ -751,11 +809,23 @@ export const useWebRecorder = ({
 					video: {
 						deviceId: { exact: selectedCameraId },
 						frameRate: { ideal: 30 },
-						width: { ideal: 1920 },
-						height: { ideal: 1080 },
+						width: { ideal: captureSize.width },
+						height: { ideal: captureSize.height },
 					},
 				});
 				cameraStreamRef.current = videoStream;
+				if (isCameraBlurPreferred()) {
+					try {
+						const blurred = await createBlurredCamera(videoStream);
+						cameraBlurRef.current = blurred;
+						videoStream = blurred.stream;
+					} catch (blurError) {
+						console.warn("Background blur unavailable", blurError);
+						toast.warning(
+							"Background blur couldn't start, so this recording won't be blurred.",
+						);
+					}
+				}
 				firstTrack = videoStream.getVideoTracks()[0] ?? null;
 			} else {
 				const desiredSurface =
@@ -766,6 +836,8 @@ export const useWebRecorder = ({
 					displaySurface?: DisplaySurfacePreference;
 				} = {
 					...DISPLAY_MEDIA_VIDEO_CONSTRAINTS,
+					width: { ideal: captureSize.width },
+					height: { ideal: captureSize.height },
 					displaySurface: desiredSurface,
 				};
 
@@ -934,7 +1006,7 @@ export const useWebRecorder = ({
 							deviceId: { exact: selectedMicId },
 							echoCancellation: true,
 							autoGainControl: true,
-							noiseSuppression: true,
+							noiseSuppression,
 						},
 					});
 				} catch (micError) {
@@ -1066,6 +1138,12 @@ export const useWebRecorder = ({
 				});
 			}
 
+			for (let remaining = countdownSeconds; remaining > 0; remaining--) {
+				setCountdown(remaining);
+				await wait(1000);
+			}
+			setCountdown(null);
+
 			const recorder = new MediaRecorder(mixedStream, {
 				mimeType: pipeline.mimeType,
 			});
@@ -1126,9 +1204,10 @@ export const useWebRecorder = ({
 			}
 
 			console.error("Failed to start recording", err);
-			toast.error("Could not start recording.");
+			toast.error(getRecordingStartErrorMessage(err));
 			await resetState();
 		} finally {
+			setCountdown(null);
 			setIsSettingUp(false);
 		}
 	};
@@ -1622,6 +1701,7 @@ export const useWebRecorder = ({
 
 	return {
 		phase,
+		countdown,
 		durationMs,
 		videoId,
 		hasAudioTrack,

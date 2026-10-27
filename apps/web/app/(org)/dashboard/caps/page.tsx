@@ -11,7 +11,6 @@ import {
 	videos,
 	videoUploads,
 } from "@cap/database/schema";
-import { serverEnv } from "@cap/env";
 import {
 	Database,
 	ImageUploads,
@@ -26,7 +25,7 @@ import { runPromise } from "@/lib/server";
 import { Caps } from "./Caps";
 
 export const metadata: Metadata = {
-	title: "My Caps — Cap",
+	title: "My Videos — RocStarr VideoShare",
 };
 
 // Helper function to fetch shared spaces data for videos
@@ -320,9 +319,7 @@ export default async function CapsPage(props: PageProps<"/dashboard/caps">) {
 			data={processedVideoData}
 			folders={foldersData}
 			count={totalCount}
-			analyticsEnabled={Boolean(
-				serverEnv().TINYBIRD_TOKEN && serverEnv().TINYBIRD_HOST,
-			)}
+			analyticsEnabled
 		/>
 	);
 }

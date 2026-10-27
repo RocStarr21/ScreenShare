@@ -29,17 +29,23 @@ export const Navbar = ({ stars }: NavbarProps) => {
 						</div>
 					</div>
 					<div className="hidden items-center space-x-2 lg:flex">
+						<Link
+							href="https://portal.rocstarrmedia.com/dashboard"
+							className="inline-flex items-center justify-center rounded-full bg-[#003594] text-white px-3.5 py-1.5 text-xs font-bold transition hover:opacity-90 shadow-sm mr-2"
+						>
+							← Central Dashboard
+						</Link>
 						<Button
 							variant="outline"
 							icon={
 								<Image src="/github.svg" alt="Github" width={16} height={16} />
 							}
 							target="_blank"
-							href="https://github.com/CapSoftware/Cap"
+							href="https://github.com/CapSoftware/RocStarr VideoShare"
 							size="sm"
 							className="w-full font-medium sm:w-auto"
 						>
-							{`GitHub${stars ? ` (${stars})` : ""}`}
+							{ stars ? `GitHub (${stars})` : "GitHub" }
 						</Button>
 						<Button
 							variant="gray"

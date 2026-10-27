@@ -9,9 +9,9 @@ import {
 } from "@/utils/releases";
 
 export const metadata: Metadata = {
-	title: "All Versions — Cap",
+	title: "All Versions — RocStarr VideoShare",
 	description:
-		"Download previous versions of Cap for macOS, Windows, and Linux.",
+		"Download previous versions of RocStarr VideoShare for macOS, Windows, and Linux.",
 };
 
 export const revalidate = 3600;
@@ -246,7 +246,7 @@ export default async function VersionsPage() {
 						All Versions
 					</h1>
 					<p className="text-gray-10">
-						Download previous versions of Cap for macOS, Windows, and Linux.
+						Download previous versions of RocStarr VideoShare for macOS, Windows, and Linux.
 					</p>
 				</div>
 

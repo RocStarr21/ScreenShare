@@ -178,7 +178,7 @@ export function SignupForm() {
 					layout="position"
 					className="text-2xl font-semibold text-gray-12"
 				>
-					Sign up to Cap
+					Sign up to RocStarr VideoShare
 				</motion.h1>
 				<motion.p
 					key="subtitle"
@@ -324,7 +324,7 @@ export function SignupForm() {
 							className="text-xs text-center text-gray-9"
 						>
 							By typing your email and clicking continue, you acknowledge that
-							you have both read and agree to Cap's{" "}
+							you have both read and agree to RocStarr VideoShare's{" "}
 							<Link
 								href="/terms"
 								target="_blank"

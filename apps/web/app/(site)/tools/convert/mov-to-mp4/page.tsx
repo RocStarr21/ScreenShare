@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "MOV to MP4 Converter — Free Online Video Converter | Cap",
+	title: "MOV to MP4 Converter — Free Online Video Converter | RocStarr VideoShare",
 	description:
 		"Convert Apple QuickTime MOV videos to MP4 format directly in your browser. Free, private, no upload needed. Works with iPhone recordings, screen captures, and any MOV file.",
 	keywords: [
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
 		"browser mov converter",
 	],
 	openGraph: {
-		title: "MOV to MP4 Converter — Free Online Video Converter | Cap",
+		title: "MOV to MP4 Converter — Free Online Video Converter | RocStarr VideoShare",
 		description:
 			"Convert MOV videos to the universally compatible MP4 format directly in your browser. No uploads, no installs, 100% private. Works with iPhone recordings and QuickTime files.",
 		url: "https://cap.so/tools/convert/mov-to-mp4",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "https://cap.so/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap MOV to MP4 Converter — Free Online Video Converter",
+				alt: "RocStarr VideoShare MOV to MP4 Converter — Free Online Video Converter",
 			},
 		],
 		locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "MOV to MP4 Converter — Free Online Video Converter | Cap",
+		title: "MOV to MP4 Converter — Free Online Video Converter | RocStarr VideoShare",
 		description:
 			"Convert MOV to MP4 directly in your browser. No uploads, no installs, 100% private.",
 		images: ["https://cap.so/og.png"],
@@ -50,7 +50,7 @@ const faqs = [
 	{
 		question: "How do I convert MOV to MP4 online?",
 		answer:
-			"Open Cap's MOV to MP4 converter, drag and drop your MOV file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
+			"Open RocStarr VideoShare's MOV to MP4 converter, drag and drop your MOV file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
 	},
 	{
 		question: "Is the MOV to MP4 converter free?",
@@ -75,7 +75,7 @@ const faqs = [
 	{
 		question: "Does this work with iPhone MOV files?",
 		answer:
-			"Yes. iPhones and iPads record video in the MOV (QuickTime) container using HEVC or H.264. Cap's converter handles both formats and outputs a widely compatible MP4 file you can share, upload, or play on any device.",
+			"Yes. iPhones and iPads record video in the MOV (QuickTime) container using HEVC or H.264. RocStarr VideoShare's converter handles both formats and outputs a widely compatible MP4 file you can share, upload, or play on any device.",
 	},
 	{
 		question: "Does the converter work on mobile?",
@@ -92,7 +92,7 @@ const faqs = [
 const howToSteps = [
 	{
 		name: "Upload your MOV file",
-		text: "Open Cap's MOV to MP4 converter and drag and drop your MOV file into the upload area, or click to browse your files. Supports QuickTime MOV files up to 500 MB.",
+		text: "Open RocStarr VideoShare's MOV to MP4 converter and drag and drop your MOV file into the upload area, or click to browse your files. Supports QuickTime MOV files up to 500 MB.",
 	},
 	{
 		name: "Start the conversion",
@@ -122,7 +122,7 @@ const howToStructuredData = {
 	"@type": "HowTo",
 	name: "How to Convert MOV to MP4 Online",
 	description:
-		"Convert Apple QuickTime MOV video files to MP4 format for free using Cap's browser-based converter. No upload required.",
+		"Convert Apple QuickTime MOV video files to MP4 format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 	step: howToSteps.map((step, index) => ({
 		"@type": "HowToStep",
 		position: index + 1,
@@ -187,10 +187,10 @@ export default function MOVToMP4Page() {
 		],
 		faqs,
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: "RocStarr VideoShare is the open source Loom alternative",
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with RocStarr VideoShare. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
+			buttonText: "Download RocStarr VideoShare Free",
 		},
 	};
 

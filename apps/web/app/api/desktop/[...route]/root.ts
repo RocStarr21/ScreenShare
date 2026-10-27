@@ -427,7 +427,7 @@ app.post(
 				}),
 				cc: userEmail,
 				replyTo: userEmail,
-				fromOverride: "Richie from Cap <richie@send.cap.so>",
+				fromOverride: "Richie from RocStarr VideoShare <richie@send.cap.so>",
 			});
 
 			return c.json({

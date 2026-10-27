@@ -31,7 +31,7 @@ const ProRiveArt = ({ onReady }: { onReady: (rive: Rive | null) => void }) => {
 };
 
 const UpgradeToPro = ({
-	text = "Upgrade To Cap Pro",
+	text = "Upgrade To RocStarr VideoShare Pro",
 	onClick,
 }: {
 	text?: string;

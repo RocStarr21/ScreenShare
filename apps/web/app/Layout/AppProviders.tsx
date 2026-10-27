@@ -37,6 +37,10 @@ export async function AppProviders({ children }: PropsWithChildren) {
 									webUrl: buildEnv.NEXT_PUBLIC_WEB_URL,
 									workosAuthAvailable: !!serverEnv().WORKOS_CLIENT_ID,
 									googleAuthAvailable: !!serverEnv().GOOGLE_CLIENT_ID,
+									// Mirrors the email provider: both are required to send.
+									emailDeliveryAvailable:
+										!!serverEnv().RESEND_API_KEY &&
+										!!serverEnv().RESEND_FROM_DOMAIN,
 								}}
 							>
 								<ReactQueryProvider>

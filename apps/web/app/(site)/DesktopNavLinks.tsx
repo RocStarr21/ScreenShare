@@ -58,17 +58,17 @@ const Links: NavItem[] = [
 			},
 			{
 				label: "Open Source",
-				sub: "Cap is open source and available on GitHub",
-				href: "https://github.com/CapSoftware/Cap",
+				sub: "RocStarr VideoShare is open source and available on GitHub",
+				href: "https://github.com/CapSoftware/RocStarr VideoShare",
 			},
 			{
-				label: "Self-host Cap",
-				sub: "Self-host Cap on your own infrastructure",
+				label: "Self-host RocStarr VideoShare",
+				sub: "Self-host RocStarr VideoShare on your own infrastructure",
 				href: "/self-hosting",
 			},
 			{
 				label: "Join the community",
-				sub: "Join the Cap community on Discord",
+				sub: "Join the RocStarr VideoShare community on Discord",
 				href: "https://cap.link/discord",
 			},
 		],
@@ -92,12 +92,12 @@ const Links: NavItem[] = [
 			},
 			{
 				label: "Documentation",
-				sub: "Documentation for using Cap",
+				sub: "Documentation for using RocStarr VideoShare",
 				href: "/docs",
 			},
 			{
 				label: "FAQs",
-				sub: "Frequently asked questions about Cap",
+				sub: "Frequently asked questions about RocStarr VideoShare",
 				href: "/faq",
 			},
 			{

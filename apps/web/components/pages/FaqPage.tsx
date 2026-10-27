@@ -13,39 +13,39 @@ interface FaqItem {
 
 const faqContent: FaqItem[] = [
 	{
-		title: "Who is Cap for?",
+		title: "Who is RocStarr VideoShare for?",
 		answer:
-			"Cap is for anyone who wants to record, edit, and share videos. It's a lightweight, powerful tool for creators, educators, marketers, developers, and remote teams who want to communicate more effectively through screen recordings.",
+			"RocStarr VideoShare is for anyone who wants to record, edit, and share videos. It's a lightweight, powerful tool for creators, educators, marketers, developers, and remote teams who want to communicate more effectively through screen recordings.",
 	},
 	{
 		title: "How much does it cost?",
 		answer:
-			"Cap offers a free version for personal use. You can upgrade to Cap Pro for just $8.16/month (when billed annually) to unlock unlimited cloud storage, unlimited recording length, custom domain support, advanced team features, password-protected videos, analytics, and priority support. We also offer commercial licenses and self-hosted options for businesses.",
+			"RocStarr VideoShare offers a free version for personal use. You can upgrade to RocStarr VideoShare Pro for just $8.16/month (when billed annually) to unlock unlimited cloud storage, unlimited recording length, custom domain support, advanced team features, password-protected videos, analytics, and priority support. We also offer commercial licenses and self-hosted options for businesses.",
 	},
 	{
-		title: "Which platforms does Cap support?",
+		title: "Which platforms does RocStarr VideoShare support?",
 		answer:
-			"Cap is cross-platform and works on macOS (both Apple Silicon and Intel) and Windows. For macOS, we recommend version 13.1 or newer. For Windows, we recommend Windows 10 or newer.",
+			"RocStarr VideoShare is cross-platform and works on macOS (both Apple Silicon and Intel) and Windows. For macOS, we recommend version 13.1 or newer. For Windows, we recommend Windows 10 or newer.",
 	},
 	{
-		title: "What makes Cap different from Loom?",
+		title: "What makes RocStarr VideoShare different from Loom?",
 		answer:
-			"Cap is open source, privacy-focused, and lets you own your data. You can connect your own Google Drive or custom S3 storage buckets, self-host the entire platform, and get a lightweight, faster experience. We focus strongly on design, user experience, and building with our community at the center of everything we do. Plus, our built-in Loom video importer makes switching effortless.",
+			"RocStarr VideoShare is open source, privacy-focused, and lets you own your data. You can connect your own Google Drive or custom S3 storage buckets, self-host the entire platform, and get a lightweight, faster experience. We focus strongly on design, user experience, and building with our community at the center of everything we do. Plus, our built-in Loom video importer makes switching effortless.",
 	},
 	{
-		title: "Can I import my Loom videos to Cap?",
+		title: "Can I import my Loom videos to RocStarr VideoShare?",
 		answer:
-			"Yes! Cap Pro includes a built-in Loom video importer that lets you seamlessly transfer your existing Loom recordings into Cap. Just paste your Loom video links and Cap handles the rest — keeping all your content organized in one place.",
+			"Yes! RocStarr VideoShare Pro includes a built-in Loom video importer that lets you seamlessly transfer your existing Loom recordings into RocStarr VideoShare. Just paste your Loom video links and RocStarr VideoShare handles the rest — keeping all your content organized in one place.",
 	},
 	{
-		title: "Can I self-host Cap?",
+		title: "Can I self-host RocStarr VideoShare?",
 		answer:
-			"Yes! Cap can be self-hosted on your own infrastructure, giving you full control over your data.",
+			"Yes! RocStarr VideoShare can be self-hosted on your own infrastructure, giving you full control over your data.",
 	},
 	{
 		title: "Is there a commercial license available?",
 		answer:
-			"Yes, we offer commercial licenses for businesses that want to use the Cap desktop app. The commercial license includes the Cap Recorder + Editor with local-only features. Our Pro plan also includes a commercial license for the desktop app.",
+			"Yes, we offer commercial licenses for businesses that want to use the RocStarr VideoShare desktop app. The commercial license includes the RocStarr VideoShare Recorder + Editor with local-only features. Our Pro plan also includes a commercial license for the desktop app.",
 		link: {
 			text: "Deactivate your license",
 			href: "/deactivate-license",

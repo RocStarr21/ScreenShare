@@ -1,26 +1,26 @@
 ---
-title: "Self-hosting Cap Web"
-summary: "How to deploy Cap Web on your own infrastructure"
+title: "Self-hosting RocStarr VideoShare Web"
+summary: "How to deploy RocStarr VideoShare Web on your own infrastructure"
 tags: "Deployment, Self-hosting"
 image: "/docs/self-hosting.webp"
 ---
 
-Cap Web is our web application for uploading and sharing Caps - it's what runs right here on [Cap.so](https://cap.so).
-You can upload videos to it from the dashboard or from Cap Desktop.
+RocStarr VideoShare Web is our web application for uploading and sharing Caps - it's what runs right here on [RocStarr VideoShare.so](https://cap.so).
+You can upload videos to it from the dashboard or from RocStarr VideoShare Desktop.
 
 <CapEmbed src="https://cap.so/embed/k310v2vf41d6ffp" />
 
 ## Quick Start (One Command)
 
-The fastest way to self-host Cap is with Docker Compose. This single command will start everything you need:
+The fastest way to self-host RocStarr VideoShare is with Docker Compose. This single command will start everything you need:
 
 ```bash
-git clone https://github.com/CapSoftware/Cap.git
-cd Cap
+git clone https://github.com/CapSoftware/RocStarr VideoShare.git
+cd RocStarr VideoShare
 docker compose up -d
 ```
 
-That's it! Cap will be available at `http://localhost:3000`.
+That's it! RocStarr VideoShare will be available at `http://localhost:3000`.
 
 <Warning title="Security Notice for Production Deployments">
 The default `docker-compose.yml` includes placeholder secrets for quick local testing. **If you're deploying to a public server or production environment**, you must change these values. See the [Production Checklist](#production-checklist) below.
@@ -38,7 +38,7 @@ docker compose logs cap-web
 Best for VPS, home servers, or any Docker-capable host.
 
 **What's included:**
-- Cap Web application
+- RocStarr VideoShare Web application
 - Media server (FFmpeg processing)
 - MySQL database
 - MinIO (S3-compatible storage)
@@ -46,7 +46,7 @@ Best for VPS, home servers, or any Docker-capable host.
 **Steps:**
 1. Clone the repository
 2. Run `docker compose up -d`
-3. Access Cap at `http://localhost:3000`
+3. Access RocStarr VideoShare at `http://localhost:3000`
 
 > **Note:** The main `docker-compose.yml` builds the media server from source, so a full clone of the repository is required. The Coolify compose file uses a pre-built image from `ghcr.io` instead.
 
@@ -82,17 +82,17 @@ Login credentials appear in Railway's Deploy Logs after deployment.
 For Coolify users, use `docker-compose.coolify.yml` which includes environment variable placeholders:
 
 1. Create a new Docker Compose project in Coolify
-2. Point to the Cap repository
+2. Point to the RocStarr VideoShare repository
 3. Set compose file to `docker-compose.coolify.yml`
 4. Configure environment variables in Coolify's UI
 5. Deploy
 
 > **Note:** The Coolify compose file uses slightly different environment variable names: `WEB_URL` instead of `CAP_URL`, and `S3_PUBLIC_ENDPOINT` instead of `S3_PUBLIC_URL`.
 
-## Connecting Cap Desktop
+## Connecting RocStarr VideoShare Desktop
 
-1. Open Cap Desktop settings
-2. Set 'Cap Server URL' to your deployment URL (e.g., `https://cap.yourdomain.com`)
+1. Open RocStarr VideoShare Desktop settings
+2. Set 'RocStarr VideoShare Server URL' to your deployment URL (e.g., `https://cap.yourdomain.com`)
 3. Uploads will now go to your self-hosted instance
 
 ## Email Configuration
@@ -128,13 +128,13 @@ GOOGLE_CLIENT_SECRET=your-secret
 ## Production Checklist
 
 <Warning title="Critical: Change Default Secrets Before Going Public">
-The default `docker-compose.yml` contains **hardcoded placeholder secrets** that are visible in the public repository. Anyone who knows you're using Cap with defaults could potentially:
+The default `docker-compose.yml` contains **hardcoded placeholder secrets** that are visible in the public repository. Anyone who knows you're using RocStarr VideoShare with defaults could potentially:
 
 - **Forge authentication sessions** (via `NEXTAUTH_SECRET`)
 - **Decrypt sensitive database fields** (via `DATABASE_ENCRYPTION_KEY`)
 - **Spoof webhook requests** (via `MEDIA_SERVER_WEBHOOK_SECRET`)
 
-This is fine for local development or testing on a private network, but **you must generate unique secrets before exposing Cap to the internet**.
+This is fine for local development or testing on a private network, but **you must generate unique secrets before exposing RocStarr VideoShare to the internet**.
 </Warning>
 
 **Generate secure secrets:**
@@ -161,7 +161,7 @@ Run this command three times to generate values for:
 
 ```
 ┌─────────────────┐     ┌─────────────────┐
-│   Cap Desktop   │────▶│    Cap Web      │
+│   RocStarr VideoShare Desktop   │────▶│    RocStarr VideoShare Web      │
 └─────────────────┘     │   (port 3000)   │
                         └────────┬────────┘
                                  │
@@ -175,11 +175,11 @@ Run this command three times to generate values for:
 
 ## Environment Variables Reference
 
-See [`packages/env/server.ts`](https://github.com/CapSoftware/Cap/blob/main/packages/env/server.ts) for all available options.
+See [`packages/env/server.ts`](https://github.com/CapSoftware/RocStarr VideoShare/blob/main/packages/env/server.ts) for all available options.
 
 ## Troubleshooting
 
-**Can't access Cap after starting:**
+**Can't access RocStarr VideoShare after starting:**
 ```bash
 docker compose logs cap-web
 ```
@@ -199,7 +199,7 @@ docker compose up -d
 ## Support
 
 If you encounter issues with self-hosting:
-- [Open a GitHub issue](https://github.com/CapSoftware/Cap/issues/new)
+- [Open a GitHub issue](https://github.com/CapSoftware/RocStarr VideoShare/issues/new)
 - Check existing issues for solutions
 
 We do not offer direct support for self-hosted deployments.

@@ -157,7 +157,7 @@ export const syncCapKnowledgeBase = async (requestedByEmail: string) => {
 		"https://cap.so/tools/convert/mp4-to-mp3",
 		"https://cap.so/tools/convert/mp4-to-webm",
 
-		"https://github.com/CapSoftware/Cap",
+		"https://github.com/CapSoftware/RocStarr VideoShare",
 	];
 
 	await client.documents.batchAdd({

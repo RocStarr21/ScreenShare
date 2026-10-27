@@ -1,8 +1,8 @@
 <p align="center">
-	<img width="150" height="150" src="https://github.com/CapSoftware/Cap/blob/main/apps/desktop/src-tauri/icons/Square310x310Logo.png" alt="Cap logo">
+	<img width="150" height="150" src="https://github.com/CapSoftware/RocStarr VideoShare/blob/main/apps/desktop/src-tauri/icons/Square310x310Logo.png" alt="RocStarr VideoShare logo">
 </p>
 
-<h1 align="center">Cap</h1>
+<h1 align="center">RocStarr VideoShare</h1>
 
 <p align="center">
 	Beautiful, shareable screen recordings. Open source, fast, and built for teams that want to own their data.
@@ -26,64 +26,64 @@
 	</a>
 </p>
 
-<img src="https://raw.githubusercontent.com/CapSoftware/Cap/refs/heads/main/apps/web/public/landing-cover.png" alt="Cap app preview">
+<img src="https://raw.githubusercontent.com/CapSoftware/RocStarr VideoShare/refs/heads/main/apps/web/public/landing-cover.png" alt="RocStarr VideoShare app preview">
 
-Cap is the open source alternative to Loom. It gives you fast screen recording, polished local editing, instant share links, comments, transcripts, analytics, team workspaces, custom domains, custom S3 storage, and full self-hosting when you need complete control.
+RocStarr VideoShare is the open source alternative to Loom. It gives you fast screen recording, polished local editing, instant share links, comments, transcripts, analytics, team workspaces, custom domains, custom S3 storage, and full self-hosting when you need complete control.
 
-Use Cap for product demos, bug reports, onboarding, tutorials, design reviews, engineering walkthroughs, async standups, client updates, and any moment where showing the work is faster than scheduling another call.
+Use RocStarr VideoShare for product demos, bug reports, onboarding, tutorials, design reviews, engineering walkthroughs, async standups, client updates, and any moment where showing the work is faster than scheduling another call.
 
-## Why Cap
+## Why RocStarr VideoShare
 
 - **Record, edit, share.** Capture your screen, camera, and microphone, then share a link or export a finished video.
 - **Instant Mode for speed.** Upload while recording and get a shareable link the moment you stop.
 - **Studio Mode for polish.** Record locally, edit with backgrounds, zooms, trimming, captions, and export controls.
-- **Desktop apps for your team.** Cap runs on macOS and Windows, with a web dashboard for viewing, sharing, and managing recordings.
-- **Own your storage.** Use Cap Cloud, connect your own S3-compatible bucket, keep recordings local, or self-host the full platform.
+- **Desktop apps for your team.** RocStarr VideoShare runs on macOS and Windows, with a web dashboard for viewing, sharing, and managing recordings.
+- **Own your storage.** Use RocStarr VideoShare Cloud, connect your own S3-compatible bucket, keep recordings local, or self-host the full platform.
 - **Privacy by default.** Share publicly or privately, add passwords, use your own domain, or keep sensitive recordings off hosted infrastructure.
 - **Async collaboration.** Comments, reactions, transcripts, viewer analytics, and team workspaces keep feedback attached to the video.
-- **Cap AI.** Generate titles, summaries, clickable chapters, captions, and transcripts automatically.
-- **Move from Loom.** Import existing Loom videos into Cap and keep your library in one place.
+- **RocStarr VideoShare AI.** Generate titles, summaries, clickable chapters, captions, and transcripts automatically.
+- **Move from Loom.** Import existing Loom videos into RocStarr VideoShare and keep your library in one place.
 
 ## Recording Modes
 
 | Mode | Best for | How it works |
 | --- | --- | --- |
-| Instant Mode | Fast feedback, bug reports, async updates | Cap uploads while you record, then gives you a share link as soon as recording stops. |
-| Studio Mode | Product demos, tutorials, launches, client work | Cap records locally, opens the editor, and lets you export or share a polished video. |
+| Instant Mode | Fast feedback, bug reports, async updates | RocStarr VideoShare uploads while you record, then gives you a share link as soon as recording stops. |
+| Studio Mode | Product demos, tutorials, launches, client work | RocStarr VideoShare records locally, opens the editor, and lets you export or share a polished video. |
 
 ## Data Ownership
 
-Cap is designed for people and teams who do not want their recording workflow locked inside a black box.
+RocStarr VideoShare is designed for people and teams who do not want their recording workflow locked inside a black box.
 
-- Use Cap Cloud for the fastest hosted experience.
+- Use RocStarr VideoShare Cloud for the fastest hosted experience.
 - Connect AWS S3, Cloudflare R2, Backblaze B2, MinIO, Wasabi, or another S3-compatible provider.
 - Serve share pages from your own domain.
-- Self-host Cap Web, the API, database, media server, and object storage with Docker Compose.
-- Point Cap Desktop at your self-hosted instance from `Settings > Cap Server URL`.
+- Self-host RocStarr VideoShare Web, the API, database, media server, and object storage with Docker Compose.
+- Point RocStarr VideoShare Desktop at your self-hosted instance from `Settings > RocStarr VideoShare Server URL`.
 
 ## Get Started
 
 For most users, the fastest path is:
 
-1. Download Cap for macOS or Windows from [cap.so/download](https://cap.so/download).
+1. Download RocStarr VideoShare for macOS or Windows from [cap.so/download](https://cap.so/download).
 2. Sign in or create an account.
 3. Choose Instant Mode or Studio Mode.
-4. Record your first Cap.
+4. Record your first RocStarr VideoShare.
 5. Share the link, export the file, or keep it local.
 
 The full product docs live at [cap.so/docs](https://cap.so/docs).
 
 ## Self-Hosting
 
-The fastest way to self-host Cap Web is Docker Compose:
+The fastest way to self-host RocStarr VideoShare Web is Docker Compose:
 
 ```bash
-git clone https://github.com/CapSoftware/Cap.git
-cd Cap
+git clone https://github.com/CapSoftware/RocStarr VideoShare.git
+cd RocStarr VideoShare
 docker compose up -d
 ```
 
-Cap will be available at `http://localhost:3000`.
+RocStarr VideoShare will be available at `http://localhost:3000`.
 
 Login links appear in the service logs when email is not configured:
 
@@ -112,7 +112,7 @@ See the [self-hosting guide](https://cap.so/docs/self-hosting) for email setup, 
 
 ## Local Development
 
-Cap is a Turborepo monorepo with Rust, TypeScript, Tauri, SolidStart, Next.js, Drizzle, MySQL, Tailwind CSS, and shared media crates.
+RocStarr VideoShare is a Turborepo monorepo with Rust, TypeScript, Tauri, SolidStart, Next.js, Drizzle, MySQL, Tailwind CSS, and shared media crates.
 
 Requirements:
 
@@ -176,7 +176,7 @@ The web API uses Effect and `@effect/platform` HTTP APIs. Desktop capture and ex
 
 ## Analytics
 
-Cap uses [Tinybird](https://www.tinybird.co) for viewer telemetry dashboards. Set `TINYBIRD_ADMIN_TOKEN` or `TINYBIRD_TOKEN` before running analytics commands.
+RocStarr VideoShare uses [Tinybird](https://www.tinybird.co) for viewer telemetry dashboards. Set `TINYBIRD_ADMIN_TOKEN` or `TINYBIRD_TOKEN` before running analytics commands.
 
 | Command | Purpose |
 | --- | --- |
@@ -187,7 +187,7 @@ Cap uses [Tinybird](https://www.tinybird.co) for viewer telemetry dashboards. Se
 
 ## Contributing
 
-Cap is built in public. Issues, pull requests, design feedback, bug reports, docs fixes, and bounties are welcome.
+RocStarr VideoShare is built in public. Issues, pull requests, design feedback, bug reports, docs fixes, and bounties are welcome.
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 - Join the community on [Discord](https://cap.link/discord).
@@ -197,6 +197,6 @@ Cap is built in public. Issues, pull requests, design feedback, bug reports, doc
 
 Portions of this software are licensed as follows:
 
-- Code in the `cap-camera*` and `scap-*` crate families is licensed under the MIT License. See [licenses/LICENSE-MIT](https://github.com/CapSoftware/Cap/blob/main/licenses/LICENSE-MIT).
+- Code in the `cap-camera*` and `scap-*` crate families is licensed under the MIT License. See [licenses/LICENSE-MIT](https://github.com/CapSoftware/RocStarr VideoShare/blob/main/licenses/LICENSE-MIT).
 - Third-party components are licensed under the original license provided by their owner.
-- All other content not mentioned above is available under the AGPLv3 license as defined in [LICENSE](https://github.com/CapSoftware/Cap/blob/main/LICENSE).
+- All other content not mentioned above is available under the AGPLv3 license as defined in [LICENSE](https://github.com/CapSoftware/RocStarr VideoShare/blob/main/LICENSE).

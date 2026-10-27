@@ -34,13 +34,13 @@ const features = [
 		icon: MousePointerClick,
 		title: "Connect Google Drive in two clicks",
 		description:
-			"No access keys, endpoints, or buckets to configure. Sign in with Google once, approve access, and Cap is ready to store your recordings in your own Drive.",
+			"No access keys, endpoints, or buckets to configure. Sign in with Google once, approve access, and RocStarr VideoShare is ready to store your recordings in your own Drive.",
 	},
 	{
 		icon: HardDriveUpload,
 		title: "Every shareable link lives in your Drive",
 		description:
-			"Once connected, new shareable links upload straight to a private Cap folder in your Google Drive. You own the underlying video files, in the account you already trust.",
+			"Once connected, new shareable links upload straight to a private RocStarr VideoShare folder in your Google Drive. You own the underlying video files, in the account you already trust.",
 	},
 	{
 		icon: Building2,
@@ -52,26 +52,26 @@ const features = [
 		icon: Link2,
 		title: "Your links keep working exactly the same",
 		description:
-			"Share links stay on Cap with comments, viewer analytics, chapters, and password protection intact. The recording is simply streamed from your Google Drive instead of Cap Cloud.",
+			"Share links stay on RocStarr VideoShare with comments, viewer analytics, chapters, and password protection intact. The recording is simply streamed from your Google Drive instead of RocStarr VideoShare Cloud.",
 	},
 	{
 		icon: ArrowLeftRight,
 		title: "Switch storage whenever you want",
 		description:
-			"Keep Cap Cloud and your own S3 bucket alongside Drive, then choose the active provider with one toggle. Existing recordings keep the storage they were created with.",
+			"Keep RocStarr VideoShare Cloud and your own S3 bucket alongside Drive, then choose the active provider with one toggle. Existing recordings keep the storage they were created with.",
 	},
 	{
 		icon: ShieldCheck,
-		title: "Cap only ever touches its own folder",
+		title: "RocStarr VideoShare only ever touches its own folder",
 		description:
-			"Cap uses Google's drive.file permission, so it can only see and manage the files it creates for you. The rest of your Google Drive stays completely private to Cap.",
+			"RocStarr VideoShare uses Google's drive.file permission, so it can only see and manage the files it creates for you. The rest of your Google Drive stays completely private to RocStarr VideoShare.",
 	},
 ];
 
 const flow = [
 	{
 		icon: <Zap className="size-6" strokeWidth={1.75} />,
-		title: "1. Record in Cap",
+		title: "1. Record in RocStarr VideoShare",
 		description:
 			"Capture your screen in Instant Mode or Studio Mode on Mac or Windows, at up to 4K and 60fps, with system audio and webcam.",
 	},
@@ -79,13 +79,13 @@ const flow = [
 		icon: <GoogleDriveLogo size={26} />,
 		title: "2. Store in your Drive",
 		description:
-			"When you share, Cap uploads the recording to a private Cap folder in your connected Google Drive, individually or for your whole organization.",
+			"When you share, RocStarr VideoShare uploads the recording to a private RocStarr VideoShare folder in your connected Google Drive, individually or for your whole organization.",
 	},
 	{
 		icon: <Link2 className="size-6" strokeWidth={1.75} />,
 		title: "3. Share from your Drive",
 		description:
-			"Copy your Cap link. Viewers watch through Cap's player while the video is served straight from your own Google Drive after access checks.",
+			"Copy your RocStarr VideoShare link. Viewers watch through RocStarr VideoShare's player while the video is served straight from your own Google Drive after access checks.",
 	},
 ];
 
@@ -93,7 +93,7 @@ const comparisonTable: {
 	headers: string[];
 	rows: (string | ComparisonCell)[][];
 } = {
-	headers: ["Feature", "Cap + Google Drive", "Loom", "Vidyard"],
+	headers: ["Feature", "RocStarr VideoShare + Google Drive", "Loom", "Vidyard"],
 	rows: [
 		[
 			"Store recordings in your own Google Drive",
@@ -148,9 +148,9 @@ const comparisonTable: {
 
 const steps = [
 	{
-		title: "Upgrade to Cap Pro",
+		title: "Upgrade to RocStarr VideoShare Pro",
 		description:
-			"Connecting your own Google Drive is a Cap Pro feature, available for individual creators and entire organizations.",
+			"Connecting your own Google Drive is a RocStarr VideoShare Pro feature, available for individual creators and entire organizations.",
 	},
 	{
 		title: "Open the storage integrations",
@@ -160,7 +160,7 @@ const steps = [
 	{
 		title: "Connect Google Drive",
 		description:
-			"Click Connect Google Drive, sign in, and approve access. Cap creates a private Cap folder in your Drive for new uploads.",
+			"Click Connect Google Drive, sign in, and approve access. RocStarr VideoShare creates a private RocStarr VideoShare folder in your Drive for new uploads.",
 	},
 	{
 		title: "Record and share",
@@ -296,7 +296,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 						<span className="flex justify-center items-center rounded-xl border size-11 bg-gray-1 border-gray-4">
 							<Image
 								src="/logos/logo-solo.svg"
-								alt="Cap"
+								alt="RocStarr VideoShare"
 								width={22}
 								height={22}
 							/>
@@ -324,7 +324,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 						variants={fadeUp}
 						className="mx-auto mt-6 max-w-2xl text-lg leading-7 text-gray-10"
 					>
-						Connect Google Drive to Cap and every shareable link uploads to, and
+						Connect Google Drive to RocStarr VideoShare and every shareable link uploads to, and
 						is served from, your own Drive. Available for individual creators
 						and entire organizations. Open source, privacy-first, and yours to
 						keep.
@@ -343,7 +343,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 							size="lg"
 							className="w-full font-medium sm:w-auto"
 						>
-							Download Cap Free
+							Download RocStarr VideoShare Free
 						</Button>
 						<Button
 							variant="white"
@@ -374,7 +374,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 				>
 					<ConnectionDemo />
 					<p className="mx-auto mt-4 text-sm text-center text-gray-9">
-						This is the Google Drive integration inside Cap, available on Cap
+						This is the Google Drive integration inside RocStarr VideoShare, available on RocStarr VideoShare
 						Pro.
 					</p>
 				</motion.div>
@@ -386,7 +386,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 						Your recordings, in the Drive you already own
 					</h2>
 					<p className="text-xl leading-relaxed text-gray-10">
-						Cap brings the instant sharing you expect from Loom, while every new
+						RocStarr VideoShare brings the instant sharing you expect from Loom, while every new
 						recording stays in your own Google Drive.
 					</p>
 				</div>
@@ -421,10 +421,10 @@ export const GoogleDriveScreenRecorderPage = () => {
 			<div className="px-5 mx-auto mt-32 max-w-[1100px] md:mt-44">
 				<div className="mx-auto mb-16 text-center max-w-[800px]">
 					<h2 className="mb-3 text-3xl font-medium md:text-4xl text-gray-12">
-						How Cap and Google Drive work together
+						How RocStarr VideoShare and Google Drive work together
 					</h2>
 					<p className="text-xl leading-relaxed text-gray-10">
-						Record once and Cap handles the rest, from upload to a shareable
+						Record once and RocStarr VideoShare handles the rest, from upload to a shareable
 						link served from your Drive.
 					</p>
 				</div>
@@ -450,14 +450,14 @@ export const GoogleDriveScreenRecorderPage = () => {
 					))}
 				</div>
 				<p className="mx-auto mt-10 max-w-2xl text-center text-gray-10">
-					Prefer object storage instead? Cap also lets you{" "}
+					Prefer object storage instead? RocStarr VideoShare also lets you{" "}
 					<a
 						href="/self-hosted-screen-recording"
 						className="font-semibold text-blue-500 transition-colors hover:text-blue-600"
 					>
 						connect your own S3-compatible bucket
 					</a>{" "}
-					, or see how Cap compares as a{" "}
+					, or see how RocStarr VideoShare compares as a{" "}
 					<a
 						href="/loom-alternative"
 						className="font-semibold text-blue-500 transition-colors hover:text-blue-600"
@@ -471,7 +471,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 			<div className="px-5 mx-auto mt-32 max-w-4xl md:mt-44">
 				<div className="mx-auto mb-12 text-center max-w-[800px]">
 					<h2 className="text-3xl font-medium md:text-4xl text-gray-12">
-						Cap with Google Drive vs other recorders
+						RocStarr VideoShare with Google Drive vs other recorders
 					</h2>
 				</div>
 				<div className="overflow-x-auto">
@@ -517,7 +517,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 			<div className="px-5 mx-auto mt-32 max-w-3xl md:mt-44">
 				<div className="mx-auto mb-12 text-center max-w-[800px]">
 					<h2 className="text-3xl font-medium md:text-4xl text-gray-12">
-						How to record to Google Drive with Cap
+						How to record to Google Drive with RocStarr VideoShare
 					</h2>
 				</div>
 				<div className="px-6 rounded-2xl border shadow-sm sm:px-8 border-gray-4 bg-gray-1">
@@ -621,7 +621,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 						Keep every recording in your own Google Drive
 					</h2>
 					<p className="mb-8 max-w-xl text-xl text-gray-10">
-						Download Cap, upgrade to Pro, and connect Google Drive for yourself
+						Download RocStarr VideoShare, upgrade to Pro, and connect Google Drive for yourself
 						or your whole organization in minutes.
 					</p>
 					<div className="flex flex-col gap-3 justify-center items-center sm:flex-row sm:gap-4">
@@ -631,7 +631,7 @@ export const GoogleDriveScreenRecorderPage = () => {
 							size="lg"
 							className="w-full font-medium sm:w-auto"
 						>
-							Download Cap Free
+							Download RocStarr VideoShare Free
 						</Button>
 						<Button
 							variant="white"

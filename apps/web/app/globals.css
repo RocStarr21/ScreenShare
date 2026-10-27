@@ -10,12 +10,12 @@
 @tailwind utilities;
 
 :root {
-	--primary: #005cb1;
-	--primary-2: #004c93;
-	--primary-3: #003b73;
-	--secondary: #2eb4ff;
-	--secondary-2: #1696e0;
-	--secondary-3: #117ebd;
+	--primary: #003594;          /* Action Blue */
+	--primary-2: #041E42;        /* Cowboys Navy */
+	--primary-3: #002b7a;
+	--secondary: #869397;        /* Brand Silver */
+	--secondary-2: #D8DEE8;      /* Light Border */
+	--secondary-3: #F6F8FB;      /* Cool BG */
 	--tertiary: #c5eaff;
 	--tertiary-2: #d3e5ff;
 	--tertiary-3: #e0edff;
@@ -23,13 +23,13 @@
 	--filler-2: #e4e4e4;
 	--filler-3: #e2e2e2;
 	--filler-txt: #b3b3b3;
-	--text-primary: #0d1b2a;
+	--text-primary: #101828;     /* Primary Text */
 	--text-secondary: #ffffff;
 	--shadow-gray-11: hsl(0, 0%, 13%);
 	--header-height: 80px;
 	--vh100-offset: calc(100vh - var(--header-height));
-	--foreground-rgb: #000000;
-	--background-start-rgb: 214, 219, 220;
+	--foreground-rgb: #101828;
+	--background-start-rgb: 246, 248, 251;
 	--background-end-rgb: 255, 255, 255;
 	--gradient-border-radius: 12px;
 }

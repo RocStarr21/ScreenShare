@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "MP4 to MP3 Converter | Extract Audio from Video | Cap",
+	title: "MP4 to MP3 Converter | Extract Audio from Video | RocStarr VideoShare",
 	description:
 		"Extract audio from MP4 videos and save as MP3 files directly in your browser. No uploads required, completely private and secure.",
 	openGraph: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 				url: "/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap MP4 to MP3 Converter Tool",
+				alt: "RocStarr VideoShare MP4 to MP3 Converter Tool",
 			},
 		],
 	},
@@ -85,10 +85,10 @@ export default function MP4ToMP3Page() {
 			},
 		],
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: "RocStarr VideoShare is the open source Loom alternative",
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with RocStarr VideoShare. 100% open source and privacy focused.",
+			buttonText: "Download RocStarr VideoShare Free",
 		},
 	};
 

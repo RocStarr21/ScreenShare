@@ -415,6 +415,55 @@ export const videoEdits = mysqlTable("video_edits", {
 	updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
 });
 
+export const videoShareOptions = mysqlTable("video_share_options", {
+	videoId: nanoId("videoId")
+		.notNull()
+		.primaryKey()
+		.$type<Video.VideoId>()
+		.references(() => videos.id, { onDelete: "cascade" }),
+	ctaText: varchar("ctaText", { length: 80 }),
+	ctaUrl: varchar("ctaUrl", { length: 2048 }),
+	emailGate: boolean("emailGate").notNull().default(false),
+	allowDownload: boolean("allowDownload").notNull().default(false),
+	thumbnailKey: varchar("thumbnailKey", { length: 512 }),
+	updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+});
+
+export const videoViews = mysqlTable(
+	"video_views",
+	{
+		id: nanoId("id").notNull().primaryKey(),
+		videoId: nanoId("videoId")
+			.notNull()
+			.$type<Video.VideoId>()
+			.references(() => videos.id, { onDelete: "cascade" }),
+		sessionId: varchar("sessionId", { length: 128 }).notNull(),
+		viewerKey: varchar("viewerKey", { length: 64 }),
+		viewerUserId: nanoIdNullable("viewerUserId").$type<User.UserId>(),
+		viewerName: varchar("viewerName", { length: 255 }),
+		viewerEmail: varchar("viewerEmail", { length: 255 }),
+		country: varchar("country", { length: 64 }),
+		city: varchar("city", { length: 128 }),
+		browser: varchar("browser", { length: 64 }),
+		os: varchar("os", { length: 64 }),
+		device: varchar("device", { length: 32 }),
+		referrer: varchar("referrer", { length: 512 }),
+		watchedSeconds: float("watchedSeconds").notNull().default(0),
+		maxPosition: float("maxPosition").notNull().default(0),
+		videoDuration: float("videoDuration"),
+		watchedBuckets: varchar("watchedBuckets", { length: 100 })
+			.notNull()
+			.default(""),
+		ctaClicks: int("ctaClicks").notNull().default(0),
+		createdAt: timestamp("createdAt").notNull().defaultNow(),
+		updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+	},
+	(table) => [
+		uniqueIndex("video_session_idx").on(table.videoId, table.sessionId),
+		index("video_created_idx").on(table.videoId, table.createdAt),
+	],
+);
+
 export const sharedVideos = mysqlTable(
 	"shared_videos",
 	{

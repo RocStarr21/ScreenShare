@@ -27,7 +27,7 @@ describe("VideoRecordingSoftwarePage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -99,36 +99,36 @@ describe("VideoRecordingSoftwarePage FAQ schema", () => {
 		{
 			question: "What is the best free video recording software?",
 			answer:
-				"Cap is the best free video recording software for most users. Studio Mode is 100% free for personal use.",
+				"RocStarr VideoShare is the best free video recording software for most users. Studio Mode is 100% free for personal use.",
 		},
 		{
-			question: "Is Cap video recording software free?",
+			question: "Is RocStarr VideoShare video recording software free?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with no time limits, no watermarks, and no hidden fees.",
+				"Yes. RocStarr VideoShare's Studio Mode is completely free for personal use with no time limits, no watermarks, and no hidden fees.",
 		},
 		{
-			question: "Does Cap video recording software work on Mac and Windows?",
+			question: "Does RocStarr VideoShare video recording software work on Mac and Windows?",
 			answer:
-				"Yes. Cap is available as a native desktop app for both macOS and Windows.",
+				"Yes. RocStarr VideoShare is available as a native desktop app for both macOS and Windows.",
 		},
 		{
 			question: "Can video recording software capture system audio?",
 			answer:
-				"Yes. Cap captures both system audio and microphone input simultaneously in every recording.",
+				"Yes. RocStarr VideoShare captures both system audio and microphone input simultaneously in every recording.",
 		},
 		{
 			question: "What video recording software has no watermark?",
-			answer: "Cap has no watermark on any recording, including the free plan.",
+			answer: "RocStarr VideoShare has no watermark on any recording, including the free plan.",
 		},
 		{
-			question: "Can I self-host my video recordings with Cap?",
+			question: "Can I self-host my video recordings with RocStarr VideoShare?",
 			answer:
-				"Yes. Cap supports any S3-compatible storage provider including AWS S3, Cloudflare R2, and self-hosted MinIO.",
+				"Yes. RocStarr VideoShare supports any S3-compatible storage provider including AWS S3, Cloudflare R2, and self-hosted MinIO.",
 		},
 		{
-			question: "Is Cap open-source video recording software?",
+			question: "Is RocStarr VideoShare open-source video recording software?",
 			answer:
-				"Yes. Cap is fully open-source and MIT-licensed. The complete codebase is publicly available on GitHub.",
+				"Yes. RocStarr VideoShare is fully open-source and MIT-licensed. The complete codebase is publicly available on GitHub.",
 		},
 	];
 

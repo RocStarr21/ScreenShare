@@ -69,7 +69,7 @@ export const ProCard = () => {
 			}
 
 			if (data.subscription === true) {
-				toast.success("You are already on the Cap Pro plan");
+				toast.success("You are already on the RocStarr VideoShare Pro plan");
 			}
 
 			if (data.url) {
@@ -113,7 +113,7 @@ export const ProCard = () => {
 
 			<div className="mt-6 space-y-3 min-h-[120px]">
 				<BillingToggle
-					ariaLabel="Billing cycle for Cap Pro"
+					ariaLabel="Billing cycle for RocStarr VideoShare Pro"
 					value={isAnnually ? "annual" : "monthly"}
 					onChange={(value) => setIsAnnually(value === "annual")}
 					options={[
@@ -144,7 +144,7 @@ export const ProCard = () => {
 				onClick={() => planCheckout.mutate()}
 				disabled={isLoading}
 				className="mt-6 w-full font-medium"
-				aria-label="Purchase Cap Pro License"
+				aria-label="Purchase RocStarr VideoShare Pro License"
 			>
 				{isLoading ? "Loading..." : copy.cta}
 			</Button>

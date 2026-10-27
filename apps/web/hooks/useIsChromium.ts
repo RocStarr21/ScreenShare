@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 /**
  * Detects whether the current browser is Chromium-based (Chrome, Edge, Brave,
- * Arc, Opera, Vivaldi, …), i.e. one that can install the Cap Chrome extension.
+ * Arc, Opera, Vivaldi, …), i.e. one that can install the RocStarr VideoShare Chrome extension.
  *
  * Defaults to `true` during SSR and on the first client render — Chromium is
  * the overwhelming majority, so this avoids a layout flash for most visitors

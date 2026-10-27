@@ -12,6 +12,7 @@ import {
 	PauseCircle,
 	PlayCircle,
 	RotateCcw,
+	StickyNote,
 	StopCircle,
 } from "lucide-react";
 import {
@@ -61,6 +62,7 @@ interface InProgressRecordingBarProps {
 	onRestart?: () => void | Promise<void>;
 	isRestarting?: boolean;
 	errorDownload?: RecordingFailureDownload | null;
+	speakerNotes?: string;
 }
 
 const DRAG_PADDING = 12;
@@ -76,8 +78,10 @@ export const InProgressRecordingBar = ({
 	onRestart,
 	isRestarting = false,
 	errorDownload,
+	speakerNotes = "",
 }: InProgressRecordingBarProps) => {
 	const [mounted, setMounted] = useState(false);
+	const [notesOpen, setNotesOpen] = useState(true);
 	const [position, setPosition] = useState({ x: 0, y: 24 });
 	const [isDragging, setIsDragging] = useState(false);
 	const dragOffsetRef = useRef({ x: 0, y: 0 });
@@ -232,6 +236,7 @@ export const InProgressRecordingBar = ({
 		}
 	};
 
+	const hasNotes = speakerNotes.trim().length > 0 && !isErrorState;
 	const canTogglePause =
 		(phase === "recording" && Boolean(onPause)) ||
 		(isPaused && Boolean(onResume));
@@ -364,6 +369,18 @@ export const InProgressRecordingBar = ({
 									className={clsx("size-5", isRestarting && "animate-spin")}
 								/>
 							</ActionButton>
+							{hasNotes && (
+								<ActionButton
+									data-no-drag
+									onClick={() => setNotesOpen((open) => !open)}
+									aria-label={
+										notesOpen ? "Hide speaker notes" : "Show speaker notes"
+									}
+									aria-pressed={notesOpen}
+								>
+									<StickyNote className="size-5" />
+								</ActionButton>
+							)}
 						</div>
 					</div>
 				)}
@@ -374,6 +391,14 @@ export const InProgressRecordingBar = ({
 					<MoreVertical className="size-5" />
 				</div>
 			</div>
+			{hasNotes && notesOpen && (
+				<div
+					data-no-drag
+					className="mt-2 max-w-[360px] max-h-56 overflow-y-auto rounded-[0.9rem] border border-gray-5 bg-gray-1 p-3 text-sm leading-relaxed whitespace-pre-wrap text-gray-12 shadow-[0_16px_60px_rgba(0,0,0,0.25)] cursor-text"
+				>
+					{speakerNotes}
+				</div>
+			)}
 		</div>,
 		document.body,
 	);

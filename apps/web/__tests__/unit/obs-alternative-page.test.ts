@@ -23,7 +23,7 @@ describe("ObsAlternativePage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -97,43 +97,43 @@ describe("ObsAlternativePage component content", () => {
 describe("ObsAlternativePage FAQ schema", () => {
 	const faqs = [
 		{
-			question: "Why would I use Cap instead of OBS Studio?",
+			question: "Why would I use RocStarr VideoShare instead of OBS Studio?",
 			answer:
-				"OBS Studio is the best tool for live streaming, but it's complex and saves files locally. Cap is designed for async screen sharing.",
+				"OBS Studio is the best tool for live streaming, but it's complex and saves files locally. RocStarr VideoShare is designed for async screen sharing.",
 		},
 		{
-			question: "Is Cap free like OBS?",
+			question: "Is RocStarr VideoShare free like OBS?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with no time limits and no watermarks.",
+				"Yes. RocStarr VideoShare's Studio Mode is completely free for personal use with no time limits and no watermarks.",
 		},
 		{
-			question: "Is Cap open source like OBS?",
-			answer: "Yes. Cap is fully open source and MIT-licensed on GitHub.",
+			question: "Is RocStarr VideoShare open source like OBS?",
+			answer: "Yes. RocStarr VideoShare is fully open source and MIT-licensed on GitHub.",
 		},
 		{
-			question: "Can Cap do live streaming like OBS?",
+			question: "Can RocStarr VideoShare do live streaming like OBS?",
 			answer:
-				"No. Cap is built for async screen recording and sharing, not live streaming.",
+				"No. RocStarr VideoShare is built for async screen recording and sharing, not live streaming.",
 		},
 		{
-			question: "Does Cap support the same recording quality as OBS?",
+			question: "Does RocStarr VideoShare support the same recording quality as OBS?",
 			answer:
-				"Yes. Cap records at up to 4K resolution and 60 frames per second with system audio and microphone.",
+				"Yes. RocStarr VideoShare records at up to 4K resolution and 60 frames per second with system audio and microphone.",
 		},
 		{
-			question: "What happens to my recordings after I stop recording in Cap?",
+			question: "What happens to my recordings after I stop recording in RocStarr VideoShare?",
 			answer:
-				"Cap automatically uploads your recording and generates a shareable link in seconds.",
+				"RocStarr VideoShare automatically uploads your recording and generates a shareable link in seconds.",
 		},
 		{
-			question: "Does Cap work on Mac and Windows like OBS?",
+			question: "Does RocStarr VideoShare work on Mac and Windows like OBS?",
 			answer:
-				"Yes. Cap is available as a native desktop app for macOS and Windows, just like OBS.",
+				"Yes. RocStarr VideoShare is available as a native desktop app for macOS and Windows, just like OBS.",
 		},
 		{
-			question: "Can I self-host Cap like I can self-host OBS outputs?",
+			question: "Can I self-host RocStarr VideoShare like I can self-host OBS outputs?",
 			answer:
-				"Yes. Cap supports any S3-compatible storage provider, including AWS S3, Cloudflare R2, and self-hosted MinIO.",
+				"Yes. RocStarr VideoShare supports any S3-compatible storage provider, including AWS S3, Cloudflare R2, and self-hosted MinIO.",
 		},
 	];
 
@@ -150,7 +150,7 @@ describe("ObsAlternativePage FAQ schema", () => {
 
 		expect(schema.mainEntity[0]).toEqual({
 			"@type": "Question",
-			name: "Why would I use Cap instead of OBS Studio?",
+			name: "Why would I use RocStarr VideoShare instead of OBS Studio?",
 			acceptedAnswer: {
 				"@type": "Answer",
 				text: faqs[0]?.answer,

@@ -6,11 +6,11 @@ export const LogoSection = () => {
 			<div className="mb-4">
 				<Link
 					href="/"
-					aria-label="Cap Home"
+					aria-label="RocStarr VideoShare Home"
 					className="inline-block w-[250px] h-auto mx-auto"
 				>
 					<svg
-						aria-label="Cap Logo"
+						aria-label="RocStarr VideoShare Logo"
 						xmlns="http://www.w3.org/2000/svg"
 						className="w-[250px] h-auto mx-auto"
 						fill="none"

@@ -11,13 +11,13 @@ export const AboutPage = () => {
 				<div className="mx-auto max-w-[680px] pt-16 pb-24 md:pt-24 md:pb-32">
 					<div className="mb-16 md:mb-24">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-gray-9">
-							About Cap
+							About RocStarr VideoShare
 						</p>
 						<h1 className="text-[2rem] leading-[2.5rem] md:text-[3.25rem] md:leading-[3.75rem] text-gray-12 mb-6">
-							Why we started Cap
+							Why we started RocStarr VideoShare
 						</h1>
 						<p className="text-lg md:text-xl leading-relaxed text-gray-10">
-							Cap started as the open source alternative to Loom, but it has
+							RocStarr VideoShare started as the open source alternative to Loom, but it has
 							evolved into so much more. A screen recording and sharing platform
 							built on privacy, transparency, and community.
 						</p>
@@ -66,14 +66,14 @@ export const AboutPage = () => {
 									ownership of everything you create.
 								</p>
 								<p>
-									Cap is built around a simple principle: your recordings are
+									RocStarr VideoShare is built around a simple principle: your recordings are
 									yours. You should be able to record, edit, and share without
 									sacrificing privacy or flexibility. Whether you're explaining
 									a bug, walking through a design, or recording a demo, the tool
 									should get out of your way.
 								</p>
 								<p>
-									We built Cap as a native desktop app with a powerful web
+									We built RocStarr VideoShare as a native desktop app with a powerful web
 									companion. Record in Instant Mode for quick shares, or use
 									Studio Mode for high-fidelity captures with separate screen
 									and camera tracks. Add automatic captions, smooth zoom
@@ -91,29 +91,29 @@ export const AboutPage = () => {
 							</h2>
 							<div className="space-y-5 text-[1.0625rem] leading-[1.8] text-gray-11">
 								<p>
-									Cap is fully open source under the AGPL license. Every line of
+									RocStarr VideoShare is fully open source under the AGPL license. Every line of
 									code, from the Rust-powered recording engine to the web
 									sharing platform, is public and auditable. This isn't a
 									marketing decision. It's a core belief about how software
 									should be built.
 								</p>
 								<p>
-									Open source means you can verify exactly what Cap does with
+									Open source means you can verify exactly what RocStarr VideoShare does with
 									your data. The community can contribute improvements, report
-									issues, and shape the product's direction. And Cap will never
+									issues, and shape the product's direction. And RocStarr VideoShare will never
 									disappear behind a paywall or pivot away from what makes it
 									useful.
 								</p>
 								<p>
 									We've seen what happens when closed-source tools change their
 									pricing, shut down, or get acquired. Workflows break. Data
-									gets trapped. With Cap, that won't happen. You can self-host
+									gets trapped. With RocStarr VideoShare, that won't happen. You can self-host
 									the entire platform, fork the code, or simply trust that
 									thousands of developers are watching the codebase.
 								</p>
 							</div>
 							<a
-								href="https://github.com/CapSoftware/Cap"
+								href="https://github.com/CapSoftware/RocStarr VideoShare"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="inline-flex items-center gap-2 mt-6 text-[1.0625rem] font-medium text-gray-12 hover:text-blue-9 transition-colors duration-200"
@@ -133,7 +133,7 @@ export const AboutPage = () => {
 							<div className="space-y-5 text-[1.0625rem] leading-[1.8] text-gray-11">
 								<p>
 									Privacy isn't a checkbox on our features page. It's the
-									foundation of everything we build. Cap doesn't track you,
+									foundation of everything we build. RocStarr VideoShare doesn't track you,
 									doesn't sell your data, and doesn't require you to use our
 									servers.
 								</p>
@@ -155,7 +155,7 @@ export const AboutPage = () => {
 							</h2>
 							<div className="space-y-5 text-[1.0625rem] leading-[1.8] text-gray-11 mb-8">
 								<p>
-									Cap is built for developers, designers, product teams,
+									RocStarr VideoShare is built for developers, designers, product teams,
 									creators, and anyone who wants a recording tool that respects
 									them. Here's where we put our energy:
 								</p>
@@ -205,12 +205,12 @@ export const AboutPage = () => {
 						<section>
 							<div className="space-y-5 text-[1.0625rem] leading-[1.8] text-gray-11">
 								<p>
-									We're building Cap because we think the tools people use every
+									We're building RocStarr VideoShare because we think the tools people use every
 									day should be open, honest, and designed to last. Not built to
 									extract value, but to create it.
 								</p>
 								<p>
-									If that resonates with you, we'd love for you to try Cap,
+									If that resonates with you, we'd love for you to try RocStarr VideoShare,
 									contribute to the project, or follow along as we build in
 									public.
 								</p>
@@ -222,10 +222,10 @@ export const AboutPage = () => {
 									size="lg"
 									className="font-medium"
 								>
-									Download Cap
+									Download RocStarr VideoShare
 								</Button>
 								<Button
-									href="https://github.com/CapSoftware/Cap"
+									href="https://github.com/CapSoftware/RocStarr VideoShare"
 									variant="white"
 									size="lg"
 									className="font-medium"
@@ -234,7 +234,7 @@ export const AboutPage = () => {
 								</Button>
 							</div>
 							<p className="mt-12 text-[1.0625rem] text-gray-10">
-								The Cap Team
+								The RocStarr VideoShare Team
 							</p>
 						</section>
 					</div>

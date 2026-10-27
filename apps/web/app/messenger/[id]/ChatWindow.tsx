@@ -83,7 +83,7 @@ function MessageBubble({
 	}
 
 	const isAdmin = message.role === "admin";
-	const label = isAdmin ? "Cap Team" : agentName;
+	const label = isAdmin ? "RocStarr VideoShare Team" : agentName;
 
 	return (
 		<div className="flex items-end gap-2 pr-12">
@@ -276,10 +276,10 @@ export function ChatWindow({
 					<AgentAvatar name="Millie" size="md" />
 					<div className="flex-1">
 						<div className="text-sm font-semibold text-gray-12">
-							Cap Support
+							RocStarr VideoShare Support
 						</div>
 						<div className="text-[11px] text-gray-9">
-							{conversation.mode === "human" ? "Cap Team" : "Millie"}
+							{conversation.mode === "human" ? "RocStarr VideoShare Team" : "Millie"}
 						</div>
 					</div>
 					{conversation.mode === "human" && (
@@ -308,7 +308,7 @@ export function ChatWindow({
 							Chat with Millie
 						</p>
 						<p className="mt-1 max-w-[240px] text-center text-xs leading-relaxed text-gray-9">
-							Ask anything about Cap
+							Ask anything about RocStarr VideoShare
 						</p>
 						<div className="mt-5 flex flex-wrap justify-center gap-2 px-4">
 							{MESSENGER_SUGGESTED_PROMPTS.map((prompt) => (

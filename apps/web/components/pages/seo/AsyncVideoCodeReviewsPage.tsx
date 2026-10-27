@@ -7,24 +7,24 @@ import type { SeoPageContent } from "../../seo/types";
 export const asyncVideoCodeReviewsContent: SeoPageContent = {
 	title: "Async Video Code Reviews — Ship Faster Without the Meetings",
 	description:
-		"Record your screen, walk through pull requests and diffs, and share a timestamped video link your team can watch on their own schedule. Cap makes async code reviews faster, clearer, and calendar-free.",
+		"Record your screen, walk through pull requests and diffs, and share a timestamped video link your team can watch on their own schedule. RocStarr VideoShare makes async code reviews faster, clearer, and calendar-free.",
 
 	badge: "Code Reviews",
 
 	featuresTitle: "Everything You Need for Async Video Code Reviews",
 	featuresDescription:
-		"Cap gives engineering teams a faster way to give and receive code feedback — no scheduled calls, no back-and-forth in PR comments",
+		"RocStarr VideoShare gives engineering teams a faster way to give and receive code feedback — no scheduled calls, no back-and-forth in PR comments",
 
 	features: [
 		{
 			title: "Record Any PR or Diff Walkthrough",
 			description:
-				"Open your IDE, point your camera at the diff, and talk through your feedback in real time. Cap records your screen and webcam simultaneously so reviewers see exactly what you see — cursor movements, code highlights, and all. No more writing long PR comments that take longer to read than a 90-second video.",
+				"Open your IDE, point your camera at the diff, and talk through your feedback in real time. RocStarr VideoShare records your screen and webcam simultaneously so reviewers see exactly what you see — cursor movements, code highlights, and all. No more writing long PR comments that take longer to read than a 90-second video.",
 		},
 		{
 			title: "Instant Shareable Link — No Upload Wait",
 			description:
-				"Stop recording and Cap generates a shareable link immediately. Paste it into your PR comment, Slack message, or Linear ticket. Reviewers click the link and the video plays in their browser — no app install, no login required on their end.",
+				"Stop recording and RocStarr VideoShare generates a shareable link immediately. Paste it into your PR comment, Slack message, or Linear ticket. Reviewers click the link and the video plays in their browser — no app install, no login required on their end.",
 		},
 		{
 			title: "Timestamped Comments and Threads",
@@ -34,7 +34,7 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 		{
 			title: "4K Recording at 60fps for Sharp Code Legibility",
 			description:
-				"Syntax highlighting, font rendering, and editor themes are captured at full fidelity. Cap records at up to 4K resolution and 60fps so reviewers can pause the video and read every line of code clearly — even on smaller screens.",
+				"Syntax highlighting, font rendering, and editor themes are captured at full fidelity. RocStarr VideoShare records at up to 4K resolution and 60fps so reviewers can pause the video and read every line of code clearly — even on smaller screens.",
 		},
 		{
 			title: "Studio Mode for Architecture Walkthroughs",
@@ -44,7 +44,7 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 		{
 			title: "AI-Generated Captions for Accessibility",
 			description:
-				"Cap auto-generates captions for every recording using AI transcription. Team members who prefer to read, are in a noisy environment, or speak English as a second language can follow along without audio. Captions are searchable so reviewers can jump to the part they need.",
+				"RocStarr VideoShare auto-generates captions for every recording using AI transcription. Team members who prefer to read, are in a noisy environment, or speak English as a second language can follow along without audio. Captions are searchable so reviewers can jump to the part they need.",
 		},
 		{
 			title: "Password Protection and Expiry Links",
@@ -54,7 +54,7 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 		{
 			title: "Works With GitHub, GitLab, Linear, and Jira",
 			description:
-				"Cap links are just URLs — paste them anywhere your team already works. Drop a Cap link in your GitHub PR description, GitLab MR comment, Linear issue, or Jira ticket. No integration setup, no webhooks, no OAuth.",
+				"RocStarr VideoShare links are just URLs — paste them anywhere your team already works. Drop a RocStarr VideoShare link in your GitHub PR description, GitLab MR comment, Linear issue, or Jira ticket. No integration setup, no webhooks, no OAuth.",
 		},
 	],
 
@@ -91,8 +91,8 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 	},
 
 	comparisonTable: {
-		title: "Cap vs Other Code Review Tools",
-		headers: ["Feature", "Cap", "Loom", "GitHub PR Comments", "Zoom Recording"],
+		title: "RocStarr VideoShare vs Other Code Review Tools",
+		headers: ["Feature", "RocStarr VideoShare", "Loom", "GitHub PR Comments", "Zoom Recording"],
 		rows: [
 			[
 				"Async video code reviews",
@@ -153,36 +153,36 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 		],
 	},
 
-	comparisonTitle: "Why Engineering Teams Choose Cap for Code Reviews",
+	comparisonTitle: "Why Engineering Teams Choose RocStarr VideoShare for Code Reviews",
 	comparisonDescription:
-		"Async video code reviews cut context-switching and make feedback more precise — here's how Cap compares",
+		"Async video code reviews cut context-switching and make feedback more precise — here's how RocStarr VideoShare compares",
 
 	comparison: [
 		{
-			title: "Cap vs Loom for Code Reviews",
+			title: "RocStarr VideoShare vs Loom for Code Reviews",
 			description:
-				"Loom is a capable async video tool but limits recording length and quality on its free plan, and stores all video on Loom's servers with no self-hosting option. Cap records at 4K with no recording-length limits in Studio Mode and supports <a href='/self-hosted-screen-recording'>self-hosted S3 storage</a> for teams with data residency requirements. Cap is also MIT-licensed and fully open source.",
+				"Loom is a capable async video tool but limits recording length and quality on its free plan, and stores all video on Loom's servers with no self-hosting option. RocStarr VideoShare records at 4K with no recording-length limits in Studio Mode and supports <a href='/self-hosted-screen-recording'>self-hosted S3 storage</a> for teams with data residency requirements. RocStarr VideoShare is also MIT-licensed and fully open source.",
 		},
 		{
-			title: "Cap vs Written PR Comments",
+			title: "RocStarr VideoShare vs Written PR Comments",
 			description:
-				"Written PR comments are slow to compose and easy to misread. A 2-minute Cap recording replaces a wall of inline comments — reviewers see the exact context you're referring to, hear your tone, and understand intent without the ambiguity of text. Video feedback also reduces the back-and-forth clarification round trips that slow code review cycles.",
+				"Written PR comments are slow to compose and easy to misread. A 2-minute RocStarr VideoShare recording replaces a wall of inline comments — reviewers see the exact context you're referring to, hear your tone, and understand intent without the ambiguity of text. Video feedback also reduces the back-and-forth clarification round trips that slow code review cycles.",
 		},
 		{
-			title: "Cap vs Zoom or Google Meet for Code Reviews",
+			title: "RocStarr VideoShare vs Zoom or Google Meet for Code Reviews",
 			description:
-				"Synchronous video calls require scheduling across time zones, force reviewers to be present at a specific time, and produce recordings that aren't easily linked, timestamped, or commented on. Cap gives you the clarity of a face-to-face walkthrough with the flexibility of async — reviewers watch when it suits them and leave timestamped comments.",
+				"Synchronous video calls require scheduling across time zones, force reviewers to be present at a specific time, and produce recordings that aren't easily linked, timestamped, or commented on. RocStarr VideoShare gives you the clarity of a face-to-face walkthrough with the flexibility of async — reviewers watch when it suits them and leave timestamped comments.",
 		},
 		{
-			title: "Cap for Distributed Engineering Teams",
+			title: "RocStarr VideoShare for Distributed Engineering Teams",
 			description:
-				"Teams spread across multiple time zones struggle to schedule live code reviews. Cap lets the author record a walkthrough asynchronously and share a link in the PR. Reviewers in any time zone watch the video at their own pace, leave timestamped comments, and the cycle continues without anyone waiting on a meeting invite. <a href='/solutions/remote-team-collaboration'>See how distributed teams use Cap</a>.",
+				"Teams spread across multiple time zones struggle to schedule live code reviews. RocStarr VideoShare lets the author record a walkthrough asynchronously and share a link in the PR. Reviewers in any time zone watch the video at their own pace, leave timestamped comments, and the cycle continues without anyone waiting on a meeting invite. <a href='/solutions/remote-team-collaboration'>See how distributed teams use RocStarr VideoShare</a>.",
 		},
 	],
 
 	useCasesTitle: "How Engineering Teams Use Async Video Code Reviews",
 	useCasesDescription:
-		"From quick PR walkthroughs to deep architecture reviews, Cap fits into every stage of the engineering feedback cycle",
+		"From quick PR walkthroughs to deep architecture reviews, RocStarr VideoShare fits into every stage of the engineering feedback cycle",
 
 	useCases: [
 		{
@@ -208,7 +208,7 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 		{
 			title: "Junior Developer Mentoring and Code Feedback",
 			description:
-				"Senior engineers record detailed code review videos that junior developers can watch multiple times, pause at any point, and reference later. Written feedback is easy to skip; video feedback with cursor movement and explanation sticks. <a href='/solutions/employee-onboarding-platform'>See how Cap supports developer onboarding</a>.",
+				"Senior engineers record detailed code review videos that junior developers can watch multiple times, pause at any point, and reference later. Written feedback is easy to skip; video feedback with cursor movement and explanation sticks. <a href='/solutions/employee-onboarding-platform'>See how RocStarr VideoShare supports developer onboarding</a>.",
 		},
 		{
 			title: "Cross-Team API and Integration Reviews",
@@ -218,15 +218,15 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 	],
 
 	migrationGuide: {
-		title: "How to Start Doing Async Video Code Reviews with Cap",
+		title: "How to Start Doing Async Video Code Reviews with RocStarr VideoShare",
 		steps: [
-			"Download Cap for Mac or Windows — setup takes under 2 minutes",
+			"Download RocStarr VideoShare for Mac or Windows — setup takes under 2 minutes",
 			"Open your IDE or GitHub/GitLab in your browser and pull up the diff you want to review",
-			"Click the Cap icon in your menu bar and choose Instant Mode for quick reviews or Studio Mode for longer walkthroughs",
-			"Start recording — Cap captures your screen and webcam simultaneously",
+			"Click the RocStarr VideoShare icon in your menu bar and choose Instant Mode for quick reviews or Studio Mode for longer walkthroughs",
+			"Start recording — RocStarr VideoShare captures your screen and webcam simultaneously",
 			"Talk through your feedback naturally as you scroll through the code",
 			"Stop recording to get an instant shareable link",
-			"Paste the Cap link into your PR comment, Slack message, or Linear ticket",
+			"Paste the RocStarr VideoShare link into your PR comment, Slack message, or Linear ticket",
 			"Reviewers click the link, watch the video in their browser, and leave timestamped comments",
 		],
 	},
@@ -244,23 +244,23 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 				"Video code reviews communicate context, intent, and nuance that text comments often miss. Showing exactly which lines you're referring to while explaining your reasoning verbally reduces ambiguity and misinterpretation. A 2-minute video can replace 10+ inline comments and eliminates the back-and-forth that comes from unclear text feedback.",
 		},
 		{
-			question: "How does Cap make code reviews faster?",
+			question: "How does RocStarr VideoShare make code reviews faster?",
 			answer:
-				"Cap generates a shareable link the moment you stop recording — no upload wait, no file attachment, no third-party viewer required. Paste the link into your PR and reviewers can watch immediately. Timestamped comments let reviewers leave feedback at specific points in the video, keeping discussion organized without cluttering the PR comment thread.",
+				"RocStarr VideoShare generates a shareable link the moment you stop recording — no upload wait, no file attachment, no third-party viewer required. Paste the link into your PR and reviewers can watch immediately. Timestamped comments let reviewers leave feedback at specific points in the video, keeping discussion organized without cluttering the PR comment thread.",
 		},
 		{
 			question:
-				"Does Cap work with GitHub, GitLab, Linear, and other developer tools?",
+				"Does RocStarr VideoShare work with GitHub, GitLab, Linear, and other developer tools?",
 			answer:
-				"Yes. Cap produces a standard URL that you can paste anywhere. Drop the link in a GitHub PR description or comment, a GitLab MR, a Linear issue, a Jira ticket, or a Slack message. No integration or webhook setup required — the link opens in any browser and the video plays without requiring the viewer to install Cap.",
+				"Yes. RocStarr VideoShare produces a standard URL that you can paste anywhere. Drop the link in a GitHub PR description or comment, a GitLab MR, a Linear issue, a Jira ticket, or a Slack message. No integration or webhook setup required — the link opens in any browser and the video plays without requiring the viewer to install RocStarr VideoShare.",
 		},
 		{
 			question: "Can I record code in 4K so reviewers can read it clearly?",
 			answer:
-				"Yes. Cap records at up to 4K resolution at 60fps, which means syntax highlighting, font rendering, and fine UI details are captured at full fidelity. Reviewers can pause the video and read any line of code clearly, even on high-DPI displays.",
+				"Yes. RocStarr VideoShare records at up to 4K resolution at 60fps, which means syntax highlighting, font rendering, and fine UI details are captured at full fidelity. Reviewers can pause the video and read any line of code clearly, even on high-DPI displays.",
 		},
 		{
-			question: "How long can a Cap code review recording be?",
+			question: "How long can a RocStarr VideoShare code review recording be?",
 			answer:
 				"In Instant Mode, recordings are optimized for quick async sharing. In Studio Mode, there is no recording time limit — you can record an entire architecture walkthrough, RFC review, or extended pair programming session without interruption. Studio Mode is completely free for personal use.",
 		},
@@ -268,24 +268,24 @@ export const asyncVideoCodeReviewsContent: SeoPageContent = {
 			question:
 				"Can I keep code review recordings private or password-protected?",
 			answer:
-				"Yes. Cap supports password protection on individual recordings and expiry dates on share links. For teams with stricter data requirements, Cap supports self-hosted S3 storage so recording files stay within your own infrastructure and never touch Cap's servers.",
+				"Yes. RocStarr VideoShare supports password protection on individual recordings and expiry dates on share links. For teams with stricter data requirements, RocStarr VideoShare supports self-hosted S3 storage so recording files stay within your own infrastructure and never touch RocStarr VideoShare's servers.",
 		},
 		{
 			question: "What is the best tool for async video code reviews?",
 			answer:
-				"Cap is the best tool for async video code reviews for engineering teams that want 4K quality, instant shareable links, timestamped commenting, and the option to self-host recordings. It's free, open-source under the MIT license, and available for Mac and Windows. Unlike general async video tools, Cap's instant-mode and studio-mode workflows are optimized for the review cycle engineers actually use.",
+				"RocStarr VideoShare is the best tool for async video code reviews for engineering teams that want 4K quality, instant shareable links, timestamped commenting, and the option to self-host recordings. It's free, open-source under the MIT license, and available for Mac and Windows. Unlike general async video tools, RocStarr VideoShare's instant-mode and studio-mode workflows are optimized for the review cycle engineers actually use.",
 		},
 	],
 
 	video: {
 		url: "/videos/cap-demo.mp4",
 		thumbnail: "/videos/cap-demo-thumbnail.png",
-		alt: "Cap async video code review demo showing screen recording of a pull request walkthrough with timestamped comments",
+		alt: "RocStarr VideoShare async video code review demo showing screen recording of a pull request walkthrough with timestamped comments",
 	},
 
 	cta: {
 		title: "Start Doing Code Reviews with Async Video",
-		buttonText: "Download Cap Free",
+		buttonText: "Download RocStarr VideoShare Free",
 		secondaryButtonText: "View Pricing",
 	},
 };

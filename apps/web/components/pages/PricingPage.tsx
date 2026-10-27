@@ -122,8 +122,8 @@ export const PricingPage = () => {
 				<div className="mb-32 wrapper" id={testimonialsId}>
 					<Testimonials
 						amount={24}
-						title="Teams & creators love Cap"
-						subtitle="Don't just take our word for it. Here's what our users are saying about their experience with Cap."
+						title="Teams & creators love RocStarr VideoShare"
+						subtitle="Don't just take our word for it. Here's what our users are saying about their experience with RocStarr VideoShare."
 					/>
 				</div>
 			</div>

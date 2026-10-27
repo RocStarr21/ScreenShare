@@ -50,7 +50,7 @@ const VideoModal = ({ setVideoToggled }: Props) => {
 						}}
 						allow="autoplay; fullscreen; picture-in-picture"
 						allowFullScreen
-						title="Cap demo video"
+						title="RocStarr VideoShare demo video"
 					/>
 				</div>
 			</motion.div>

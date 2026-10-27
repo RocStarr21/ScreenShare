@@ -13,7 +13,7 @@ On 23rd September we had our first major outage. We sincerely apologize for the 
 ## Summary
 
 - A local Infrastructure as Code change in SST referenced our Vercel project as a new resource instead of retrieving the existing one.
-- During `sst deploy` the Vercel project that serves cap.so was removed, which took down marketing pages, the dashboard, video sharing pages, and APIs used by Cap Desktop.
+- During `sst deploy` the Vercel project that serves cap.so was removed, which took down marketing pages, the dashboard, video sharing pages, and APIs used by RocStarr VideoShare Desktop.
 - We rebuilt the project, restored environment variables, and reattached custom domains. Service was mostly back after 90 minutes.
 - Uploads from desktop stayed broken for another 30 minutes due to a www redirect that stripped `Authorization` headers. Removing that behavior brought us back to full health.
 
@@ -21,7 +21,7 @@ On 23rd September we had our first major outage. We sincerely apologize for the 
 
 - **Duration:** 2:30 pm to 4:30 pm AWST for full restoration, with partial restoration at 4:00 pm.
 - **Surface area:** cap.so marketing site, dashboard, video sharing, and desktop upload APIs.
-- **Customer effect:** broken links and failed API calls from Cap Desktop during the incident window.
+- **Customer effect:** broken links and failed API calls from RocStarr VideoShare Desktop during the incident window.
 
 ## Timeline
 
@@ -67,7 +67,7 @@ We immediately created a new Vercel project. Critical environment variables were
 
 ### Why uploads kept failing
 
-After most pages returned, uploads from Cap Desktop still failed. We had configured cap.so to www.cap.so as recommended by Vercel, but this had a side-effect of causing the Authorization header to be stripped from any requests to cap.so. The client sent the header, the redirect hop discarded it, and the target saw an unauthenticated request. We removed this redirect and video uploads began working again.
+After most pages returned, uploads from RocStarr VideoShare Desktop still failed. We had configured cap.so to www.cap.so as recommended by Vercel, but this had a side-effect of causing the Authorization header to be stripped from any requests to cap.so. The client sent the header, the redirect hop discarded it, and the target saw an unauthenticated request. We removed this redirect and video uploads began working again.
 
 ## What went wrong
 
@@ -80,7 +80,7 @@ After most pages returned, uploads from Cap Desktop still failed. We had configu
 - We had env vars backed up in two places. This reduced guesswork during restore.
 - Custom domains were reattached quickly.
 - We used a clear checklist during restore and avoided risky parallel changes.
-- Cap's local Studio Mode remained fully functional. Users could still record videos locally, export them, or save them for later to create shareable links once service was restored.
+- RocStarr VideoShare's local Studio Mode remained fully functional. Users could still record videos locally, export them, or save them for later to create shareable links once service was restored.
 
 ## Changes we have made
 

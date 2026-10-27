@@ -4,10 +4,10 @@ const script = String.raw`$ErrorActionPreference = "Stop"
 
 function Find-CapAppPath {
 	$candidates = @(
-		"$env:LOCALAPPDATA\Programs\Cap\Cap.exe",
-		"$env:LOCALAPPDATA\Cap\Cap.exe",
-		"$env:ProgramFiles\Cap\Cap.exe",
-		"${programFilesX86}\Cap\Cap.exe"
+		"$env:LOCALAPPDATA\Programs\RocStarr VideoShare\RocStarr VideoShare.exe",
+		"$env:LOCALAPPDATA\RocStarr VideoShare\RocStarr VideoShare.exe",
+		"$env:ProgramFiles\RocStarr VideoShare\RocStarr VideoShare.exe",
+		"${programFilesX86}\RocStarr VideoShare\RocStarr VideoShare.exe"
 	)
 
 	foreach ($candidate in $candidates) {
@@ -21,16 +21,16 @@ function Find-CapAppPath {
 
 function Install-CapDesktop {
 	$downloadUrl = "https://cap.so/download/windows"
-	$installerPath = Join-Path ([System.IO.Path]::GetTempPath()) ("Cap-" + [System.Guid]::NewGuid().ToString("N") + ".exe")
+	$installerPath = Join-Path ([System.IO.Path]::GetTempPath()) ("RocStarr VideoShare-" + [System.Guid]::NewGuid().ToString("N") + ".exe")
 
 	try {
-		Write-Host "Downloading Cap Desktop..."
+		Write-Host "Downloading RocStarr VideoShare Desktop..."
 		Invoke-WebRequest -UseBasicParsing -Uri $downloadUrl -OutFile $installerPath
-		Write-Host "Installing Cap Desktop..."
+		Write-Host "Installing RocStarr VideoShare Desktop..."
 		$process = Start-Process -FilePath $installerPath -ArgumentList "/S" -Wait -PassThru
 
 		if ($process.ExitCode -ne 0) {
-			Write-Error "Cap Desktop installer failed with exit code $($process.ExitCode)."
+			Write-Error "RocStarr VideoShare Desktop installer failed with exit code $($process.ExitCode)."
 			exit 1
 		}
 	} finally {
@@ -44,7 +44,7 @@ $forceDesktopInstall = $env:CAP_DESKTOP_FORCE_INSTALL
 if (-not $appPath) {
 	$appPath = Find-CapAppPath
 } elseif (-not (Test-Path $appPath)) {
-	Write-Error "Cap Desktop was not found at $appPath."
+	Write-Error "RocStarr VideoShare Desktop was not found at $appPath."
 	exit 1
 }
 
@@ -53,7 +53,7 @@ if (-not $appPath) {
 	$appPath = Find-CapAppPath
 
 	if (-not $appPath) {
-		Write-Error "Cap Desktop was installed, but Cap.exe was not found. Open Cap Desktop once, then run this script again."
+		Write-Error "RocStarr VideoShare Desktop was installed, but RocStarr VideoShare.exe was not found. Open RocStarr VideoShare Desktop once, then run this script again."
 		exit 1
 	}
 }
@@ -63,7 +63,7 @@ if ($forceDesktopInstall) {
 	$appPath = Find-CapAppPath
 
 	if (-not $appPath) {
-		Write-Error "Cap Desktop was installed, but Cap.exe was not found. Open Cap Desktop once, then run this script again."
+		Write-Error "RocStarr VideoShare Desktop was installed, but RocStarr VideoShare.exe was not found. Open RocStarr VideoShare Desktop once, then run this script again."
 		exit 1
 	}
 }
@@ -77,12 +77,12 @@ if ((Get-Item $appPath).PSIsContainer) {
 $cliTarget = Join-Path $appDir "cap-cli.exe"
 
 if (-not (Test-Path $cliTarget)) {
-	Write-Host "This Cap Desktop install does not include the CLI. Reinstalling Cap Desktop..."
+	Write-Host "This RocStarr VideoShare Desktop install does not include the CLI. Reinstalling RocStarr VideoShare Desktop..."
 	Install-CapDesktop
 	$appPath = Find-CapAppPath
 
 	if (-not $appPath) {
-		Write-Error "Cap Desktop was installed, but Cap.exe was not found. Open Cap Desktop once, then run this script again."
+		Write-Error "RocStarr VideoShare Desktop was installed, but RocStarr VideoShare.exe was not found. Open RocStarr VideoShare Desktop once, then run this script again."
 		exit 1
 	}
 
@@ -95,7 +95,7 @@ if (-not (Test-Path $cliTarget)) {
 	$cliTarget = Join-Path $appDir "cap-cli.exe"
 
 	if (-not (Test-Path $cliTarget)) {
-		Write-Error "This Cap Desktop install does not include the CLI."
+		Write-Error "This RocStarr VideoShare Desktop install does not include the CLI."
 		exit 1
 	}
 }
@@ -127,8 +127,8 @@ New-Item -ItemType Directory -Force -Path $installDir | Out-Null
 
 if (Test-Path $shimPath) {
 	$contents = Get-Content $shimPath -Raw
-	if (-not ($contents.Contains($cliTarget) -or $contents.Contains($shimTarget) -or $contents -match '\\Cap\\cap-cli\.exe')) {
-		Write-Error "$shimPath already exists and is not managed by Cap. Remove it or set CAP_CLI_INSTALL_DIR, then run this script again."
+	if (-not ($contents.Contains($cliTarget) -or $contents.Contains($shimTarget) -or $contents -match '\\RocStarr VideoShare\\cap-cli\.exe')) {
+		Write-Error "$shimPath already exists and is not managed by RocStarr VideoShare. Remove it or set CAP_CLI_INSTALL_DIR, then run this script again."
 		exit 1
 	}
 }

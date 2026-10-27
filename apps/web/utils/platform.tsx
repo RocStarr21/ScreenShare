@@ -22,7 +22,7 @@ export const getDownloadButtonText = (
 	isIntel: boolean = false,
 ): string => {
 	if (loading) {
-		return "Download Cap";
+		return "Download RocStarr VideoShare";
 	} else if (platform === "windows") {
 		return "Download for free";
 	} else if (platform === "macos") {
@@ -30,7 +30,7 @@ export const getDownloadButtonText = (
 	} else if (platform === "linux") {
 		return "Download for free";
 	} else {
-		return "Download Cap";
+		return "Download RocStarr VideoShare";
 	}
 };
 

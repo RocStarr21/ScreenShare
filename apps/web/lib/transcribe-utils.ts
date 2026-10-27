@@ -86,3 +86,48 @@ export function formatToWebVTT(result: DeepgramResult): string {
 
 	return output;
 }
+
+export interface TimedTranscriptWord {
+	text: string;
+	start: number;
+	end: number;
+}
+
+const CUE_BREAK_PUNCTUATION = /[,.!?;:]$/;
+const CUE_MAX_WORDS = 8;
+const CUE_PAUSE_SECONDS = 0.5;
+
+export function wordsToWebVTT(words: TimedTranscriptWord[]): string {
+	let output = "WEBVTT\n\n";
+	let captionIndex = 1;
+	let group: TimedTranscriptWord[] = [];
+
+	const flush = () => {
+		const first = group[0];
+		const last = group[group.length - 1];
+		if (!first || !last) return;
+		const start = formatTimestamp(first.start);
+		const end = formatTimestamp(Math.max(last.end, first.start));
+		output += `${captionIndex}\n${start} --> ${end}\n${group.map((w) => w.text).join(" ")}\n\n`;
+		captionIndex++;
+		group = [];
+	};
+
+	for (let i = 0; i < words.length; i++) {
+		const word = words[i];
+		const text = word?.text.trim();
+		if (!word || !text) continue;
+		group.push({ text, start: word.start, end: word.end });
+		const next = words[i + 1];
+		if (
+			CUE_BREAK_PUNCTUATION.test(text) ||
+			(next && next.start - word.end > CUE_PAUSE_SECONDS) ||
+			group.length === CUE_MAX_WORDS
+		) {
+			flush();
+		}
+	}
+	flush();
+
+	return output;
+}

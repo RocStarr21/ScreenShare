@@ -63,10 +63,13 @@ export async function requestEmailCode({
 		return normalizedEmail;
 	}
 
+	// NextAuth reports every failure inside sendVerificationRequest as
+	// "EmailSignin" — a rejected or misconfigured send just as much as a rate
+	// limit — and callers already enforce the resend cooldown before getting
+	// here. Presenting it as "please wait 30 seconds" sent people round in
+	// circles retrying a send that was never going to succeed.
 	toast.error(
-		response?.error === "EmailSignin"
-			? "Please wait 30 seconds before requesting a new code."
-			: "We could not send a code. Please try again.",
+		"We couldn't send a sign-in code. Wait a moment and try again — if it keeps failing, email delivery on this server needs attention.",
 	);
 
 	return null;

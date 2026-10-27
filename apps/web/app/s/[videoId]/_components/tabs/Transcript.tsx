@@ -23,10 +23,12 @@ import { useCurrentUser } from "@/app/Layout/AuthContext";
 import { normalizeTranscriptCueText } from "@/lib/transcript-vtt";
 import type { VideoData } from "../../types";
 import { type CaptionLanguage, useCaptionContext } from "../CaptionContext";
+import { DeviceTranscriptPanel } from "../DeviceTranscriptPanel";
 
 interface TranscriptProps {
 	data: VideoData;
 	onSeek?: (time: number) => void;
+	serverTranscriptionAvailable?: boolean;
 	user?: { id: string } | null;
 }
 
@@ -134,7 +136,11 @@ const parseVTT = (vttContent: string): TranscriptEntry[] => {
 	return sortedEntries;
 };
 
-export const Transcript: React.FC<TranscriptProps> = ({ data, onSeek }) => {
+export const Transcript: React.FC<TranscriptProps> = ({
+	data,
+	onSeek,
+	serverTranscriptionAvailable = true,
+}) => {
 	const user = useCurrentUser();
 	const queryClient = useQueryClient();
 	const captionContext = useCaptionContext();
@@ -404,6 +410,25 @@ export const Transcript: React.FC<TranscriptProps> = ({ data, onSeek }) => {
 	};
 
 	const canEdit = user?.id === data.owner.id && selectedLanguage === "original";
+
+	if (
+		!serverTranscriptionAvailable &&
+		!retryTriggered &&
+		(!data.transcriptionStatus || data.transcriptionStatus === "ERROR")
+	) {
+		return (
+			<DeviceTranscriptPanel
+				videoId={data.id}
+				canTranscribe={user?.id === data.owner.id}
+				onComplete={() => {
+					invalidateTranscript(data.id);
+					queryClient.invalidateQueries({
+						queryKey: ["videoStatus", data.id],
+					});
+				}}
+			/>
+		);
+	}
 
 	if (isTranscriptionProcessing && !hasTimedOut) {
 		return (

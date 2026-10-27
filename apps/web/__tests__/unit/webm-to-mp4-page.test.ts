@@ -26,7 +26,7 @@ describe("WebM to MP4 page metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -64,7 +64,7 @@ describe("WebM to MP4 FAQ schema validity", () => {
 		{
 			question: "How do I convert WebM to MP4 online?",
 			answer:
-				"Open Cap's WebM to MP4 converter, drag and drop your WebM file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
+				"Open RocStarr VideoShare's WebM to MP4 converter, drag and drop your WebM file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
 		},
 		{
 			question: "Is the WebM to MP4 converter free?",
@@ -89,7 +89,7 @@ describe("WebM to MP4 FAQ schema validity", () => {
 		{
 			question: "Does this work with screen recording WebM files?",
 			answer:
-				"Yes. Browser-based screen recorders, Chrome extensions, and tools using the MediaRecorder API typically produce VP8 or VP9 WebM files. Cap's converter handles both VP8 and VP9 WebM files and outputs a universally compatible H.264 MP4.",
+				"Yes. Browser-based screen recorders, Chrome extensions, and tools using the MediaRecorder API typically produce VP8 or VP9 WebM files. RocStarr VideoShare's converter handles both VP8 and VP9 WebM files and outputs a universally compatible H.264 MP4.",
 		},
 		{
 			question: "Does the converter work on mobile?",
@@ -137,7 +137,7 @@ describe("WebM to MP4 HowTo schema validity", () => {
 	const howToSteps = [
 		{
 			name: "Upload your WebM file",
-			text: "Open Cap's WebM to MP4 converter and drag and drop your WebM file into the upload area, or click to browse your files. Supports WebM files up to 500 MB, including VP8 and VP9 encoded files from screen recorders.",
+			text: "Open RocStarr VideoShare's WebM to MP4 converter and drag and drop your WebM file into the upload area, or click to browse your files. Supports WebM files up to 500 MB, including VP8 and VP9 encoded files from screen recorders.",
 		},
 		{
 			name: "Start the conversion",
@@ -153,7 +153,7 @@ describe("WebM to MP4 HowTo schema validity", () => {
 		const schema = createHowToSchema({
 			name: "How to Convert WebM to MP4 Online",
 			description:
-				"Convert WebM video files to MP4 format for free using Cap's browser-based converter. No upload required.",
+				"Convert WebM video files to MP4 format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 			steps: howToSteps,
 		});
 

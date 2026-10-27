@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Privacy Policy — Cap",
+	title: "Privacy Policy — RocStarr VideoShare",
 };
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
 				</p>
 				<div className="text-left legal-body fade-in-up animate-delay-2">
 					<p>
-						At Cap Software, Inc. ("Cap," "we," "us," or "our"), we are
+						At RocStarr VideoShare Software, Inc. ("RocStarr VideoShare," "we," "us," or "our"), we are
 						committed to protecting your privacy and ensuring the security of
 						your personal information. This Privacy Policy explains how we
 						collect, use, disclose, and safeguard your information when you use
@@ -138,7 +138,7 @@ export default function App() {
 						By using our Services, you acknowledge that you have read and
 						understood this Privacy Policy and agree to be bound by its terms.
 					</p>
-					<p>Privacy Policy for Cap Software, Inc.</p>
+					<p>Privacy Policy for RocStarr VideoShare Software, Inc.</p>
 					<p>Last Updated: 24th April 2024</p>
 				</div>
 			</div>

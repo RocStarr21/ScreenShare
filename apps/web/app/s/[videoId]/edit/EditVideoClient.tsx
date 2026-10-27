@@ -11,6 +11,7 @@ import {
 } from "@cap/ui";
 import type { Video } from "@cap/web-domain";
 import {
+	AudioLines,
 	ChevronLeft,
 	ChevronRight,
 	Minus,
@@ -34,10 +35,12 @@ import {
 	useState,
 } from "react";
 import { toast } from "sonner";
+import { getTranscript } from "@/actions/videos/get-transcript";
 import {
 	restoreVideoToOriginal,
 	saveVideoEdits,
 } from "@/actions/videos/save-edits";
+import { findSilentRanges, parseVttSpeechRanges } from "@/lib/silence-ranges";
 import {
 	clearTimelineDraft,
 	getTimelineDraftKey,
@@ -46,6 +49,7 @@ import {
 	writeTimelineDraft,
 } from "@/lib/video-edit-drafts";
 import {
+	addTimelineDeletedRanges,
 	areEditSpecsEquivalent,
 	areTimelineStatesEquivalent,
 	createTimelineHistory,
@@ -931,6 +935,42 @@ export function EditVideoClient({
 	}, []);
 
 	// Loom-style: cut the clip at the current playhead into two independent clips.
+	const [isRemovingSilences, setIsRemovingSilences] = useState(false);
+	const handleRemoveSilences = useCallback(async () => {
+		setIsRemovingSilences(true);
+		try {
+			const transcript = await getTranscript(video.id);
+			if (!transcript.success || !transcript.content) {
+				toast.error(
+					"Create a transcript first (Transcript tab on the video page), then try again.",
+				);
+				return;
+			}
+			const silences = findSilentRanges(
+				parseVttSpeechRanges(transcript.content),
+				stateRef.current.duration,
+			);
+			if (silences.length === 0) {
+				toast.message("No long silences found");
+				return;
+			}
+			const removed = silences.reduce(
+				(total, range) => total + (range.end - range.start),
+				0,
+			);
+			commitState(addTimelineDeletedRanges(stateRef.current, silences));
+			toast.success(
+				`Cut ${silences.length} silent ${silences.length === 1 ? "part" : "parts"} (${Math.round(removed)}s). Undo if you want any back.`,
+			);
+		} catch (error) {
+			toast.error(
+				error instanceof Error ? error.message : "Could not find silences",
+			);
+		} finally {
+			setIsRemovingSilences(false);
+		}
+	}, [commitState, video.id]);
+
 	const handleSplit = useCallback(() => {
 		commitState(splitTimelineAt(stateRef.current, playheadRef.current));
 	}, [commitState]);
@@ -1814,15 +1854,29 @@ export function EditVideoClient({
 				</div>
 
 				<div className="mt-4 flex items-center justify-between gap-3 px-1 sm:mt-5">
-					<button
-						type="button"
-						title="Split at the playhead (S)"
-						onClick={handleSplit}
-						className="inline-flex h-9 select-none items-center gap-1.5 rounded-full px-3.5 text-[13px] font-medium text-gray-12 transition hover:bg-gray-3 active:bg-gray-4"
-					>
-						<Scissors className="size-3.5" aria-hidden />
-						<span>Split</span>
-					</button>
+					<div className="flex items-center gap-1">
+						<button
+							type="button"
+							title="Split at the playhead (S)"
+							onClick={handleSplit}
+							className="inline-flex h-9 select-none items-center gap-1.5 rounded-full px-3.5 text-[13px] font-medium text-gray-12 transition hover:bg-gray-3 active:bg-gray-4"
+						>
+							<Scissors className="size-3.5" aria-hidden />
+							<span>Split</span>
+						</button>
+						<button
+							type="button"
+							title="Cut pauses longer than a second, using the transcript"
+							onClick={handleRemoveSilences}
+							disabled={isRemovingSilences}
+							className="inline-flex h-9 select-none items-center gap-1.5 rounded-full px-3.5 text-[13px] font-medium text-gray-12 transition hover:bg-gray-3 active:bg-gray-4 disabled:pointer-events-none disabled:opacity-40"
+						>
+							<AudioLines className="size-3.5" aria-hidden />
+							<span>
+								{isRemovingSilences ? "Finding silences…" : "Remove silences"}
+							</span>
+						</button>
+					</div>
 
 					<div className="flex items-center gap-3">
 						<div className="inline-flex items-baseline gap-1.5 font-mono text-[12px] tabular-nums">

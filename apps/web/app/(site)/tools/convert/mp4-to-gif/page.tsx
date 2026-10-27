@@ -5,21 +5,21 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "MP4 to GIF Converter — Free Online Animated GIF Maker | Cap",
+	title: "MP4 to GIF Converter — Free Online Animated GIF Maker | RocStarr VideoShare",
 	description:
 		"Convert MP4 videos to animated GIF images directly in your browser. Free, private, no upload needed. Adjust FPS, quality, and dimensions for the perfect GIF.",
 	openGraph: {
-		title: "MP4 to GIF Converter — Free Online Animated GIF Maker | Cap",
+		title: "MP4 to GIF Converter — Free Online Animated GIF Maker | RocStarr VideoShare",
 		description:
 			"Convert MP4 to animated GIF directly in your browser. No uploads, no installs, 100% private. Customize FPS, quality, and size.",
 		url: "https://cap.so/tools/convert/mp4-to-gif",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "https://cap.so/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap MP4 to GIF Converter — Free Online Animated GIF Maker",
+				alt: "RocStarr VideoShare MP4 to GIF Converter — Free Online Animated GIF Maker",
 			},
 		],
 		locale: "en_US",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "MP4 to GIF Converter — Free Online Animated GIF Maker | Cap",
+		title: "MP4 to GIF Converter — Free Online Animated GIF Maker | RocStarr VideoShare",
 		description:
 			"Convert MP4 to animated GIF directly in your browser. No uploads, no installs, 100% private.",
 		images: ["https://cap.so/og.png"],
@@ -41,7 +41,7 @@ const faqs = [
 	{
 		question: "How do I convert MP4 to GIF?",
 		answer:
-			"Open the Cap MP4 to GIF converter, drag and drop your MP4 file (or click to browse), adjust your settings if needed, then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, download the GIF instantly.",
+			"Open the RocStarr VideoShare MP4 to GIF converter, drag and drop your MP4 file (or click to browse), adjust your settings if needed, then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, download the GIF instantly.",
 	},
 	{
 		question: "Is the MP4 to GIF converter free?",
@@ -83,7 +83,7 @@ const faqs = [
 const howToSteps = [
 	{
 		name: "Upload your MP4 file",
-		text: "Open the Cap MP4 to GIF converter and drag and drop your MP4 file into the upload area, or click to browse your files.",
+		text: "Open the RocStarr VideoShare MP4 to GIF converter and drag and drop your MP4 file into the upload area, or click to browse your files.",
 	},
 	{
 		name: "Adjust conversion settings",
@@ -113,7 +113,7 @@ const howToStructuredData = {
 	"@type": "HowTo",
 	name: "How to Convert MP4 to GIF Online",
 	description:
-		"Convert MP4 video files to animated GIF format for free using Cap's browser-based converter. No upload required.",
+		"Convert MP4 video files to animated GIF format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 	step: howToSteps.map((step, index) => ({
 		"@type": "HowToStep",
 		position: index + 1,
@@ -178,10 +178,10 @@ export default function MP4ToGIFPage() {
 		],
 		faqs,
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: "RocStarr VideoShare is the open source Loom alternative",
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Export directly to MP4 — no conversion needed.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with RocStarr VideoShare. 100% open source and privacy focused. Export directly to MP4 — no conversion needed.",
+			buttonText: "Download RocStarr VideoShare Free",
 		},
 	};
 

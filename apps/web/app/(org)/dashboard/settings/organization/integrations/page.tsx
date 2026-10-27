@@ -5,7 +5,7 @@ import { getOrganizationStorageSettings } from "@/actions/organization/storage";
 import { OrganizationStorageIntegrations } from "./storage-integrations";
 
 export const metadata: Metadata = {
-	title: "Organization Integrations — Cap",
+	title: "Organization Integrations — RocStarr VideoShare",
 };
 
 export default async function OrganizationIntegrationsPage() {

@@ -123,11 +123,13 @@ const OtpForm = ({
 			});
 
 			if (result?.error) {
-				throw "Please wait 30 seconds before requesting a new code";
+				// Every sendVerificationRequest failure surfaces as "EmailSignin" and the
+				// cooldown is checked above, so this is a failed send, not a rate limit.
+				throw "We couldn't send a new code. If this keeps happening, email delivery on this server needs attention.";
 			}
 		},
 		onSuccess: () => {
-			toast.success("A new code has been sent to your email!");
+			toast.success("A new code has been requested.");
 			setCode(["", "", "", "", "", ""]);
 			inputRefs.current[0]?.focus();
 			setLastResendTime(Date.now());

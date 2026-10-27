@@ -7,27 +7,27 @@ import type { SeoPageContent } from "../../seo/types";
 export const bestScreenRecorderContent: SeoPageContent = {
 	title: "Best Screen Recorder in 2026 — Free, No Watermark, 4K Quality",
 	description:
-		"Cap is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. Completely free with no watermarks and no time limits in Studio Mode.",
+		"RocStarr VideoShare is the best screen recorder for Mac and Windows. Record in 4K with audio and webcam overlay, then share instantly. Completely free with no watermarks and no time limits in Studio Mode.",
 
-	featuresTitle: "Why Cap is the Best Screen Recorder Available",
+	featuresTitle: "Why RocStarr VideoShare is the Best Screen Recorder Available",
 	featuresDescription:
-		"Cap delivers everything you need from a top-tier screen recorder — quality, simplicity, and instant sharing — all in one free app",
+		"RocStarr VideoShare delivers everything you need from a top-tier screen recorder — quality, simplicity, and instant sharing — all in one free app",
 
 	features: [
 		{
 			title: "4K Recording at 60fps",
 			description:
-				"Capture crystal-clear recordings at up to 4K resolution and 60 frames per second. Every click, scroll, and animation is reproduced with absolute clarity — making Cap the best screen recorder for professional-grade output.",
+				"Capture crystal-clear recordings at up to 4K resolution and 60 frames per second. Every click, scroll, and animation is reproduced with absolute clarity — making RocStarr VideoShare the best screen recorder for professional-grade output.",
 		},
 		{
 			title: "Completely Free, Zero Watermarks",
 			description:
-				"Cap's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most screen recorders, Cap produces clean, professional recordings without branding overlays. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> today.",
+				"RocStarr VideoShare's Studio Mode is 100% free for personal use with no watermarks, no time limits, and no hidden fees. Unlike most screen recorders, RocStarr VideoShare produces clean, professional recordings without branding overlays. <a href='/free-screen-recorder'>Download RocStarr VideoShare's free screen recorder</a> today.",
 		},
 		{
 			title: "Instant Shareable Links",
 			description:
-				"Get a shareable link the moment you stop recording. Paste it in Slack, email, or any chat — no uploading, no waiting. Cap's instant sharing is what makes it the best screen recorder for async teams.",
+				"Get a shareable link the moment you stop recording. Paste it in Slack, email, or any chat — no uploading, no waiting. RocStarr VideoShare's instant sharing is what makes it the best screen recorder for async teams.",
 		},
 		{
 			title: "Screen and Webcam Simultaneously",
@@ -37,29 +37,29 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			title: "System Audio and Microphone",
 			description:
-				"Capture both system audio and your microphone in the same recording. Narrate live while system sounds play through, or record voiceover-only. Cap handles both tracks cleanly and in sync.",
+				"Capture both system audio and your microphone in the same recording. Narrate live while system sounds play through, or record voiceover-only. RocStarr VideoShare handles both tracks cleanly and in sync.",
 		},
 		{
 			title: "AI-Powered Captions",
 			description:
-				"Automatically generate accurate captions from your recording audio with zero manual effort. Make your content accessible, searchable, and more engaging — a key reason Cap stands out as the best screen recorder for content creators.",
+				"Automatically generate accurate captions from your recording audio with zero manual effort. Make your content accessible, searchable, and more engaging — a key reason RocStarr VideoShare stands out as the best screen recorder for content creators.",
 		},
 		{
 			title: "Thread Comments on Recordings",
 			description:
-				"Viewers can leave timestamped comments directly on your recordings. Collect structured feedback without email threads or follow-up calls — built-in collaboration sets Cap apart from basic screen recorders.",
+				"Viewers can leave timestamped comments directly on your recordings. Collect structured feedback without email threads or follow-up calls — built-in collaboration sets RocStarr VideoShare apart from basic screen recorders.",
 		},
 		{
 			title: "Open Source and Privacy-First",
 			description:
-				"Cap is fully open-source and supports custom S3-compatible storage so your recordings stay under your control. No proprietary lock-in, no third-party data access — the best screen recorder for privacy-conscious users and teams.",
+				"RocStarr VideoShare is fully open-source and supports custom S3-compatible storage so your recordings stay under your control. No proprietary lock-in, no third-party data access — the best screen recorder for privacy-conscious users and teams.",
 		},
 	],
 
 	recordingModes: {
 		title: "Two Recording Modes for Every Use Case",
 		description:
-			"Cap adapts to your workflow — whether you need a quick share or a polished, professional video",
+			"RocStarr VideoShare adapts to your workflow — whether you need a quick share or a polished, professional video",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -84,7 +84,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 
 	comparisonTable: {
 		title: "Best Screen Recorders Compared Side by Side",
-		headers: ["Feature", "Cap", "OBS Studio", "Loom", "Camtasia"],
+		headers: ["Feature", "RocStarr VideoShare", "OBS Studio", "Loom", "Camtasia"],
 		rows: [
 			[
 				"Price",
@@ -145,42 +145,42 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		],
 	},
 
-	comparisonTitle: "How Cap Compares to Other Screen Recorders",
+	comparisonTitle: "How RocStarr VideoShare Compares to Other Screen Recorders",
 	comparisonDescription:
-		"The best screen recorder depends on your workflow. Here's how Cap stacks up against the most popular alternatives",
+		"The best screen recorder depends on your workflow. Here's how RocStarr VideoShare stacks up against the most popular alternatives",
 
 	comparison: [
 		{
-			title: "Cap vs OBS Studio",
+			title: "RocStarr VideoShare vs OBS Studio",
 			description:
-				"OBS is powerful and free but requires significant configuration — it's built for streamers, not everyday screen recording. Cap is designed for simplicity and instant sharing, making it the best screen recorder for teams and professionals who don't want to spend time on setup. <a href='/screen-recording-software'>Compare screen recording software in detail</a>.",
+				"OBS is powerful and free but requires significant configuration — it's built for streamers, not everyday screen recording. RocStarr VideoShare is designed for simplicity and instant sharing, making it the best screen recorder for teams and professionals who don't want to spend time on setup. <a href='/screen-recording-software'>Compare screen recording software in detail</a>.",
 		},
 		{
-			title: "Cap vs Loom",
+			title: "RocStarr VideoShare vs Loom",
 			description:
-				"Cap starts at $9.99/month compared to Loom's $18/month, and Cap's Studio Mode is completely free with no watermarks. Cap is also open-source, supports custom S3 storage, and records at up to 4K — quality that Loom's free and paid plans don't match. <a href='/loom-alternative'>See the full Cap vs Loom comparison</a>.",
+				"RocStarr VideoShare starts at $9.99/month compared to Loom's $18/month, and RocStarr VideoShare's Studio Mode is completely free with no watermarks. RocStarr VideoShare is also open-source, supports custom S3 storage, and records at up to 4K — quality that Loom's free and paid plans don't match. <a href='/loom-alternative'>See the full RocStarr VideoShare vs Loom comparison</a>.",
 		},
 		{
-			title: "Cap vs Camtasia",
+			title: "RocStarr VideoShare vs Camtasia",
 			description:
-				"Camtasia costs $299.99 as a one-time purchase and is primarily an editing-focused tool. Cap is free and built for the full workflow from recording to sharing — making it the best screen recorder for users who want professional results without enterprise pricing.",
+				"Camtasia costs $299.99 as a one-time purchase and is primarily an editing-focused tool. RocStarr VideoShare is free and built for the full workflow from recording to sharing — making it the best screen recorder for users who want professional results without enterprise pricing.",
 		},
 		{
-			title: "Cap vs macOS / Windows Built-in Tools",
+			title: "RocStarr VideoShare vs macOS / Windows Built-in Tools",
 			description:
-				"Built-in screen recorders on <a href='/screen-recorder-mac'>macOS</a> and <a href='/screen-recorder-windows'>Windows</a> lack system audio capture, webcam overlay, instant sharing, and cloud storage. Cap adds all of these natively, making it the best screen recorder upgrade from default OS tools.",
+				"Built-in screen recorders on <a href='/screen-recorder-mac'>macOS</a> and <a href='/screen-recorder-windows'>Windows</a> lack system audio capture, webcam overlay, instant sharing, and cloud storage. RocStarr VideoShare adds all of these natively, making it the best screen recorder upgrade from default OS tools.",
 		},
 	],
 
-	useCasesTitle: "Who Uses Cap as Their Best Screen Recorder",
+	useCasesTitle: "Who Uses RocStarr VideoShare as Their Best Screen Recorder",
 	useCasesDescription:
-		"Cap is trusted across industries and roles — from solo creators to enterprise teams",
+		"RocStarr VideoShare is trusted across industries and roles — from solo creators to enterprise teams",
 
 	useCases: [
 		{
 			title: "Software Tutorials and Documentation",
 			description:
-				"Developers and product teams use Cap to create step-by-step screen recordings that walk users through features, APIs, and workflows. HD quality and instant links make sharing documentation effortless.",
+				"Developers and product teams use RocStarr VideoShare to create step-by-step screen recordings that walk users through features, APIs, and workflows. HD quality and instant links make sharing documentation effortless.",
 		},
 		{
 			title: "Bug Reports and QA",
@@ -195,7 +195,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			title: "Client Demos and Presentations",
 			description:
-				"Record polished product demos and walkthroughs for clients without scheduling a live call. Share instantly and collect structured feedback through Cap's built-in thread commenting.",
+				"Record polished product demos and walkthroughs for clients without scheduling a live call. Share instantly and collect structured feedback through RocStarr VideoShare's built-in thread commenting.",
 		},
 		{
 			title: "Employee Training and Onboarding",
@@ -205,7 +205,7 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			title: "Content Creation and Education",
 			description:
-				"Educators and course creators use Cap to produce high-quality lecture recordings and tutorials. <a href='/solutions/online-classroom-tools'>Learn how Cap supports online teaching</a>.",
+				"Educators and course creators use RocStarr VideoShare to produce high-quality lecture recordings and tutorials. <a href='/solutions/online-classroom-tools'>Learn how RocStarr VideoShare supports online teaching</a>.",
 		},
 	],
 
@@ -214,54 +214,54 @@ export const bestScreenRecorderContent: SeoPageContent = {
 		{
 			question: "What is the best screen recorder?",
 			answer:
-				"Cap is the best screen recorder for most users — it records in 4K at 60fps, works on Mac and Windows, has no watermarks, and generates shareable links instantly. It's free, open-source, and designed to be simple enough for first-time users while powerful enough for professionals. For streaming-focused use cases, OBS Studio is also excellent but requires more configuration.",
+				"RocStarr VideoShare is the best screen recorder for most users — it records in 4K at 60fps, works on Mac and Windows, has no watermarks, and generates shareable links instantly. It's free, open-source, and designed to be simple enough for first-time users while powerful enough for professionals. For streaming-focused use cases, OBS Studio is also excellent but requires more configuration.",
 		},
 		{
 			question: "What is the best free screen recorder?",
 			answer:
-				"Cap is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> to get started.",
+				"RocStarr VideoShare is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode supports recordings up to 5 minutes on the free plan with instant shareable links. <a href='/free-screen-recorder'>Download RocStarr VideoShare's free screen recorder</a> to get started.",
 		},
 		{
 			question: "What is the best screen recorder for Mac?",
 			answer:
-				"Cap is the best screen recorder for Mac. It is natively optimized for macOS, records at up to 4K with system audio and webcam overlay, and generates instant shareable links. Unlike macOS's built-in Cmd+Shift+5 recorder, Cap captures system audio, supports webcam overlay, and includes cloud sharing. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
+				"RocStarr VideoShare is the best screen recorder for Mac. It is natively optimized for macOS, records at up to 4K with system audio and webcam overlay, and generates instant shareable links. Unlike macOS's built-in Cmd+Shift+5 recorder, RocStarr VideoShare captures system audio, supports webcam overlay, and includes cloud sharing. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
 		},
 		{
 			question: "What is the best screen recorder for Windows?",
 			answer:
-				"Cap is the best screen recorder for Windows. It supports Windows 10 and 11, records your full screen, specific windows, or custom regions, and includes audio and webcam capture. Unlike Xbox Game Bar, Cap records any application and generates instant shareable links. <a href='/screen-recorder-windows'>Learn more about screen recording on Windows</a>.",
+				"RocStarr VideoShare is the best screen recorder for Windows. It supports Windows 10 and 11, records your full screen, specific windows, or custom regions, and includes audio and webcam capture. Unlike Xbox Game Bar, RocStarr VideoShare records any application and generates instant shareable links. <a href='/screen-recorder-windows'>Learn more about screen recording on Windows</a>.",
 		},
 		{
 			question: "Which screen recorder has no watermark?",
 			answer:
-				"Cap has no watermark on any recording, including the free plan. Studio Mode in Cap produces completely clean recordings with no branding overlays or watermarks. This makes Cap the best free screen recorder without watermarks available on Mac and Windows.",
+				"RocStarr VideoShare has no watermark on any recording, including the free plan. Studio Mode in RocStarr VideoShare produces completely clean recordings with no branding overlays or watermarks. This makes RocStarr VideoShare the best free screen recorder without watermarks available on Mac and Windows.",
 		},
 		{
 			question: "What is the best screen recorder for beginners?",
 			answer:
-				"Cap is designed to be the best screen recorder for beginners. Download the app, click record, and get a shareable link when you stop — no configuration, no settings maze. The interface is clean and straightforward, getting you from idea to shared recording in under 60 seconds.",
+				"RocStarr VideoShare is designed to be the best screen recorder for beginners. Download the app, click record, and get a shareable link when you stop — no configuration, no settings maze. The interface is clean and straightforward, getting you from idea to shared recording in under 60 seconds.",
 		},
 		{
-			question: "Does Cap screen recorder capture system audio?",
+			question: "Does RocStarr VideoShare screen recorder capture system audio?",
 			answer:
-				"Yes, Cap captures both system audio and microphone input simultaneously. You can narrate your recording while application sounds and system audio play through, or record microphone-only for clean voiceovers. Both audio tracks are captured and synchronized automatically.",
+				"Yes, RocStarr VideoShare captures both system audio and microphone input simultaneously. You can narrate your recording while application sounds and system audio play through, or record microphone-only for clean voiceovers. Both audio tracks are captured and synchronized automatically.",
 		},
 		{
 			question: "What is the best screen recorder for teams?",
 			answer:
-				"Cap is the best screen recorder for teams because of its built-in sharing and collaboration features. Instant shareable links work anywhere — Slack, email, Notion, Jira. Viewers can leave timestamped comments directly on recordings, making async feedback fast and structured. Cap Pro adds unlimited recording time, custom branding, and team management.",
+				"RocStarr VideoShare is the best screen recorder for teams because of its built-in sharing and collaboration features. Instant shareable links work anywhere — Slack, email, Notion, Jira. Viewers can leave timestamped comments directly on recordings, making async feedback fast and structured. RocStarr VideoShare Pro adds unlimited recording time, custom branding, and team management.",
 		},
 	],
 
 	video: {
 		url: "/videos/cap-demo.mp4",
 		thumbnail: "/videos/cap-demo-thumbnail.png",
-		alt: "Cap screen recorder demo showing 4K capture, webcam overlay, and instant sharing",
+		alt: "RocStarr VideoShare screen recorder demo showing 4K capture, webcam overlay, and instant sharing",
 	},
 
 	cta: {
 		title: "Start Using the Best Screen Recorder for Free",
-		buttonText: "Download Cap Free",
+		buttonText: "Download RocStarr VideoShare Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

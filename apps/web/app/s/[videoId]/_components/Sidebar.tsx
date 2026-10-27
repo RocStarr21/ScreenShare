@@ -8,11 +8,19 @@ import type { OrganizationSettings } from "@/app/(org)/dashboard/dashboard-data"
 import { useCurrentUser } from "@/app/Layout/AuthContext";
 import type { VideoData } from "../types";
 import { Activity } from "./tabs/Activity";
+import { Insights } from "./tabs/Insights";
 import { Settings } from "./tabs/Settings";
+import { ShareOptions } from "./tabs/ShareOptions";
 import { Summary } from "./tabs/Summary";
 import { Transcript } from "./tabs/Transcript";
 
-type TabType = "activity" | "transcript" | "summary" | "settings";
+type TabType =
+	| "activity"
+	| "transcript"
+	| "summary"
+	| "settings"
+	| "insights"
+	| "share";
 
 type CommentType = typeof commentsSchema.$inferSelect & {
 	authorName?: string | null;
@@ -44,6 +52,7 @@ interface SidebarProps {
 		aiGenerationStatus?: AiGenerationStatus | null;
 	} | null;
 	aiGenerationEnabled?: boolean;
+	transcriptionGenerationAvailable?: boolean;
 }
 
 const TabContent = motion.div;
@@ -84,6 +93,7 @@ export const Sidebar = forwardRef<{ scrollToBottom: () => void }, SidebarProps>(
 			onSeek,
 			aiData,
 			aiGenerationEnabled = false,
+			transcriptionGenerationAvailable = true,
 		},
 		ref,
 	) => {
@@ -130,7 +140,18 @@ export const Sidebar = forwardRef<{ scrollToBottom: () => void }, SidebarProps>(
 					videoSettings?.disableTranscript ??
 					data.orgSettings?.disableTranscript,
 			},
+			{
+				id: "insights",
+				label: "Insights",
+				disabled: !isOwnerOrMember,
+			},
+			{
+				id: "share",
+				label: "Share",
+				disabled: !isOwner,
+			},
 		];
+		const visibleTabCount = tabs.filter((tab) => !tab.disabled).length;
 
 		const paginate = (tabId: TabType) => {
 			const currentIndex = tabs.findIndex((tab) => tab.id === activeTab);
@@ -180,9 +201,19 @@ export const Sidebar = forwardRef<{ scrollToBottom: () => void }, SidebarProps>(
 						/>
 					);
 				case "transcript":
-					return <Transcript data={data} onSeek={onSeek} />;
+					return (
+						<Transcript
+							data={data}
+							onSeek={onSeek}
+							serverTranscriptionAvailable={transcriptionGenerationAvailable}
+						/>
+					);
 				case "settings":
 					return <Settings />;
+				case "insights":
+					return <Insights videoId={data.id} />;
+				case "share":
+					return <ShareOptions videoId={data.id} />;
 				default:
 					return null;
 			}
@@ -207,14 +238,16 @@ export const Sidebar = forwardRef<{ scrollToBottom: () => void }, SidebarProps>(
 									key={tab.id}
 									onClick={() => paginate(tab.id as TabType)}
 									className={classNames(
-										"flex-1 px-5 py-3 text-sm font-medium relative transition-colors duration-200",
+										"flex-1 py-3 text-sm font-medium relative transition-colors duration-200",
+										visibleTabCount > 3 ? "px-1.5" : "px-5",
 										"hover:bg-gray-1",
 										activeTab === tab.id ? "bg-gray-3" : "",
 									)}
 								>
 									<span
 										className={classNames(
-											"relative z-10 text-sm",
+											"relative z-10",
+											visibleTabCount > 3 ? "text-xs" : "text-sm",
 											activeTab === tab.id ? "text-gray-12" : "text-gray-9",
 										)}
 									>

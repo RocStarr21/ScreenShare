@@ -8,34 +8,34 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 	title:
 		"Developer Documentation Videos — Record API Demos and SDK Walkthroughs",
 	description:
-		"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, CLI tutorials, and changelog videos in seconds. Cap is free, open-source, and built for developers who ship documentation alongside code.",
+		"Create professional developer documentation videos with screen recording. Record API demos, SDK walkthroughs, CLI tutorials, and changelog videos in seconds. RocStarr VideoShare is free, open-source, and built for developers who ship documentation alongside code.",
 
 	badge: "Developer Docs",
 
 	featuresTitle: "Everything You Need to Create Developer Documentation Videos",
 	featuresDescription:
-		"Cap gives developers a fast, high-quality way to record and share technical documentation — without a video team or complex setup",
+		"RocStarr VideoShare gives developers a fast, high-quality way to record and share technical documentation — without a video team or complex setup",
 
 	features: [
 		{
 			title: "Record API Demos and SDK Walkthroughs",
 			description:
-				"Open your terminal, IDE, or browser and start recording. Cap captures your screen and webcam simultaneously so viewers see exactly what you see — code execution, API responses, SDK method calls, and all. Narrate as you go and produce a complete API demo in minutes, not days.",
+				"Open your terminal, IDE, or browser and start recording. RocStarr VideoShare captures your screen and webcam simultaneously so viewers see exactly what you see — code execution, API responses, SDK method calls, and all. Narrate as you go and produce a complete API demo in minutes, not days.",
 		},
 		{
 			title: "4K Resolution for Readable Code and Terminal Output",
 			description:
-				"Cap records at up to 4K resolution at 60fps, which means syntax highlighting, terminal text, JSON responses, and font rendering are captured at full fidelity. Developers watching your documentation can pause and read every line of code clearly — even dense stack traces and config files.",
+				"RocStarr VideoShare records at up to 4K resolution at 60fps, which means syntax highlighting, terminal text, JSON responses, and font rendering are captured at full fidelity. Developers watching your documentation can pause and read every line of code clearly — even dense stack traces and config files.",
 		},
 		{
 			title: "Instant Shareable Link — Embed in Docs Anywhere",
 			description:
-				"Stop recording and Cap generates a shareable link immediately. Paste it into your README, Notion doc, Confluence page, GitHub wiki, or Docusaurus site. Viewers watch the video in their browser without installing anything. Use the embed code to inline videos directly in documentation pages.",
+				"Stop recording and RocStarr VideoShare generates a shareable link immediately. Paste it into your README, Notion doc, Confluence page, GitHub wiki, or Docusaurus site. Viewers watch the video in their browser without installing anything. Use the embed code to inline videos directly in documentation pages.",
 		},
 		{
 			title: "AI-Generated Transcripts for Documentation Search",
 			description:
-				"Cap auto-generates accurate captions and transcripts for every recording using AI transcription. Developers who prefer to read, are in loud environments, or need searchable content get a full text version alongside the video. Transcripts make your documentation more accessible and easier to index.",
+				"RocStarr VideoShare auto-generates accurate captions and transcripts for every recording using AI transcription. Developers who prefer to read, are in loud environments, or need searchable content get a full text version alongside the video. Transcripts make your documentation more accessible and easier to index.",
 		},
 		{
 			title: "Studio Mode for Long-Form Technical Docs",
@@ -45,7 +45,7 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 		{
 			title: "Changelog and Release Walkthrough Videos",
 			description:
-				"Ship a short Cap recording with every major release. Walk through new API endpoints, breaking changes, and migration steps on screen. Developers reading your changelog get the context they need without parsing dense release notes. Link the video in your GitHub release, Slack announcement, or newsletter.",
+				"Ship a short RocStarr VideoShare recording with every major release. Walk through new API endpoints, breaking changes, and migration steps on screen. Developers reading your changelog get the context they need without parsing dense release notes. Link the video in your GitHub release, Slack announcement, or newsletter.",
 		},
 		{
 			title: "Password Protection for Private Internal Documentation",
@@ -55,7 +55,7 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 		{
 			title: "Self-Hosted Storage for Compliance and Data Residency",
 			description:
-				"Organizations with documentation stored on internal infrastructure can <a href='/self-hosted-screen-recording'>configure Cap to upload recordings directly to their own S3-compatible bucket</a>. AWS S3, Cloudflare R2, and MinIO are all supported. Video files never touch Cap's servers.",
+				"Organizations with documentation stored on internal infrastructure can <a href='/self-hosted-screen-recording'>configure RocStarr VideoShare to upload recordings directly to their own S3-compatible bucket</a>. AWS S3, Cloudflare R2, and MinIO are all supported. Video files never touch RocStarr VideoShare's servers.",
 		},
 	],
 
@@ -92,8 +92,8 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 	},
 
 	comparisonTable: {
-		title: "Cap vs Other Developer Documentation Video Tools",
-		headers: ["Feature", "Cap", "Loom", "Scribe", "Confluence Recorder"],
+		title: "RocStarr VideoShare vs Other Developer Documentation Video Tools",
+		headers: ["Feature", "RocStarr VideoShare", "Loom", "Scribe", "Confluence Recorder"],
 		rows: [
 			[
 				"Screen + webcam recording",
@@ -154,36 +154,36 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 		],
 	},
 
-	comparisonTitle: "Why Developers Choose Cap for Documentation Videos",
+	comparisonTitle: "Why Developers Choose RocStarr VideoShare for Documentation Videos",
 	comparisonDescription:
-		"Developer documentation videos reduce support tickets and accelerate onboarding — here's how Cap compares to other tools",
+		"Developer documentation videos reduce support tickets and accelerate onboarding — here's how RocStarr VideoShare compares to other tools",
 
 	comparison: [
 		{
-			title: "Cap vs Loom for Developer Documentation",
+			title: "RocStarr VideoShare vs Loom for Developer Documentation",
 			description:
-				"Loom is a capable async video tool but limits recording quality and length on its free plan, and has no self-hosting option for teams with data residency requirements. Cap records at 4K with no recording-length limits in Studio Mode and supports <a href='/self-hosted-screen-recording'>self-hosted S3 storage</a>. Cap is also fully open source under the MIT license — developers can audit the code, contribute features, and trust the tool they're using to document their own products.",
+				"Loom is a capable async video tool but limits recording quality and length on its free plan, and has no self-hosting option for teams with data residency requirements. RocStarr VideoShare records at 4K with no recording-length limits in Studio Mode and supports <a href='/self-hosted-screen-recording'>self-hosted S3 storage</a>. RocStarr VideoShare is also fully open source under the MIT license — developers can audit the code, contribute features, and trust the tool they're using to document their own products.",
 		},
 		{
-			title: "Cap vs Written Documentation",
+			title: "RocStarr VideoShare vs Written Documentation",
 			description:
-				"Written docs are valuable but struggle to convey dynamic processes — API authentication flows, SDK initialization sequences, CLI command outputs. A 3-minute Cap recording showing an end-to-end API integration replaces a multi-page written guide that developers have to parse and mentally simulate. Video documentation reduces support questions and accelerates integration time for your users.",
+				"Written docs are valuable but struggle to convey dynamic processes — API authentication flows, SDK initialization sequences, CLI command outputs. A 3-minute RocStarr VideoShare recording showing an end-to-end API integration replaces a multi-page written guide that developers have to parse and mentally simulate. Video documentation reduces support questions and accelerates integration time for your users.",
 		},
 		{
-			title: "Cap vs Scribe for Technical Walkthroughs",
+			title: "RocStarr VideoShare vs Scribe for Technical Walkthroughs",
 			description:
-				"Scribe generates step-by-step screenshot guides automatically, which works well for UI workflows but struggles with code, terminal output, and API responses. Cap records continuous video with audio narration, capturing the full context of a technical process — not just screenshots of discrete clicks. For developer documentation, video plus voice explains the why, not just the what.",
+				"Scribe generates step-by-step screenshot guides automatically, which works well for UI workflows but struggles with code, terminal output, and API responses. RocStarr VideoShare records continuous video with audio narration, capturing the full context of a technical process — not just screenshots of discrete clicks. For developer documentation, video plus voice explains the why, not just the what.",
 		},
 		{
-			title: "Cap for Open Source Project Documentation",
+			title: "RocStarr VideoShare for Open Source Project Documentation",
 			description:
-				"Open source maintainers can record quick demo videos and link them directly in their README, contributing guides, and release notes. Viewers see exactly how to install the library, run the examples, and use the main APIs — without a dedicated docs team. <a href='/open-source-screen-recorder'>Cap is itself open source</a>, so it's the natural choice for developers documenting open source projects.",
+				"Open source maintainers can record quick demo videos and link them directly in their README, contributing guides, and release notes. Viewers see exactly how to install the library, run the examples, and use the main APIs — without a dedicated docs team. <a href='/open-source-screen-recorder'>RocStarr VideoShare is itself open source</a>, so it's the natural choice for developers documenting open source projects.",
 		},
 	],
 
-	useCasesTitle: "How Developers Use Cap for Documentation Videos",
+	useCasesTitle: "How Developers Use RocStarr VideoShare for Documentation Videos",
 	useCasesDescription:
-		"From API demos to internal runbooks, Cap fits every technical documentation workflow",
+		"From API demos to internal runbooks, RocStarr VideoShare fits every technical documentation workflow",
 
 	useCases: [
 		{
@@ -199,7 +199,7 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 		{
 			title: "Changelog and Migration Guides",
 			description:
-				"For every major release, record a short Cap video showing what changed. Walk through new features, demonstrate API changes, and show exactly what developers need to update in their integration. Link the video in your GitHub release notes and developer newsletter so your users understand changes without reading a wall of text.",
+				"For every major release, record a short RocStarr VideoShare video showing what changed. Walk through new features, demonstrate API changes, and show exactly what developers need to update in their integration. Link the video in your GitHub release notes and developer newsletter so your users understand changes without reading a wall of text.",
 		},
 		{
 			title: "Internal Technical Runbooks",
@@ -209,25 +209,25 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 		{
 			title: "Open Source Project README and Contributing Guides",
 			description:
-				"Add a Cap demo video to your project README showing the library in action. Record a contributing guide showing how to set up the development environment, run the test suite, and submit a pull request. Lower the barrier to first contribution and accelerate new contributor onboarding without writing additional documentation.",
+				"Add a RocStarr VideoShare demo video to your project README showing the library in action. Record a contributing guide showing how to set up the development environment, run the test suite, and submit a pull request. Lower the barrier to first contribution and accelerate new contributor onboarding without writing additional documentation.",
 		},
 		{
 			title: "Developer Onboarding and Internal Tooling Docs",
 			description:
-				"Record walkthroughs of internal tools, deployment systems, and development workflows for new engineers joining the team. A library of video recordings replaces the traditional onboarding buddy pairing for standard procedures. New hires can watch, pause, and rewatch at their own pace. <a href='/solutions/employee-onboarding-platform'>See how Cap supports developer onboarding</a>.",
+				"Record walkthroughs of internal tools, deployment systems, and development workflows for new engineers joining the team. A library of video recordings replaces the traditional onboarding buddy pairing for standard procedures. New hires can watch, pause, and rewatch at their own pace. <a href='/solutions/employee-onboarding-platform'>See how RocStarr VideoShare supports developer onboarding</a>.",
 		},
 	],
 
 	migrationGuide: {
-		title: "How to Start Creating Developer Documentation Videos with Cap",
+		title: "How to Start Creating Developer Documentation Videos with RocStarr VideoShare",
 		steps: [
-			"Download Cap for Mac or Windows — setup takes under 2 minutes",
+			"Download RocStarr VideoShare for Mac or Windows — setup takes under 2 minutes",
 			"Open your IDE, terminal, browser, or API client with the flow you want to document",
-			"Click the Cap icon in your menu bar and choose Instant Mode for quick demos or Studio Mode for comprehensive tutorials",
-			"Start recording — Cap captures your screen and webcam simultaneously in up to 4K",
+			"Click the RocStarr VideoShare icon in your menu bar and choose Instant Mode for quick demos or Studio Mode for comprehensive tutorials",
+			"Start recording — RocStarr VideoShare captures your screen and webcam simultaneously in up to 4K",
 			"Narrate the documentation as you demonstrate — explain what you're doing and why",
 			"Stop recording to get an instant shareable link",
-			"Paste the Cap link into your README, docs site, Notion, Confluence, or GitHub wiki",
+			"Paste the RocStarr VideoShare link into your README, docs site, Notion, Confluence, or GitHub wiki",
 			"Optionally embed the video directly in your documentation page using the embed code",
 		],
 	},
@@ -240,51 +240,51 @@ export const developerDocumentationVideosContent: SeoPageContent = {
 				"A developer documentation video is a screen recording that demonstrates how to use an API, SDK, CLI tool, or technical workflow. Instead of relying solely on written guides, developer documentation videos show code execution, API responses, and terminal output in real time with narration — making it faster for developers to understand and integrate technical products.",
 		},
 		{
-			question: "How do I embed a Cap video in my documentation?",
+			question: "How do I embed a RocStarr VideoShare video in my documentation?",
 			answer:
-				"Cap generates a shareable link the moment you stop recording. You can paste this URL directly into Notion, Confluence, Docusaurus, GitBook, or any documentation platform that supports link unfurling. For direct embedding, use the embed code provided on the Cap sharing page — it works in any site that supports iframes, including GitHub wikis, custom docs sites, and developer portals.",
+				"RocStarr VideoShare generates a shareable link the moment you stop recording. You can paste this URL directly into Notion, Confluence, Docusaurus, GitBook, or any documentation platform that supports link unfurling. For direct embedding, use the embed code provided on the RocStarr VideoShare sharing page — it works in any site that supports iframes, including GitHub wikis, custom docs sites, and developer portals.",
 		},
 		{
 			question: "Can I record my terminal and IDE output in 4K?",
 			answer:
-				"Yes. Cap records at up to 4K resolution at 60fps, capturing terminal text, code editors, browser DevTools, and API client responses at full fidelity. Developers watching your documentation can pause the video and read every line of output, including stack traces, JSON responses, and syntax-highlighted code — even on high-DPI displays.",
+				"Yes. RocStarr VideoShare records at up to 4K resolution at 60fps, capturing terminal text, code editors, browser DevTools, and API client responses at full fidelity. Developers watching your documentation can pause the video and read every line of output, including stack traces, JSON responses, and syntax-highlighted code — even on high-DPI displays.",
 		},
 		{
-			question: "Does Cap auto-generate transcripts for documentation?",
+			question: "Does RocStarr VideoShare auto-generate transcripts for documentation?",
 			answer:
-				"Yes. Cap auto-generates captions and transcripts for every recording using AI transcription. The transcript appears alongside the video on the Cap sharing page, making documentation more accessible to developers who prefer to read, are in noisy environments, or need searchable text content. Transcripts can also be copied for use in written documentation alongside the video.",
+				"Yes. RocStarr VideoShare auto-generates captions and transcripts for every recording using AI transcription. The transcript appears alongside the video on the RocStarr VideoShare sharing page, making documentation more accessible to developers who prefer to read, are in noisy environments, or need searchable text content. Transcripts can also be copied for use in written documentation alongside the video.",
 		},
 		{
 			question: "How do I share a documentation video with my team or users?",
 			answer:
-				"Cap generates a shareable link immediately when you stop recording — no upload wait, no file attachment. Paste the link into your GitHub repository, Slack channel, documentation site, or email. Viewers click the link and the video plays in their browser without any account or app install required. For embedding, use the provided embed code to inline the video directly in your docs page.",
+				"RocStarr VideoShare generates a shareable link immediately when you stop recording — no upload wait, no file attachment. Paste the link into your GitHub repository, Slack channel, documentation site, or email. Viewers click the link and the video plays in their browser without any account or app install required. For embedding, use the provided embed code to inline the video directly in your docs page.",
 		},
 		{
 			question: "Can I record videos for private internal documentation?",
 			answer:
-				"Yes. Cap supports password protection on individual recordings and expiry dates on share links. For teams with stricter requirements, Cap supports self-hosted S3 storage — recordings upload directly to your own infrastructure (AWS S3, Cloudflare R2, MinIO) and never touch Cap's servers. This makes Cap suitable for internal runbooks, pre-release API docs, and proprietary SDK documentation.",
+				"Yes. RocStarr VideoShare supports password protection on individual recordings and expiry dates on share links. For teams with stricter requirements, RocStarr VideoShare supports self-hosted S3 storage — recordings upload directly to your own infrastructure (AWS S3, Cloudflare R2, MinIO) and never touch RocStarr VideoShare's servers. This makes RocStarr VideoShare suitable for internal runbooks, pre-release API docs, and proprietary SDK documentation.",
 		},
 		{
 			question: "What is the best screen recorder for developer documentation?",
 			answer:
-				"Cap is the best screen recorder for developer documentation because it combines 4K recording quality, instant shareable links, AI-generated transcripts, and self-hosted storage in a single free, open-source tool. Unlike general-purpose video tools, Cap is optimized for the async sharing workflows developers actually use — paste a link in a README, embed in a docs site, or share in a PR comment. It's free, MIT-licensed, and available for Mac and Windows.",
+				"RocStarr VideoShare is the best screen recorder for developer documentation because it combines 4K recording quality, instant shareable links, AI-generated transcripts, and self-hosted storage in a single free, open-source tool. Unlike general-purpose video tools, RocStarr VideoShare is optimized for the async sharing workflows developers actually use — paste a link in a README, embed in a docs site, or share in a PR comment. It's free, MIT-licensed, and available for Mac and Windows.",
 		},
 		{
-			question: "Does Cap work for recording API demos and SDK walkthroughs?",
+			question: "Does RocStarr VideoShare work for recording API demos and SDK walkthroughs?",
 			answer:
-				"Yes. Cap is designed exactly for this use case. Record your terminal, IDE, browser, API client (Postman, Insomnia, curl), or any combination of windows. The screen capture renders at 4K resolution so all text and code is readable. Narrate as you demonstrate, stop recording when you're done, and share the link immediately. The entire workflow — from starting the recording to sharing the link — takes under 5 minutes.",
+				"Yes. RocStarr VideoShare is designed exactly for this use case. Record your terminal, IDE, browser, API client (Postman, Insomnia, curl), or any combination of windows. The screen capture renders at 4K resolution so all text and code is readable. Narrate as you demonstrate, stop recording when you're done, and share the link immediately. The entire workflow — from starting the recording to sharing the link — takes under 5 minutes.",
 		},
 	],
 
 	video: {
 		url: "/videos/cap-demo.mp4",
 		thumbnail: "/videos/cap-demo-thumbnail.png",
-		alt: "Cap developer documentation video demo showing screen recording of an API walkthrough with narration and instant share link",
+		alt: "RocStarr VideoShare developer documentation video demo showing screen recording of an API walkthrough with narration and instant share link",
 	},
 
 	cta: {
 		title: "Start Recording Developer Documentation Videos",
-		buttonText: "Download Cap Free",
+		buttonText: "Download RocStarr VideoShare Free",
 		secondaryButtonText: "View Pricing",
 	},
 };

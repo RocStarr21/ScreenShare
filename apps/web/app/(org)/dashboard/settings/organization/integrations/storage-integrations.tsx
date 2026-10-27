@@ -45,7 +45,7 @@ const s3ProviderOptions = [
 ];
 
 const proRequiredMessage =
-	"Cap Pro is required to manage organization integrations";
+	"RocStarr VideoShare Pro is required to manage organization integrations";
 
 const getOrganizationId = (settings: OrganizationStorageSettings) =>
 	settings.organization.id as Organisation.OrganisationId;
@@ -746,7 +746,7 @@ export function OrganizationStorageIntegrations({
 						) : (
 							<div className="flex items-center justify-between gap-3">
 								<p className="text-[12px] text-gray-10">
-									Link your Google account to store uploads in a "Cap" folder in
+									Link your Google account to store uploads in a "RocStarr VideoShare" folder in
 									your Drive. You can change the location after connecting.
 								</p>
 								<Button

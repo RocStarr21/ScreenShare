@@ -225,6 +225,13 @@
 			"when": 1781271269353,
 			"tag": "0031_add_auth_api_keys_user_created_index",
 			"breakpoints": true
+		},
+		{
+			"idx": 32,
+			"version": "5",
+			"when": 1792551782914,
+			"tag": "0032_add_video_views_and_share_options",
+			"breakpoints": true
 		}
 	]
 }

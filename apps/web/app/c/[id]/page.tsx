@@ -43,10 +43,10 @@ export async function generateMetadata(
 	const description =
 		collection.publicPage.subtitle.trim() ||
 		collection.description?.trim() ||
-		`View public videos in ${title} on Cap.`;
+		`View public videos in ${title} on RocStarr VideoShare.`;
 
 	return {
-		title: `${title} | Cap Collection`,
+		title: `${title} | RocStarr VideoShare Collection`,
 		description,
 		robots: "noindex, nofollow",
 	};
@@ -170,7 +170,7 @@ export default async function PublicCollectionPage(
 					<div className="flex justify-between items-center px-4 mx-auto max-w-7xl h-16 sm:px-6 lg:px-8">
 						{branding ? (
 							branding.type === "cap" ? (
-								<Link href="/?ref=collection" aria-label="Cap home">
+								<Link href="/?ref=collection" aria-label="RocStarr VideoShare home">
 									<BrandingMark branding={branding} />
 								</Link>
 							) : (

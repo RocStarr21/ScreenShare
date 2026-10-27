@@ -67,8 +67,11 @@ import {
 	areEditSpecsEquivalent,
 	createIdentityEditSpec,
 } from "@/lib/video-edits";
+import { getVideoShareOptions } from "@/lib/video-share-options";
+import { getViewerIdentity } from "@/lib/viewer-identity-cookie";
 import { optionFromTOrFirst } from "@/utils/effect";
 import { isAiGenerationEnabled } from "@/utils/flags";
+import { EmailGateOverlay } from "./_components/EmailGateOverlay";
 import { PasswordOverlay } from "./_components/PasswordOverlay";
 import { PendingRecordingShare } from "./_components/PendingRecordingShare";
 import { ShareHeader } from "./_components/ShareHeader";
@@ -232,7 +235,7 @@ export async function generateMetadata(
 				onNone: () =>
 					awaitRecording
 						? {
-								title: "Cap: Preparing Video",
+								title: "RocStarr VideoShare: Preparing Video",
 								description: "This recording is being made available.",
 								robots: "noindex, nofollow",
 							}
@@ -252,8 +255,8 @@ export async function generateMetadata(
 					).toString();
 
 					return {
-						title: `${video.name} | Cap Recording`,
-						description: "Watch this video on Cap",
+						title: `${video.name} | RocStarr VideoShare Recording`,
+						description: "Watch this video on RocStarr VideoShare",
 						openGraph: {
 							images: [
 								{
@@ -279,8 +282,8 @@ export async function generateMetadata(
 						},
 						twitter: {
 							card: "player",
-							title: `${video.name} | Cap Recording`,
-							description: "Watch this video on Cap",
+							title: `${video.name} | RocStarr VideoShare Recording`,
+							description: "Watch this video on RocStarr VideoShare",
 							images: [
 								{
 									url: previewImageUrl,
@@ -314,7 +317,7 @@ export async function generateMetadata(
 		Effect.catchTags({
 			PolicyDenied: () =>
 				Effect.succeed({
-					title: "Cap: This video is restricted",
+					title: "RocStarr VideoShare: This video is restricted",
 					description: "This video has restricted access.",
 					openGraph: {
 						images: [
@@ -343,7 +346,7 @@ export async function generateMetadata(
 				}),
 			VerifyVideoPasswordError: () =>
 				Effect.succeed({
-					title: "Cap: Password Protected Video",
+					title: "RocStarr VideoShare: Password Protected Video",
 					description: "This video is password protected.",
 					openGraph: {
 						images: [
@@ -359,7 +362,7 @@ export async function generateMetadata(
 					},
 					twitter: {
 						card: "summary_large_image",
-						title: "Cap: Password Protected Video",
+						title: "RocStarr VideoShare: Password Protected Video",
 						description: "This video is password protected.",
 						images: [
 							new URL(
@@ -506,6 +509,17 @@ async function AuthorizedContent({
 				error,
 			);
 		}
+	}
+
+	const shareOptions = await getVideoShareOptions(videoId);
+	if (shareOptions.emailGate && !user && !(await getViewerIdentity())) {
+		return (
+			<EmailGateOverlay
+				videoId={videoId}
+				videoName={video.name}
+				ownerName={video.owner.name}
+			/>
+		);
 	}
 
 	const hasActiveUpload =
@@ -843,7 +857,7 @@ async function AuthorizedContent({
 		video.orgSettings?.defaultPlaybackSpeed,
 	);
 
-	const canDownloadVideo = userId
+	const canDownloadAsMember = userId
 		? await canUserDownloadVideo({
 				userId,
 				ownerId: video.owner.id,
@@ -851,9 +865,10 @@ async function AuthorizedContent({
 				orgId: video.orgId,
 			})
 		: false;
+	const canDownloadVideo = canDownloadAsMember || shareOptions.allowDownload;
 
 	let videoHasEdits = false;
-	if (canDownloadVideo) {
+	if (canDownloadAsMember) {
 		const [videoEditRow] = await db()
 			.select({ editSpec: videoEdits.editSpec })
 			.from(videoEdits)
@@ -905,6 +920,14 @@ async function AuthorizedContent({
 				initialAiData={initialAiData}
 				aiGenerationAvailable={aiGenerationEnabled && aiProviderAvailable}
 				transcriptionGenerationAvailable={transcriptionGenerationAvailable}
+				callToAction={
+					shareOptions.ctaUrl
+						? {
+								text: shareOptions.ctaText ?? "Learn more",
+								url: shareOptions.ctaUrl,
+							}
+						: null
+				}
 			/>
 		</div>
 	);

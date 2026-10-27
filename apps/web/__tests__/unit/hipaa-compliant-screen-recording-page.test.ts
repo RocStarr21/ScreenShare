@@ -33,7 +33,7 @@ describe("HipaaCompliantScreenRecordingPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -94,39 +94,39 @@ describe("HipaaCompliantScreenRecordingPage component content", () => {
 describe("HipaaCompliantScreenRecordingPage FAQ schema", () => {
 	const faqs = [
 		{
-			question: "Can Cap be used for HIPAA-compliant screen recording?",
+			question: "Can RocStarr VideoShare be used for HIPAA-compliant screen recording?",
 			answer:
-				"Cap supports HIPAA-compliant workflows when configured with self-hosted storage.",
+				"RocStarr VideoShare supports HIPAA-compliant workflows when configured with self-hosted storage.",
 		},
 		{
-			question: "Does Cap store recordings on its own servers?",
+			question: "Does RocStarr VideoShare store recordings on its own servers?",
 			answer:
-				"By default, Cap uploads recordings to Cap's cloud storage. However, Cap fully supports custom S3-compatible storage.",
+				"By default, RocStarr VideoShare uploads recordings to RocStarr VideoShare's cloud storage. However, RocStarr VideoShare fully supports custom S3-compatible storage.",
 		},
 		{
 			question:
-				"Is Cap open source and auditable for HIPAA vendor assessments?",
-			answer: "Yes. Cap is MIT-licensed and fully open source on GitHub.",
+				"Is RocStarr VideoShare open source and auditable for HIPAA vendor assessments?",
+			answer: "Yes. RocStarr VideoShare is MIT-licensed and fully open source on GitHub.",
 		},
 		{
-			question: "Can I disable AI transcription in Cap for HIPAA compliance?",
+			question: "Can I disable AI transcription in RocStarr VideoShare for HIPAA compliance?",
 			answer:
-				"Yes. Cap's AI auto-captions are optional and can be disabled entirely in settings.",
+				"Yes. RocStarr VideoShare's AI auto-captions are optional and can be disabled entirely in settings.",
 		},
 		{
-			question: "Does Cap support AWS S3 for HIPAA-eligible storage?",
+			question: "Does RocStarr VideoShare support AWS S3 for HIPAA-eligible storage?",
 			answer:
-				"Yes. Cap supports AWS S3 as a storage backend. AWS S3 is HIPAA-eligible when covered by an AWS Business Associate Agreement (BAA).",
+				"Yes. RocStarr VideoShare supports AWS S3 as a storage backend. AWS S3 is HIPAA-eligible when covered by an AWS Business Associate Agreement (BAA).",
 		},
 		{
-			question: "Can the entire Cap platform be self-hosted?",
+			question: "Can the entire RocStarr VideoShare platform be self-hosted?",
 			answer:
-				"Yes. The complete Cap platform can be self-hosted on your own infrastructure.",
+				"Yes. The complete RocStarr VideoShare platform can be self-hosted on your own infrastructure.",
 		},
 		{
 			question:
-				"How do I restrict access to HIPAA screen recordings shared via Cap?",
-			answer: "Cap supports password-protected sharing links.",
+				"How do I restrict access to HIPAA screen recordings shared via RocStarr VideoShare?",
+			answer: "RocStarr VideoShare supports password-protected sharing links.",
 		},
 		{
 			question: "What screen recording tools are HIPAA-compliant?",
@@ -148,7 +148,7 @@ describe("HipaaCompliantScreenRecordingPage FAQ schema", () => {
 
 		expect(schema.mainEntity[0]).toEqual({
 			"@type": "Question",
-			name: "Can Cap be used for HIPAA-compliant screen recording?",
+			name: "Can RocStarr VideoShare be used for HIPAA-compliant screen recording?",
 			acceptedAnswer: {
 				"@type": "Answer",
 				text: faqs[0]?.answer,

@@ -248,7 +248,7 @@ function publicPageIconKeys(
 }
 
 /**
- * Custom presentation (branding, CTA, hidden Cap logo) is a Pro entitlement
+ * Custom presentation (branding, CTA, hidden RocStarr VideoShare logo) is a Pro entitlement
  * gated on the org OWNER's plan at render time, mirroring `/s/`
  * (`getSharePageBranding`): when the owner downgrades, already-public
  * collections stay reachable but fall back to the default presentation.

@@ -23,7 +23,7 @@ export async function generateMetadata(
 
 	if (!CONVERSION_CONFIGS[conversionPath]) {
 		return {
-			title: "Conversion Not Supported | Cap",
+			title: "Conversion Not Supported | RocStarr VideoShare",
 			description:
 				"This conversion type is not supported by our free online tools.",
 		};
@@ -35,7 +35,7 @@ export async function generateMetadata(
 	const targetUpper = targetFormat.toUpperCase();
 
 	return {
-		title: `${sourceUpper} to ${targetUpper} Converter | Free Online Tool | Cap`,
+		title: `${sourceUpper} to ${targetUpper} Converter | Free Online Tool | RocStarr VideoShare`,
 		description: `${config.description(
 			sourceFormat,
 			targetFormat,
@@ -48,7 +48,7 @@ export async function generateMetadata(
 					url: "/og.png",
 					width: 1200,
 					height: 630,
-					alt: `Cap ${sourceUpper} to ${targetUpper} Converter Tool`,
+					alt: `RocStarr VideoShare ${sourceUpper} to ${targetUpper} Converter Tool`,
 				},
 			],
 		},
@@ -115,10 +115,10 @@ export default async function ConversionPage(props: ConversionPageProps) {
 			},
 		],
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: "RocStarr VideoShare is the open source Loom alternative",
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with RocStarr VideoShare. 100% open source and privacy focused.",
+			buttonText: "Download RocStarr VideoShare Free",
 		},
 	};
 

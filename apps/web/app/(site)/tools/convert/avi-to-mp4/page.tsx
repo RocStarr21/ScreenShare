@@ -5,7 +5,7 @@ import type { ToolPageContent } from "@/components/tools/types";
 import { createBreadcrumbSchema } from "@/utils/web-schema";
 
 export const metadata: Metadata = {
-	title: "AVI to MP4 Converter — Free Online Video Converter | Cap",
+	title: "AVI to MP4 Converter — Free Online Video Converter | RocStarr VideoShare",
 	description:
 		"Convert AVI videos to MP4 format directly in your browser. Free, private, no upload needed. Works with old camcorder footage, downloaded files, and any AVI video.",
 	keywords: [
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
 		"convert avi video online",
 	],
 	openGraph: {
-		title: "AVI to MP4 Converter — Free Online Video Converter | Cap",
+		title: "AVI to MP4 Converter — Free Online Video Converter | RocStarr VideoShare",
 		description:
 			"Convert AVI videos to the universally compatible MP4 format directly in your browser. No uploads, no installs, 100% private. Works with camcorder footage and any AVI file.",
 		url: "https://cap.so/tools/convert/avi-to-mp4",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "https://cap.so/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap AVI to MP4 Converter — Free Online Video Converter",
+				alt: "RocStarr VideoShare AVI to MP4 Converter — Free Online Video Converter",
 			},
 		],
 		locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "AVI to MP4 Converter — Free Online Video Converter | Cap",
+		title: "AVI to MP4 Converter — Free Online Video Converter | RocStarr VideoShare",
 		description:
 			"Convert AVI to MP4 directly in your browser. No uploads, no installs, 100% private.",
 		images: ["https://cap.so/og.png"],
@@ -50,7 +50,7 @@ const faqs = [
 	{
 		question: "How do I convert AVI to MP4 online?",
 		answer:
-			"Open Cap's AVI to MP4 converter, drag and drop your AVI file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
+			"Open RocStarr VideoShare's AVI to MP4 converter, drag and drop your AVI file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
 	},
 	{
 		question: "Is the AVI to MP4 converter free?",
@@ -92,7 +92,7 @@ const faqs = [
 const howToSteps = [
 	{
 		name: "Upload your AVI file",
-		text: "Open Cap's AVI to MP4 converter and drag and drop your AVI file into the upload area, or click to browse your files. Supports AVI files up to 500 MB.",
+		text: "Open RocStarr VideoShare's AVI to MP4 converter and drag and drop your AVI file into the upload area, or click to browse your files. Supports AVI files up to 500 MB.",
 	},
 	{
 		name: "Start the conversion",
@@ -122,7 +122,7 @@ const howToStructuredData = {
 	"@type": "HowTo",
 	name: "How to Convert AVI to MP4 Online",
 	description:
-		"Convert AVI video files to MP4 format for free using Cap's browser-based converter. No upload required.",
+		"Convert AVI video files to MP4 format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 	step: howToSteps.map((step, index) => ({
 		"@type": "HowToStep",
 		position: index + 1,
@@ -187,10 +187,10 @@ export default function AVIToMP4Page() {
 		],
 		faqs,
 		cta: {
-			title: "Cap is the open source Loom alternative",
+			title: "RocStarr VideoShare is the open source Loom alternative",
 			description:
-				"Record, edit, and share video messages with Cap. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
-			buttonText: "Download Cap Free",
+				"Record, edit, and share video messages with RocStarr VideoShare. 100% open source and privacy focused. Records directly to MP4 — no conversion needed.",
+			buttonText: "Download RocStarr VideoShare Free",
 		},
 	};
 

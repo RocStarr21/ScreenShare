@@ -57,7 +57,7 @@ export const DownloadPage = () => {
 		<div className="py-32 md:py-40 wrapper wrapper-sm">
 			<div className="space-y-4 text-center">
 				<h1 className="text-2xl fade-in-down animate-delay-1 md:text-4xl">
-					Download Cap
+					Download RocStarr VideoShare
 				</h1>
 				<p className="px-4 text-sm fade-in-down text-gray-11 animate-delay-2 md:text-base md:px-0">
 					The quickest way to share your screen. Pin to your dock or taskbar and
@@ -110,8 +110,8 @@ export const DownloadPage = () => {
 									style={{ maxWidth: "300px" }}
 								/>
 								<p className="mt-2 text-sm text-gray-8">
-									Whilst Cap for Windows is in early beta, after downloading and
-									running the app, follow the steps above to whitelist Cap on
+									Whilst RocStarr VideoShare for Windows is in early beta, after downloading and
+									running the app, follow the steps above to whitelist RocStarr VideoShare on
 									your PC.
 								</p>
 							</div>
@@ -128,10 +128,10 @@ export const DownloadPage = () => {
 						<div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
 							<div>
 								<h3 className="text-sm font-medium text-gray-12">
-									Install the Cap CLI
+									Install the RocStarr VideoShare CLI
 								</h3>
 								<p className="mt-1 text-xs leading-5 text-gray-10">
-									Already have Cap Desktop? Link the bundled CLI for agents,
+									Already have RocStarr VideoShare Desktop? Link the bundled CLI for agents,
 									scripts, and terminals.
 								</p>
 							</div>

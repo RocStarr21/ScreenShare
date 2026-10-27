@@ -342,7 +342,7 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 							<div className="flex gap-2 items-center">
 								{upgradeButton}
 								<span className="max-w-[240px] text-sm leading-snug text-gray-10">
-									Cap Pro gives you unlimited cloud sharing, AI summaries &amp;
+									RocStarr VideoShare Pro gives you unlimited cloud sharing, AI summaries &amp;
 									team features
 								</span>
 							</div>
@@ -399,7 +399,7 @@ const Header = ({ serverHomepageCopyVariant = "" }: HeaderProps) => {
 								}
 							/>
 							<span className="text-xs text-center text-gray-10">
-								Cap Pro gives you unlimited cloud sharing, AI summaries &amp;
+								RocStarr VideoShare Pro gives you unlimited cloud sharing, AI summaries &amp;
 								team features
 							</span>
 						</div>

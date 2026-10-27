@@ -140,9 +140,9 @@ export const agenciesContent: SeoPageContent = {
 	description:
 		"Send clearer client updates in minutes. Share instant links with comments, or craft polished walkthroughs. Available for both macOS & Windows.",
 
-	featuresTitle: "Why Agencies Choose Cap for Client Communication",
+	featuresTitle: "Why Agencies Choose RocStarr VideoShare for Client Communication",
 	featuresDescription:
-		"Cap provides everything busy agencies need for efficient, visual client updates that actually get watched",
+		"RocStarr VideoShare provides everything busy agencies need for efficient, visual client updates that actually get watched",
 
 	features: [
 		{
@@ -180,7 +180,7 @@ export const agenciesContent: SeoPageContent = {
 	recordingModes: {
 		title: "Two Recording Modes for Agency Workflows",
 		description:
-			"Cap adapts to your client communication needs with flexible recording options",
+			"RocStarr VideoShare adapts to your client communication needs with flexible recording options",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -205,10 +205,10 @@ export const agenciesContent: SeoPageContent = {
 	video: {
 		url: "/videos/agencies-demo.mp4",
 		thumbnail: "/videos/agencies-thumbnail.png",
-		alt: "Cap screen recorder demonstration for agencies",
+		alt: "RocStarr VideoShare screen recorder demonstration for agencies",
 	},
 
-	useCasesTitle: "How Agencies Use Cap for Client Success",
+	useCasesTitle: "How Agencies Use RocStarr VideoShare for Client Success",
 	useCasesDescription:
 		"Real solutions for common agency communication challenges",
 
@@ -248,9 +248,9 @@ export const agenciesContent: SeoPageContent = {
 	faqsTitle: "Agencies FAQ",
 	faqs: [
 		{
-			question: "Does Cap work on both macOS and Windows?",
+			question: "Does RocStarr VideoShare work on both macOS and Windows?",
 			answer:
-				"Yes. Cap supports both macOS and Windows with desktop apps, so your entire team can use the same workflow regardless of their platform preference.",
+				"Yes. RocStarr VideoShare supports both macOS and Windows with desktop apps, so your entire team can use the same workflow regardless of their platform preference.",
 		},
 		{
 			question: "Can clients view videos without installing anything?",
@@ -265,28 +265,28 @@ export const agenciesContent: SeoPageContent = {
 		{
 			question: "How long can we record on the free version?",
 			answer:
-				"The free version supports recordings up to 5 minutes. For longer client presentations and unlimited recording time, upgrade to Cap Pro at $8.16/month (billed annually).",
+				"The free version supports recordings up to 5 minutes. For longer client presentations and unlimited recording time, upgrade to RocStarr VideoShare Pro at $8.16/month (billed annually).",
 		},
 		{
-			question: "Is Cap secure enough for confidential client work?",
+			question: "Is RocStarr VideoShare secure enough for confidential client work?",
 			answer:
-				"Yes. Cap is open-source and privacy-first. You can connect your own S3 storage, use a custom domain for share links, and password-protect sensitive videos. This gives you complete control over client data.",
+				"Yes. RocStarr VideoShare is open-source and privacy-first. You can connect your own S3 storage, use a custom domain for share links, and password-protect sensitive videos. This gives you complete control over client data.",
 		},
 		{
-			question: "Can we use our own branding with Cap?",
+			question: "Can we use our own branding with RocStarr VideoShare?",
 			answer:
-				"Yes. Cap Pro includes custom domain support (cap.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
+				"Yes. RocStarr VideoShare Pro includes custom domain support (cap.yourdomain.com) so share links reflect your agency's brand. You can also use your own S3 storage for complete data ownership.",
 		},
 		{
-			question: "How does Cap pricing work for agency teams?",
+			question: "How does RocStarr VideoShare pricing work for agency teams?",
 			answer:
-				"Cap Pro is $8.16/month per user (billed annually) and includes unlimited cloud storage, custom domains, team workspaces, and all collaboration features. Volume discounts are available for teams over 10 users.",
+				"RocStarr VideoShare Pro is $8.16/month per user (billed annually) and includes unlimited cloud storage, custom domains, team workspaces, and all collaboration features. Volume discounts are available for teams over 10 users.",
 		},
 	],
 
 	comparisonTable: {
-		title: "Cap vs. Traditional Agency Communication Methods",
-		headers: ["Feature", "Cap", "Email + Screenshots", "Video Calls"],
+		title: "RocStarr VideoShare vs. Traditional Agency Communication Methods",
+		headers: ["Feature", "RocStarr VideoShare", "Email + Screenshots", "Video Calls"],
 		rows: [
 			[
 				"Client Engagement",
@@ -328,10 +328,10 @@ export const agenciesContent: SeoPageContent = {
 	},
 
 	migrationGuide: {
-		title: "Getting Started with Cap for Your Agency",
+		title: "Getting Started with RocStarr VideoShare for Your Agency",
 		steps: [
-			"Download Cap for all team members (available on Mac and Windows)",
-			"Set up Cap Pro with custom domain for professional share links",
+			"Download RocStarr VideoShare for all team members (available on Mac and Windows)",
+			"Set up RocStarr VideoShare Pro with custom domain for professional share links",
 			"Connect your own S3 storage for complete data ownership (optional)",
 			"Create agency guidelines for video updates (length, format, etc.)",
 			"Train team on Instant vs Studio Mode for different use cases",
@@ -341,7 +341,7 @@ export const agenciesContent: SeoPageContent = {
 
 	cta: {
 		title: "Ready to Transform Your Agency's Client Communication?",
-		buttonText: "Upgrade to Cap Pro",
+		buttonText: "Upgrade to RocStarr VideoShare Pro",
 	},
 };
 
@@ -391,7 +391,7 @@ export const AgenciesPage = () => {
 								size="lg"
 								className="relative z-[20] w-full sm:w-auto font-medium text-md"
 							>
-								Upgrade to Cap Pro
+								Upgrade to RocStarr VideoShare Pro
 							</Button>
 						</motion.div>
 					</div>

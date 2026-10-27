@@ -1,5 +1,4 @@
 import { getCurrentUser } from "@cap/database/auth/session";
-import { serverEnv } from "@cap/env";
 import { makeCurrentUserLayer } from "@cap/web-backend";
 import { Folder } from "@cap/web-domain";
 import { Effect } from "effect";
@@ -117,12 +116,7 @@ const FolderPage = async (props: PageProps<"/dashboard/folder/[id]">) => {
 				)}
 
 				{/* Display Videos */}
-				<FolderVideosSection
-					initialVideos={videosData}
-					analyticsEnabled={Boolean(
-						serverEnv().TINYBIRD_TOKEN && serverEnv().TINYBIRD_HOST,
-					)}
-				/>
+				<FolderVideosSection initialVideos={videosData} analyticsEnabled />
 			</div>
 		);
 	}).pipe(Effect.provide(makeCurrentUserLayer(user)), runPromise);

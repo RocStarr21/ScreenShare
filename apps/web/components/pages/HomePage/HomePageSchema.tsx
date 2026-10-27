@@ -10,34 +10,34 @@ import {
 
 const homePageFAQs = [
 	{
-		question: "What is Cap?",
+		question: "What is RocStarr VideoShare?",
 		answer:
-			"Cap is an open-source screen recording software that offers beautiful, lightweight recordings with instant sharing capabilities. It's the privacy-focused alternative to Loom.",
+			"RocStarr VideoShare is an open-source screen recording software that offers beautiful, lightweight recordings with instant sharing capabilities. It's the privacy-focused alternative to Loom.",
 	},
 	{
-		question: "How much does Cap cost?",
+		question: "How much does RocStarr VideoShare cost?",
 		answer:
-			"Cap offers a generous free plan with Studio mode for personal use and 5-minute shareable links. The Pro plan starts at just $8.16/month per user, which is less than half the price of Loom.",
+			"RocStarr VideoShare offers a generous free plan with Studio mode for personal use and 5-minute shareable links. The Pro plan starts at just $8.16/month per user, which is less than half the price of Loom.",
 	},
 	{
-		question: "Is Cap available for Windows and Mac?",
+		question: "Is RocStarr VideoShare available for Windows and Mac?",
 		answer:
-			"Yes, Cap is available for both macOS and Windows, providing consistent performance and features across both platforms.",
+			"Yes, RocStarr VideoShare is available for both macOS and Windows, providing consistent performance and features across both platforms.",
 	},
 	{
-		question: "Can I use my own storage with Cap?",
+		question: "Can I use my own storage with RocStarr VideoShare?",
 		answer:
-			"Yes, Cap allows you to connect your own Google Drive or S3 storage and a custom domain, giving you 100% ownership and control over your content.",
+			"Yes, RocStarr VideoShare allows you to connect your own Google Drive or S3 storage and a custom domain, giving you 100% ownership and control over your content.",
 	},
 	{
-		question: "What makes Cap different from other screen recorders?",
+		question: "What makes RocStarr VideoShare different from other screen recorders?",
 		answer:
-			"Cap is fully open-source, privacy-focused, and offers unique features like Studio mode (free for personal use), 4K recording at 60fps, built-in thread commenting, and the ability to use your own storage and domain.",
+			"RocStarr VideoShare is fully open-source, privacy-focused, and offers unique features like Studio mode (free for personal use), 4K recording at 60fps, built-in thread commenting, and the ability to use your own storage and domain.",
 	},
 	{
-		question: "Does Cap support team collaboration?",
+		question: "Does RocStarr VideoShare support team collaboration?",
 		answer:
-			"Yes, Cap includes built-in thread commenting on shareable links, making it easy to collaborate with teammates and collect feedback directly on your recordings.",
+			"Yes, RocStarr VideoShare includes built-in thread commenting on shareable links, making it easy to collaborate with teammates and collect feedback directly on your recordings.",
 	},
 ];
 

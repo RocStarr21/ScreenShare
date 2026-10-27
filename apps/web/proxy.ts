@@ -20,9 +20,54 @@ const mainOrigins = [
 	addHttps(serverEnv().VERCEL_PROJECT_PRODUCTION_URL_HOST),
 ].filter(Boolean) as string[];
 
+/**
+ * Requests that arrive directly on the machine running the stack, rather than
+ * through the Cloudflare tunnel. cloudflared forwards the original `Host`, so a
+ * tunnelled request never matches.
+ */
+function isLocalRequest(request: NextRequest) {
+	const extraHosts = (process.env.SCREENSHARE_LOCAL_HOSTS ?? "")
+		.split(",")
+		.map((value) => value.trim().toLowerCase())
+		.filter(Boolean);
+
+	const hostname = (request.headers.get("host") ?? "")
+		.toLowerCase()
+		.replace(/:\d+$/, "")
+		.replace(/^\[/, "")
+		.replace(/\]$/, "");
+
+	return (
+		hostname === "localhost" ||
+		hostname === "127.0.0.1" ||
+		hostname === "::1" ||
+		extraHosts.includes(hostname)
+	);
+}
+
 export async function proxy(request: NextRequest) {
 	const url = new URL(request.url);
 	const path = url.pathname;
+
+	// The passwordless owner bypass only applies on this machine. Applying it to
+	// tunnelled requests would hand an owner session to every visitor.
+	const ownerBypass =
+		process.env.SCREENSHARE_DISABLE_AUTH === "true" && isLocalRequest(request);
+
+	// Presence only — the assertion is cryptographically verified in
+	// `getCurrentUser`. Routing on it is safe because the destination page still
+	// resolves identity for itself.
+	const hasAccessAssertion = request.headers.has("cf-access-jwt-assertion");
+
+	if ((ownerBypass || hasAccessAssertion) && path === "/") {
+		return NextResponse.redirect(new URL("/dashboard/caps", url.origin));
+	}
+
+	// Deliberately not extended to Access requests: an unverifiable assertion
+	// would bounce between /login and /dashboard forever.
+	if (ownerBypass && path.startsWith("/login")) {
+		return NextResponse.redirect(new URL("/dashboard/caps", url.origin));
+	}
 
 	if (path === "/" && request.cookies.has("next-auth.session-token")) {
 		return NextResponse.redirect(new URL("/dashboard/caps", url.origin));
@@ -41,8 +86,13 @@ export async function proxy(request: NextRequest) {
 	const hostname = url.hostname;
 
 	if (buildEnv.NEXT_PUBLIC_IS_CAP !== "true") {
+		// Files from `public/` (recorder sounds, logos, fonts, web workers) are
+		// not covered by the matcher's exclusions, so without this they 307 to
+		// /login on self-hosted builds and silently fail to load.
+		const isPublicFile = /\/[^/]+\.[a-z0-9]{2,5}$/i.test(path);
 		if (
 			!(
+				isPublicFile ||
 				path.startsWith("/s/") ||
 				path.startsWith("/c/") ||
 				path.startsWith("/middleware") ||
@@ -55,7 +105,11 @@ export async function proxy(request: NextRequest) {
 				path.startsWith("/self-hosting") ||
 				path.startsWith("/download") ||
 				path.startsWith("/terms") ||
-				path.startsWith("/verify-otp")
+				path.startsWith("/verify-otp") ||
+				// Sets the light/dark theme before first paint. Not in the
+				// allowlist it would 307 to /login on the public hostname, which
+				// clients see as a flash of the wrong theme on every share page.
+				path === "/theme-script.js"
 			) &&
 			process.env.NODE_ENV !== "development"
 		)
@@ -116,6 +170,11 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
 	matcher: [
-		"/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+		// `.well-known` is excluded so the Workflow DevKit runtime endpoint
+		// (`/.well-known/workflow/v1/step`) is never rewritten to `/login` on
+		// self-hosted deployments. Without this, every "use workflow" step —
+		// video processing, transcription, Loom import — is silently swallowed
+		// by a 307 and recordings stay stuck on "Optimizing video" forever.
+		"/((?!api|.well-known|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
 	],
 };

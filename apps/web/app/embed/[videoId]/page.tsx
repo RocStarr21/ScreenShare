@@ -41,8 +41,8 @@ export async function generateMetadata(
 			Option.match({
 				onNone: () => notFound(),
 				onSome: ([video]) => ({
-					title: `${video.name} | Cap Recording`,
-					description: "Watch this video on Cap",
+					title: `${video.name} | RocStarr VideoShare Recording`,
+					description: "Watch this video on RocStarr VideoShare",
 					openGraph: {
 						images: [
 							{
@@ -68,8 +68,8 @@ export async function generateMetadata(
 					},
 					twitter: {
 						card: "player",
-						title: `${video.name} | Cap Recording`,
-						description: "Watch this video on Cap",
+						title: `${video.name} | RocStarr VideoShare Recording`,
+						description: "Watch this video on RocStarr VideoShare",
 						images: [
 							new URL(
 								`/api/video/og?videoId=${videoId}`,
@@ -96,13 +96,13 @@ export async function generateMetadata(
 		Effect.catchTags({
 			PolicyDenied: () =>
 				Effect.succeed({
-					title: "Cap: This video is private",
+					title: "RocStarr VideoShare: This video is private",
 					description: "This video is private and cannot be shared.",
 					robots: "noindex, nofollow",
 				}),
 			VerifyVideoPasswordError: () =>
 				Effect.succeed({
-					title: "Cap: Password Protected Video",
+					title: "RocStarr VideoShare: Password Protected Video",
 					description: "This video is password protected.",
 					robots: "noindex, nofollow",
 				}),

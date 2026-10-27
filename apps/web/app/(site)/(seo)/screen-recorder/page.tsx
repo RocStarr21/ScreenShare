@@ -8,20 +8,20 @@ import { createFAQSchema } from "@/utils/web-schema";
 export const metadata: Metadata = {
 	title: "Screen Recorder: High-Quality, User-Friendly, and 100% Free Locally",
 	description:
-		"Cap is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits. Perfect for team collaboration, creating tutorials, or recording professional presentations.",
+		"RocStarr VideoShare is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits. Perfect for team collaboration, creating tutorials, or recording professional presentations.",
 	openGraph: {
 		title:
 			"Screen Recorder: High-Quality, User-Friendly, and 100% Free Locally",
 		description:
-			"Cap is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
+			"RocStarr VideoShare is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
 		url: "https://cap.so/screen-recorder",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "https://cap.so/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap: Free Screen Recorder",
+				alt: "RocStarr VideoShare: Free Screen Recorder",
 			},
 		],
 		locale: "en_US",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 		title:
 			"Screen Recorder: High-Quality, User-Friendly, and 100% Free Locally",
 		description:
-			"Cap is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
+			"RocStarr VideoShare is a powerful, user-friendly screen recorder and is 100% free locally with no usage limits.",
 		images: ["https://cap.so/og.png"],
 	},
 	alternates: {

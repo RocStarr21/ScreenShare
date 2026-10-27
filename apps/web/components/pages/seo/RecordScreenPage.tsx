@@ -7,17 +7,17 @@ import type { SeoPageContent } from "../../seo/types";
 export const recordScreenContent: SeoPageContent = {
 	title: "Record Screen — Capture Your Screen Instantly and Share with a Link",
 	description:
-		"Cap makes it easy to record your screen on Mac or Windows. Capture in HD with audio and webcam, then share with a link in seconds. Free, open-source, no watermarks.",
+		"RocStarr VideoShare makes it easy to record your screen on Mac or Windows. Capture in HD with audio and webcam, then share with a link in seconds. Free, open-source, no watermarks.",
 
 	featuresTitle: "Everything You Need to Record Your Screen Professionally",
 	featuresDescription:
-		"Cap gives you a complete screen recording workflow — from one-click capture to instant sharing — without the complexity",
+		"RocStarr VideoShare gives you a complete screen recording workflow — from one-click capture to instant sharing — without the complexity",
 
 	features: [
 		{
 			title: "One-Click Screen Recording",
 			description:
-				"Record your screen in seconds. Launch Cap, select your recording region, and hit record — no complicated setup, no configuration. Stop recording and your shareable link is ready immediately.",
+				"Record your screen in seconds. Launch RocStarr VideoShare, select your recording region, and hit record — no complicated setup, no configuration. Stop recording and your shareable link is ready immediately.",
 		},
 		{
 			title: "HD Recording Up to 4K at 60fps",
@@ -32,17 +32,17 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			title: "Capture System Audio and Microphone",
 			description:
-				"Record both system audio and your microphone simultaneously. Narrate as you go or capture existing audio from apps and browsers — Cap handles both audio tracks cleanly and in sync.",
+				"Record both system audio and your microphone simultaneously. Narrate as you go or capture existing audio from apps and browsers — RocStarr VideoShare handles both audio tracks cleanly and in sync.",
 		},
 		{
 			title: "Instant Shareable Link",
 			description:
-				"The moment you stop recording, Cap generates a shareable link. No uploading, no waiting — paste the link anywhere and viewers get instant access to your screen recording.",
+				"The moment you stop recording, RocStarr VideoShare generates a shareable link. No uploading, no waiting — paste the link anywhere and viewers get instant access to your screen recording.",
 		},
 		{
 			title: "Free with Zero Watermarks",
 			description:
-				"Cap's Studio Mode lets you record your screen for free with no watermarks, no time limits, and no hidden fees. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> and start recording today.",
+				"RocStarr VideoShare's Studio Mode lets you record your screen for free with no watermarks, no time limits, and no hidden fees. <a href='/free-screen-recorder'>Download RocStarr VideoShare's free screen recorder</a> and start recording today.",
 		},
 		{
 			title: "AI-Powered Captions",
@@ -57,9 +57,9 @@ export const recordScreenContent: SeoPageContent = {
 	],
 
 	recordingModes: {
-		title: "Two Ways to Record Your Screen with Cap",
+		title: "Two Ways to Record Your Screen with RocStarr VideoShare",
 		description:
-			"Whether you need a quick share or a polished production, Cap has a recording mode for you",
+			"Whether you need a quick share or a polished production, RocStarr VideoShare has a recording mode for you",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -84,7 +84,7 @@ export const recordScreenContent: SeoPageContent = {
 
 	comparisonTable: {
 		title: "Screen Recording Software Compared",
-		headers: ["Feature", "Cap", "Loom", "OBS Studio", "Windows Game Bar"],
+		headers: ["Feature", "RocStarr VideoShare", "Loom", "OBS Studio", "Windows Game Bar"],
 		rows: [
 			[
 				"Free to record",
@@ -138,36 +138,36 @@ export const recordScreenContent: SeoPageContent = {
 		],
 	},
 
-	comparisonTitle: "How Cap Compares for Recording Your Screen",
+	comparisonTitle: "How RocStarr VideoShare Compares for Recording Your Screen",
 	comparisonDescription:
-		"Cap is built for the full screen recording workflow — from capture to sharing — without setup overhead",
+		"RocStarr VideoShare is built for the full screen recording workflow — from capture to sharing — without setup overhead",
 
 	comparison: [
 		{
-			title: "Cap vs Loom",
+			title: "RocStarr VideoShare vs Loom",
 			description:
-				"Both Cap and Loom let you record your screen and share with a link, but Cap is significantly more affordable — starting at $9.99/month versus Loom's $18/month. Cap's Studio Mode is completely free for personal use with no watermarks, and Cap is fully open-source. <a href='/loom-alternative'>See the full Cap vs Loom comparison</a>.",
+				"Both RocStarr VideoShare and Loom let you record your screen and share with a link, but RocStarr VideoShare is significantly more affordable — starting at $9.99/month versus Loom's $18/month. RocStarr VideoShare's Studio Mode is completely free for personal use with no watermarks, and RocStarr VideoShare is fully open-source. <a href='/loom-alternative'>See the full RocStarr VideoShare vs Loom comparison</a>.",
 		},
 		{
-			title: "Cap vs OBS Studio",
+			title: "RocStarr VideoShare vs OBS Studio",
 			description:
-				"OBS is a powerful free tool but is designed primarily for live streaming and requires significant configuration to simply record your screen. Cap is purpose-built for screen recording and instant sharing — start recording in under 60 seconds with zero setup.",
+				"OBS is a powerful free tool but is designed primarily for live streaming and requires significant configuration to simply record your screen. RocStarr VideoShare is purpose-built for screen recording and instant sharing — start recording in under 60 seconds with zero setup.",
 		},
 		{
-			title: "Cap vs macOS Built-in Recorder",
+			title: "RocStarr VideoShare vs macOS Built-in Recorder",
 			description:
-				"macOS Cmd+Shift+5 lets you record your screen but doesn't capture system audio, lacks webcam overlay, and provides no sharing features. Cap adds all of this natively. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
+				"macOS Cmd+Shift+5 lets you record your screen but doesn't capture system audio, lacks webcam overlay, and provides no sharing features. RocStarr VideoShare adds all of this natively. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
 		},
 		{
-			title: "Cap vs Windows Game Bar",
+			title: "RocStarr VideoShare vs Windows Game Bar",
 			description:
-				"Windows Game Bar only records the active window and cannot capture your full desktop. Cap records any region, any window, or your entire screen with full audio. <a href='/screen-recorder-windows'>Learn more about screen recording on Windows</a>.",
+				"Windows Game Bar only records the active window and cannot capture your full desktop. RocStarr VideoShare records any region, any window, or your entire screen with full audio. <a href='/screen-recorder-windows'>Learn more about screen recording on Windows</a>.",
 		},
 	],
 
-	useCasesTitle: "Why People Use Cap to Record Their Screen",
+	useCasesTitle: "Why People Use RocStarr VideoShare to Record Their Screen",
 	useCasesDescription:
-		"From quick async updates to polished tutorials — Cap fits every screen recording workflow",
+		"From quick async updates to polished tutorials — RocStarr VideoShare fits every screen recording workflow",
 
 	useCases: [
 		{
@@ -188,7 +188,7 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			title: "Client Demos and Presentations",
 			description:
-				"Record polished product walkthroughs for clients without scheduling a live call. Share instantly and collect feedback through Cap's built-in thread commenting.",
+				"Record polished product walkthroughs for clients without scheduling a live call. Share instantly and collect feedback through RocStarr VideoShare's built-in thread commenting.",
 		},
 		{
 			title: "Employee Training and Onboarding",
@@ -198,7 +198,7 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			title: "Educational Content and Lectures",
 			description:
-				"Educators use Cap to record their screen for lecture walkthroughs, coding tutorials, and course content. <a href='/solutions/online-classroom-tools'>Learn how Cap supports online teaching</a>.",
+				"Educators use RocStarr VideoShare to record their screen for lecture walkthroughs, coding tutorials, and course content. <a href='/solutions/online-classroom-tools'>Learn how RocStarr VideoShare supports online teaching</a>.",
 		},
 	],
 
@@ -207,54 +207,54 @@ export const recordScreenContent: SeoPageContent = {
 		{
 			question: "How do I record my screen?",
 			answer:
-				"With Cap, recording your screen takes under a minute. Download Cap for Mac or Windows, launch the app, select your recording region (full screen, a specific window, or a custom area), and click Record. When you stop, Cap instantly generates a shareable link. No uploading, no waiting — your screen recording is live and ready to share.",
+				"With RocStarr VideoShare, recording your screen takes under a minute. Download RocStarr VideoShare for Mac or Windows, launch the app, select your recording region (full screen, a specific window, or a custom area), and click Record. When you stop, RocStarr VideoShare instantly generates a shareable link. No uploading, no waiting — your screen recording is live and ready to share.",
 		},
 		{
-			question: "Is it free to record your screen with Cap?",
+			question: "Is it free to record your screen with RocStarr VideoShare?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode on the free plan supports recordings up to 5 minutes with instant shareable links and thread commenting. <a href='/free-screen-recorder'>Download Cap's free screen recorder</a> to get started.",
+				"Yes. RocStarr VideoShare's Studio Mode is completely free for personal use with unlimited recording time, no watermarks, and no time limits. Instant Mode on the free plan supports recordings up to 5 minutes with instant shareable links and thread commenting. <a href='/free-screen-recorder'>Download RocStarr VideoShare's free screen recorder</a> to get started.",
 		},
 		{
 			question: "Can I record my screen and webcam at the same time?",
 			answer:
-				"Yes. Cap records your screen and webcam simultaneously with a picture-in-picture overlay. In Studio Mode, the screen and webcam are saved as separate video tracks, giving you full editing flexibility in post-production.",
+				"Yes. RocStarr VideoShare records your screen and webcam simultaneously with a picture-in-picture overlay. In Studio Mode, the screen and webcam are saved as separate video tracks, giving you full editing flexibility in post-production.",
 		},
 		{
 			question: "Does recording your screen capture audio?",
 			answer:
-				"Cap captures both system audio and microphone input simultaneously when you record your screen. You can narrate as you go while system sounds play through, or record microphone-only for clean voiceovers. Both audio tracks are synced automatically.",
+				"RocStarr VideoShare captures both system audio and microphone input simultaneously when you record your screen. You can narrate as you go while system sounds play through, or record microphone-only for clean voiceovers. Both audio tracks are synced automatically.",
 		},
 		{
 			question: "How do I record my screen on Mac?",
 			answer:
-				"Download Cap for macOS and click the Cap icon in your menu bar to start recording your screen. Choose your region and hit Record. Alternatively, macOS has a built-in screen recorder accessible with Cmd+Shift+5, but it lacks system audio and instant sharing. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
+				"Download RocStarr VideoShare for macOS and click the RocStarr VideoShare icon in your menu bar to start recording your screen. Choose your region and hit Record. Alternatively, macOS has a built-in screen recorder accessible with Cmd+Shift+5, but it lacks system audio and instant sharing. <a href='/screen-recorder-mac'>Learn more about screen recording on Mac</a>.",
 		},
 		{
 			question: "How do I record my screen on Windows?",
 			answer:
-				"Download Cap for Windows and launch it from the system tray. Select your recording region and click Record. Windows also has Xbox Game Bar (Win+G) but it only captures the active window. Cap records any region of your screen with full audio support. <a href='/screen-recorder-windows'>Learn more about screen recording on Windows</a>.",
+				"Download RocStarr VideoShare for Windows and launch it from the system tray. Select your recording region and click Record. Windows also has Xbox Game Bar (Win+G) but it only captures the active window. RocStarr VideoShare records any region of your screen with full audio support. <a href='/screen-recorder-windows'>Learn more about screen recording on Windows</a>.",
 		},
 		{
-			question: "Is there a time limit when recording your screen with Cap?",
+			question: "Is there a time limit when recording your screen with RocStarr VideoShare?",
 			answer:
-				"Studio Mode in Cap has no time limit on screen recordings — record as long as you need completely free. Instant Mode on the free plan supports recordings up to 5 minutes. Upgrading to Cap Pro removes this limit for Instant Mode as well.",
+				"Studio Mode in RocStarr VideoShare has no time limit on screen recordings — record as long as you need completely free. Instant Mode on the free plan supports recordings up to 5 minutes. Upgrading to RocStarr VideoShare Pro removes this limit for Instant Mode as well.",
 		},
 		{
 			question: "How do I share a screen recording?",
 			answer:
-				"Cap automatically generates a shareable link the moment you stop recording. Copy the link and paste it anywhere — Slack, email, Notion, Jira, or any chat tool. Viewers get instant access to your screen recording without downloading any software.",
+				"RocStarr VideoShare automatically generates a shareable link the moment you stop recording. Copy the link and paste it anywhere — Slack, email, Notion, Jira, or any chat tool. Viewers get instant access to your screen recording without downloading any software.",
 		},
 	],
 
 	video: {
 		url: "/videos/cap-demo.mp4",
 		thumbnail: "/videos/cap-demo-thumbnail.png",
-		alt: "Cap screen recording demo showing one-click capture, webcam overlay, and instant sharing",
+		alt: "RocStarr VideoShare screen recording demo showing one-click capture, webcam overlay, and instant sharing",
 	},
 
 	cta: {
-		title: "Record Your Screen for Free with Cap",
-		buttonText: "Download Cap Free",
+		title: "Record Your Screen for Free with RocStarr VideoShare",
+		buttonText: "Download RocStarr VideoShare Free",
 		secondaryButtonText: "Try Instant Mode in Browser",
 	},
 };

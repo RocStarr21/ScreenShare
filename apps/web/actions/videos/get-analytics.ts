@@ -1,10 +1,10 @@
 "use server";
 
 import { db } from "@cap/database";
-import { videos } from "@cap/database/schema";
+import { videos, videoViews } from "@cap/database/schema";
 import { Tinybird } from "@cap/web-backend";
 import { Video } from "@cap/web-domain";
-import { eq } from "drizzle-orm";
+import { and, count as countRows, eq, gte } from "drizzle-orm";
 import { Effect } from "effect";
 import { runPromise } from "@/lib/server";
 
@@ -47,11 +47,21 @@ export async function getVideoAnalytics(
 		.where(eq(videos.id, Video.VideoId.make(videoId)))
 		.limit(1);
 
-	return runPromise(
+	const rangeDays = normalizeRangeDays(options?.rangeDays);
+	const [{ localViews } = { localViews: 0 }] = await db()
+		.select({ localViews: countRows() })
+		.from(videoViews)
+		.where(
+			and(
+				eq(videoViews.videoId, Video.VideoId.make(videoId)),
+				gte(videoViews.createdAt, new Date(Date.now() - rangeDays * DAY_IN_MS)),
+			),
+		);
+
+	const tinybirdResult = await runPromise(
 		Effect.gen(function* () {
 			const tinybird = yield* Tinybird;
 
-			const rangeDays = normalizeRangeDays(options?.rangeDays);
 			const now = new Date();
 			const from = new Date(now.getTime() - rangeDays * DAY_IN_MS);
 			const pathname = `/s/${videoId}`;
@@ -97,4 +107,6 @@ export async function getVideoAnalytics(
 			return { count: Number.isFinite(count) ? count : 0 };
 		}),
 	);
+
+	return { count: Math.max(tinybirdResult.count, Number(localViews) || 0) };
 }

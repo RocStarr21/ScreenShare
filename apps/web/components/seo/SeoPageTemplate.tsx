@@ -88,7 +88,7 @@ export const SeoPageTemplate = ({
 			{showLogosInHeader && (
 				<>
 					<MotionImage
-						alt="Cap Logo"
+						alt="RocStarr VideoShare Logo"
 						initial={{ opacity: 0, left: "-40vw" }}
 						animate={{ opacity: 0.5, left: "-17vw" }}
 						transition={{ duration: 1 }}
@@ -206,9 +206,9 @@ export const SeoPageTemplate = ({
 				<ComparisonSlider
 					leftImage="/app/capdashboard.webp"
 					rightImage="/app/loomdashboard.webp"
-					leftAlt="Cap Dashboard"
+					leftAlt="RocStarr VideoShare Dashboard"
 					rightAlt="Loom Dashboard"
-					leftLabel="Cap"
+					leftLabel="RocStarr VideoShare"
 					rightLabel="Loom"
 				/>
 			)}
@@ -249,10 +249,10 @@ export const SeoPageTemplate = ({
 					<div>
 						<div className="text-center max-w-[800px] mx-auto mb-10">
 							<h2 className="inline-block relative mb-2 text-3xl font-medium text-gray-800 md:text-4xl">
-								{content.video.title ?? "See Cap in Action"}
+								{content.video.title ?? "See RocStarr VideoShare in Action"}
 							</h2>
 							<p className="text-xl leading-relaxed text-gray-10">
-								Watch how Cap makes screen recording simple, powerful, and
+								Watch how RocStarr VideoShare makes screen recording simple, powerful, and
 								accessible.
 							</p>
 						</div>
@@ -268,7 +268,7 @@ export const SeoPageTemplate = ({
 								>
 									<iframe
 										src={content.video.iframe.src}
-										title={content.video.iframe.title || "Cap Demo"}
+										title={content.video.iframe.title || "RocStarr VideoShare Demo"}
 										frameBorder="0"
 										allowFullScreen
 										style={{
@@ -285,7 +285,7 @@ export const SeoPageTemplate = ({
 								<div className="overflow-hidden rounded-xl shadow-md">
 									<iframe
 										src={content.video.url}
-										title={content.video.alt ?? "Cap demo video"}
+										title={content.video.alt ?? "RocStarr VideoShare demo video"}
 										allow="fullscreen; picture-in-picture"
 										allowFullScreen
 										className="w-full border-0 aspect-video"

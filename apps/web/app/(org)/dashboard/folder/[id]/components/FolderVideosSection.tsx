@@ -87,7 +87,7 @@ export default function FolderVideosSection({
 	const { mutate: deleteCap, isPending: isDeletingCap } = useEffectMutation({
 		mutationFn: (id: Video.VideoId) => rpc.VideoDelete(id),
 		onSuccess: () => {
-			toast.success("Cap deleted successfully");
+			toast.success("RocStarr VideoShare deleted successfully");
 			router.refresh();
 		},
 		onError: () => {

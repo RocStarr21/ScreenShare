@@ -33,7 +33,7 @@ describe("DeveloperDocumentationVideosPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -109,38 +109,38 @@ describe("DeveloperDocumentationVideosPage FAQ schema", () => {
 				"A developer documentation video is a screen recording that demonstrates how to use an API, SDK, CLI tool, or technical workflow.",
 		},
 		{
-			question: "How do I embed a Cap video in my documentation?",
+			question: "How do I embed a RocStarr VideoShare video in my documentation?",
 			answer:
-				"Cap generates a shareable link the moment you stop recording. You can paste this URL directly into Notion, Confluence, Docusaurus, GitBook.",
+				"RocStarr VideoShare generates a shareable link the moment you stop recording. You can paste this URL directly into Notion, Confluence, Docusaurus, GitBook.",
 		},
 		{
 			question: "Can I record my terminal and IDE output in 4K?",
-			answer: "Yes. Cap records at up to 4K resolution at 60fps.",
+			answer: "Yes. RocStarr VideoShare records at up to 4K resolution at 60fps.",
 		},
 		{
-			question: "Does Cap auto-generate transcripts for documentation?",
+			question: "Does RocStarr VideoShare auto-generate transcripts for documentation?",
 			answer:
-				"Yes. Cap auto-generates captions and transcripts for every recording using AI transcription.",
+				"Yes. RocStarr VideoShare auto-generates captions and transcripts for every recording using AI transcription.",
 		},
 		{
 			question: "How do I share a documentation video with my team or users?",
 			answer:
-				"Cap generates a shareable link immediately when you stop recording — no upload wait, no file attachment.",
+				"RocStarr VideoShare generates a shareable link immediately when you stop recording — no upload wait, no file attachment.",
 		},
 		{
 			question: "Can I record videos for private internal documentation?",
 			answer:
-				"Yes. Cap supports password protection on individual recordings and expiry dates on share links.",
+				"Yes. RocStarr VideoShare supports password protection on individual recordings and expiry dates on share links.",
 		},
 		{
 			question: "What is the best screen recorder for developer documentation?",
 			answer:
-				"Cap is the best screen recorder for developer documentation because it combines 4K recording quality, instant shareable links, AI-generated transcripts, and self-hosted storage.",
+				"RocStarr VideoShare is the best screen recorder for developer documentation because it combines 4K recording quality, instant shareable links, AI-generated transcripts, and self-hosted storage.",
 		},
 		{
-			question: "Does Cap work for recording API demos and SDK walkthroughs?",
+			question: "Does RocStarr VideoShare work for recording API demos and SDK walkthroughs?",
 			answer:
-				"Yes. Cap is designed exactly for this use case. Record your terminal, IDE, browser, API client.",
+				"Yes. RocStarr VideoShare is designed exactly for this use case. Record your terminal, IDE, browser, API client.",
 		},
 	];
 

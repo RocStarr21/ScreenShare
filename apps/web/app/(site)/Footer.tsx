@@ -27,7 +27,7 @@ const footerLinks = {
 		{ label: "Download", href: "/download" },
 		{
 			label: "Open Source",
-			href: "https://github.com/CapSoftware/Cap",
+			href: "https://github.com/CapSoftware/RocStarr VideoShare",
 			isExternal: true,
 		},
 		{
@@ -108,13 +108,13 @@ const footerLinks = {
 			label: "Google Drive Screen Recorder",
 			href: "/google-drive-screen-recorder",
 		},
-		{ label: "Cap vs Loom", href: "/loom-alternative" },
+		{ label: "RocStarr VideoShare vs Loom", href: "/loom-alternative" },
 		{ label: "Student Discount", href: "/student-discount" },
 	] as FooterLink[],
 };
 
 const socialLinks: { label: string; href: string; icon: IconDefinition }[] = [
-	{ label: "X (@Cap)", href: "https://x.com/cap", icon: faXTwitter },
+	{ label: "X (@RocStarr VideoShare)", href: "https://x.com/cap", icon: faXTwitter },
 	{ label: "Discord", href: "https://discord.gg/y8gdQ3WRN3", icon: faDiscord },
 	{
 		label: "LinkedIn",
@@ -196,7 +196,7 @@ const ComplianceBadges = () => (
 					target="_blank"
 					rel="noopener noreferrer"
 					title={`${label} — in progress`}
-					aria-label={`${label} compliance in progress. View Cap's Trust Portal`}
+					aria-label={`${label} compliance in progress. View RocStarr VideoShare's Trust Portal`}
 					className="transition-colors text-gray-9 hover:text-gray-12"
 				>
 					<svg
@@ -333,7 +333,7 @@ export const Footer = () => {
 								title="Additional Links"
 								links={footerLinks.additional}
 							/>
-							<FooterColumn title="Cap" links={footerLinks.help} />
+							<FooterColumn title="RocStarr VideoShare" links={footerLinks.help} />
 							<FooterColumn title="Use Cases" links={footerLinks.useCases} />
 							<FooterColumn
 								title="Tools"
@@ -347,7 +347,7 @@ export const Footer = () => {
 						<div className="flex flex-col gap-4">
 							<ComplianceBadges />
 							<p className="text-sm text-gray-9">
-								© Cap Software, Inc. {new Date().getFullYear()}.
+								© RocStarr VideoShare Software, Inc. {new Date().getFullYear()}.
 							</p>
 						</div>
 						<div className="flex flex-wrap gap-x-8 gap-y-2">

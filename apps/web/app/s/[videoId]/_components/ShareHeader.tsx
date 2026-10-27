@@ -341,11 +341,13 @@ export const ShareHeader = ({
 
 		try {
 			await hideShareableLinkCapLogo(data.orgId);
-			toast.success("Cap logo hidden");
+			toast.success("RocStarr VideoShare logo hidden");
 			refresh();
 		} catch (error) {
 			toast.error(
-				error instanceof Error ? error.message : "Failed to hide Cap logo",
+				error instanceof Error
+					? error.message
+					: "Failed to hide RocStarr VideoShare logo",
 			);
 		} finally {
 			setIsHidingBranding(false);
@@ -396,7 +398,7 @@ export const ShareHeader = ({
 								<Button
 									variant="gray"
 									size="xs"
-									aria-label="Hide Cap logo"
+									aria-label="Hide RocStarr VideoShare logo"
 									className="h-7 gap-1 whitespace-nowrap rounded-full px-2 text-[11px]"
 									disabled={isHidingBranding}
 									onClick={handleHideBranding}
@@ -446,7 +448,7 @@ export const ShareHeader = ({
 						size="sm"
 						variant="blue"
 					>
-						Upgrade To Cap Pro
+						Upgrade To RocStarr VideoShare Pro
 					</Button>
 				</div>
 			)}
@@ -574,6 +576,14 @@ export const ShareHeader = ({
 									</button>
 								)}
 							</div>
+						)}
+						{user === null && canDownload && (
+							<VideoDownloadMenu
+								videoId={data.id}
+								hasEdits={false}
+								triggerLabel="Download"
+								triggerClassName="size-11 rounded-full border border-gray-5 bg-gray-3 text-gray-12 transition hover:border-gray-6 hover:bg-gray-6"
+							/>
 						)}
 					</div>
 					<div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

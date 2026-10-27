@@ -13,9 +13,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
 	if (!metadata) {
 		return {
-			title: "Cap — Beautiful screen recordings, owned by you.",
+			title: "RocStarr VideoShare — Beautiful screen recordings, owned by you.",
 			description:
-				"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+				"RocStarr VideoShare is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
 		};
 	}
 

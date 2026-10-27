@@ -26,7 +26,7 @@ describe("AVI to MP4 page metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -64,7 +64,7 @@ describe("AVI to MP4 FAQ schema validity", () => {
 		{
 			question: "How do I convert AVI to MP4 online?",
 			answer:
-				"Open Cap's AVI to MP4 converter, drag and drop your AVI file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
+				"Open RocStarr VideoShare's AVI to MP4 converter, drag and drop your AVI file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
 		},
 		{
 			question: "Is the AVI to MP4 converter free?",
@@ -137,7 +137,7 @@ describe("AVI to MP4 HowTo schema validity", () => {
 	const howToSteps = [
 		{
 			name: "Upload your AVI file",
-			text: "Open Cap's AVI to MP4 converter and drag and drop your AVI file into the upload area, or click to browse your files. Supports AVI files up to 500 MB.",
+			text: "Open RocStarr VideoShare's AVI to MP4 converter and drag and drop your AVI file into the upload area, or click to browse your files. Supports AVI files up to 500 MB.",
 		},
 		{
 			name: "Start the conversion",
@@ -153,7 +153,7 @@ describe("AVI to MP4 HowTo schema validity", () => {
 		const schema = createHowToSchema({
 			name: "How to Convert AVI to MP4 Online",
 			description:
-				"Convert AVI video files to MP4 format for free using Cap's browser-based converter. No upload required.",
+				"Convert AVI video files to MP4 format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 			steps: howToSteps,
 		});
 

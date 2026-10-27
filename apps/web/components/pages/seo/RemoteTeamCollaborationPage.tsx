@@ -7,11 +7,11 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 	title:
 		"Remote Team Collaboration Software: Asynchronous Screen Recording for Distributed Teams",
 	description:
-		"Enhance your remote team collaboration with Cap's secure, open-source screen recording platform. Save time, improve clarity, and boost productivity across time zones.",
+		"Enhance your remote team collaboration with RocStarr VideoShare's secure, open-source screen recording platform. Save time, improve clarity, and boost productivity across time zones.",
 
-	featuresTitle: "Why Cap is Perfect for Remote Team Collaboration",
+	featuresTitle: "Why RocStarr VideoShare is Perfect for Remote Team Collaboration",
 	featuresDescription:
-		"Cap provides everything distributed teams need for seamless async communication and collaboration",
+		"RocStarr VideoShare provides everything distributed teams need for seamless async communication and collaboration",
 
 	features: [
 		{
@@ -22,7 +22,7 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 		{
 			title: "Secure & Private by Design",
 			description:
-				"Share sensitive information with confidence. Cap's open-source nature and custom S3 storage options ensure your team's communications remain private and secure at all times.",
+				"Share sensitive information with confidence. RocStarr VideoShare's open-source nature and custom S3 storage options ensure your team's communications remain private and secure at all times.",
 		},
 		{
 			title: "Simple Onboarding for Remote Teams",
@@ -47,9 +47,9 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 	],
 
 	recordingModes: {
-		title: "Two Ways to Record with Cap",
+		title: "Two Ways to Record with RocStarr VideoShare",
 		description:
-			"Cap gives you flexible recording options to match your workflow needs, with both modes available in the free plan",
+			"RocStarr VideoShare gives you flexible recording options to match your workflow needs, with both modes available in the free plan",
 		modes: [
 			{
 				icon: <Zap fill="yellow" className="mb-4 size-8" strokeWidth={1.5} />,
@@ -71,7 +71,7 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 			},
 		],
 	},
-	useCasesTitle: "How Remote Teams Use Cap",
+	useCasesTitle: "How Remote Teams Use RocStarr VideoShare",
 	useCasesDescription:
 		"Real solutions for common remote collaboration challenges",
 
@@ -101,37 +101,37 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 	faqsTitle: "Remote Team Collaboration FAQs",
 	faqs: [
 		{
-			question: "How does Cap help remote teams collaborate more effectively?",
+			question: "How does RocStarr VideoShare help remote teams collaborate more effectively?",
 			answer:
-				"Cap enables asynchronous visual communication that eliminates time zone constraints. Team members can record detailed screen captures with webcam overlay, share them instantly, and collect feedback through threaded comments—all without scheduling meetings. This typically saves teams 30+ minutes per person daily and improves information clarity.",
+				"RocStarr VideoShare enables asynchronous visual communication that eliminates time zone constraints. Team members can record detailed screen captures with webcam overlay, share them instantly, and collect feedback through threaded comments—all without scheduling meetings. This typically saves teams 30+ minutes per person daily and improves information clarity.",
 		},
 		{
 			question:
-				"Can my entire remote team use Cap on different operating systems?",
+				"Can my entire remote team use RocStarr VideoShare on different operating systems?",
 			answer:
-				"Yes, Cap works seamlessly across both Mac and Windows, ensuring your entire distributed team can collaborate regardless of their device preferences. The experience remains consistent across platforms with the same features available to everyone.",
+				"Yes, RocStarr VideoShare works seamlessly across both Mac and Windows, ensuring your entire distributed team can collaborate regardless of their device preferences. The experience remains consistent across platforms with the same features available to everyone.",
 		},
 		{
 			question:
 				"How secure are the recordings for sensitive company information?",
 			answer:
-				"Cap prioritizes security and privacy with its open-source approach, allowing for complete transparency about how your data is handled. You can connect your own S3 storage and custom domain for complete data ownership, ensuring sensitive company information remains under your control.",
+				"RocStarr VideoShare prioritizes security and privacy with its open-source approach, allowing for complete transparency about how your data is handled. You can connect your own S3 storage and custom domain for complete data ownership, ensuring sensitive company information remains under your control.",
 		},
 		{
-			question: "Does Cap integrate with other remote collaboration tools?",
+			question: "Does RocStarr VideoShare integrate with other remote collaboration tools?",
 			answer:
-				"Cap provides easy-to-share links that work with all major communication platforms like Slack, Microsoft Teams, Notion, Trello, and more. Simply copy the link to your recording and paste it into your team's preferred tools for seamless workflow integration.",
+				"RocStarr VideoShare provides easy-to-share links that work with all major communication platforms like Slack, Microsoft Teams, Notion, Trello, and more. Simply copy the link to your recording and paste it into your team's preferred tools for seamless workflow integration.",
 		},
 		{
 			question: "Can I track who has viewed my team's recordings?",
 			answer:
-				"Yes, Cap's paid plans include view tracking and analytics, allowing team leads to see who has watched each recording and for how long. This helps ensure important information is reaching all team members and identifies content that may need follow-up.",
+				"Yes, RocStarr VideoShare's paid plans include view tracking and analytics, allowing team leads to see who has watched each recording and for how long. This helps ensure important information is reaching all team members and identifies content that may need follow-up.",
 		},
 	],
 
 	comparisonTable: {
-		title: "Cap vs. Traditional Remote Collaboration Methods",
-		headers: ["Feature", "Cap", "Video Meetings", "Text-Based Communication"],
+		title: "RocStarr VideoShare vs. Traditional Remote Collaboration Methods",
+		headers: ["Feature", "RocStarr VideoShare", "Video Meetings", "Text-Based Communication"],
 		rows: [
 			[
 				"Time Zone Flexibility",
@@ -179,13 +179,13 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 	},
 
 	migrationGuide: {
-		title: "How to Implement Cap for Your Remote Team",
+		title: "How to Implement RocStarr VideoShare for Your Remote Team",
 		steps: [
-			"Download Cap for all team members' operating systems (Mac and Windows)",
+			"Download RocStarr VideoShare for all team members' operating systems (Mac and Windows)",
 			"Set up shared S3 storage (optional) for complete data ownership",
 			"Create a quick getting-started recording to onboard your team",
 			"Establish guidelines for when to use Instant vs. Studio recording modes",
-			"Integrate Cap links into your existing workflow tools (Slack, Teams, etc.)",
+			"Integrate RocStarr VideoShare links into your existing workflow tools (Slack, Teams, etc.)",
 			"Start replacing some synchronous meetings with async recordings",
 		],
 	},
@@ -193,12 +193,12 @@ export const remoteTeamCollaborationContent: SeoPageContent = {
 	video: {
 		url: "/videos/remote-team-collaboration-demo.mp4",
 		thumbnail: "/videos/remote-team-collaboration-thumbnail.png",
-		alt: "Cap screen recorder demonstration for remote team collaboration",
+		alt: "RocStarr VideoShare screen recorder demonstration for remote team collaboration",
 	},
 
 	cta: {
 		title: "Ready to Transform Your Remote Team Communication?",
-		buttonText: "Download Cap Free",
+		buttonText: "Download RocStarr VideoShare Free",
 	},
 };
 

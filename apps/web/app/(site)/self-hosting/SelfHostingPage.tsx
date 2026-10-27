@@ -27,10 +27,10 @@ export const SelfHostingPage = () => {
 			<div className="relative z-10 px-5 pt-24 pb-36 w-full">
 				<div className="mx-auto text-center wrapper wrapper-sm">
 					<h1 className="fade-in-down text-[2rem] font-medium leading-[2.5rem] md:text-[3.75rem] md:leading-[4rem] relative z-10 text-black mb-4">
-						Self-host Cap
+						Self-host RocStarr VideoShare
 					</h1>
 					<p className="mx-auto mb-8 max-w-3xl text-md sm:text-xl text-zinc-500 fade-in-down animate-delay-1">
-						Deploy Cap on your own infrastructure with full control over your
+						Deploy RocStarr VideoShare on your own infrastructure with full control over your
 						data. Ideal for enterprises and organizations with specific security
 						requirements or those wanting to white label the platform.
 					</p>
@@ -60,7 +60,7 @@ export const SelfHostingPage = () => {
 						<div className="md:col-span-5">
 							<FeatureCard
 								title="Privacy-first"
-								description="Host Cap on your own servers with complete data sovereignty. Maintain full control over your sensitive information and ensure compliance with your organization's security policies and regulatory requirements."
+								description="Host RocStarr VideoShare on your own servers with complete data sovereignty. Maintain full control over your sensitive information and ensure compliance with your organization's security policies and regulatory requirements."
 								imagePath="/illustrations/privacy.webp"
 								imageAlt="Complete Control"
 								imageHeight="h-[280px]"
@@ -69,7 +69,7 @@ export const SelfHostingPage = () => {
 						<div className="md:col-span-7">
 							<FeatureCard
 								title="Multi-Platform Support"
-								description="Self-hosted Cap works seamlessly across macOS and Windows, giving your team the flexibility to collaborate regardless of their device preference. Deploy once and enable your entire organization to capture, share, and collaborate from any device."
+								description="Self-hosted RocStarr VideoShare works seamlessly across macOS and Windows, giving your team the flexibility to collaborate regardless of their device preference. Deploy once and enable your entire organization to capture, share, and collaborate from any device."
 								imagePath="/illustrations/multiplatmain.png"
 								bg="/illustrations/multiplatbg.webp"
 								imageAlt="Enterprise-Ready"
@@ -107,7 +107,7 @@ export const SelfHostingPage = () => {
 					<div className="grid grid-cols-1">
 						<FeatureCard
 							title="Advanced Team Collaboration"
-							description="Enable seamless knowledge sharing across departments with customizable access controls and team workspaces. Self-hosted Cap provides enterprise-grade collaboration features that integrate with your existing authentication systems and team structure."
+							description="Enable seamless knowledge sharing across departments with customizable access controls and team workspaces. Self-hosted RocStarr VideoShare provides enterprise-grade collaboration features that integrate with your existing authentication systems and team structure."
 							imagePath="/illustrations/collaboration.webp"
 							imageAlt="Dedicated Support"
 							imageHeight="h-[285px]"

@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
+import { usePublicEnv } from "@/utils/public-env";
 import { getSafeNextPath } from "../safe-next";
 
 export function VerifyOTPForm({
@@ -27,6 +28,7 @@ export function VerifyOTPForm({
 	);
 	const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 	const router = useRouter();
+	const { emailDeliveryAvailable } = usePublicEnv();
 
 	useEffect(() => {
 		inputRefs.current[0]?.focus();
@@ -128,12 +130,19 @@ export function VerifyOTPForm({
 			});
 
 			if (result?.error) {
-				// NextAuth returns generic "EmailSignin" error for all email errors
-				throw "Please wait 30 seconds before requesting a new code";
+				// NextAuth reports every failure inside sendVerificationRequest as the
+				// same "EmailSignin" error, and the cooldown was already checked above, so
+				// this is a failed send, not a rate limit. Calling it a 30-second wait left
+				// people pressing Resend forever.
+				throw "We couldn't send a new code. If this keeps happening, email delivery on this server needs attention.";
 			}
 		},
 		onSuccess: () => {
-			toast.success("A new code has been sent to your email!");
+			toast.success(
+				emailDeliveryAvailable
+					? "A new code has been sent to your email!"
+					: "A new code was written to the server log.",
+			);
 			setCode(["", "", "", "", "", ""]);
 			inputRefs.current[0]?.focus();
 			setLastResendTime(Date.now());
@@ -172,7 +181,9 @@ export function VerifyOTPForm({
 					Enter verification code
 				</h1>
 				<p className="text-sm text-gray-10">
-					We sent a 6-digit code to {normalizedEmail}
+					{emailDeliveryAvailable
+						? `We sent a 6-digit code to ${normalizedEmail}`
+						: `Email delivery isn't set up on this server, so this code was written to the server log instead of being emailed to ${normalizedEmail}.`}
 				</p>
 			</div>
 
@@ -230,7 +241,7 @@ export function VerifyOTPForm({
 
 			<p className="mt-6 text-xs text-center text-gray-9">
 				By entering your email, you acknowledge that you have both read and
-				agree to Cap's{" "}
+				agree to RocStarr VideoShare's{" "}
 				<Link
 					href="/terms"
 					target="_blank"

@@ -27,7 +27,7 @@ describe("AsyncVideoCodeReviewsPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -106,32 +106,32 @@ describe("AsyncVideoCodeReviewsPage FAQ schema", () => {
 				"Video code reviews communicate context, intent, and nuance that text comments often miss.",
 		},
 		{
-			question: "How does Cap make code reviews faster?",
+			question: "How does RocStarr VideoShare make code reviews faster?",
 			answer:
-				"Cap generates a shareable link the moment you stop recording — no upload wait, no file attachment.",
+				"RocStarr VideoShare generates a shareable link the moment you stop recording — no upload wait, no file attachment.",
 		},
 		{
 			question:
-				"Does Cap work with GitHub, GitLab, Linear, and other developer tools?",
-			answer: "Yes. Cap produces a standard URL that you can paste anywhere.",
+				"Does RocStarr VideoShare work with GitHub, GitLab, Linear, and other developer tools?",
+			answer: "Yes. RocStarr VideoShare produces a standard URL that you can paste anywhere.",
 		},
 		{
 			question: "Can I record code in 4K so reviewers can read it clearly?",
-			answer: "Yes. Cap records at up to 4K resolution at 60fps.",
+			answer: "Yes. RocStarr VideoShare records at up to 4K resolution at 60fps.",
 		},
 		{
-			question: "How long can a Cap code review recording be?",
+			question: "How long can a RocStarr VideoShare code review recording be?",
 			answer: "In Studio Mode, there is no recording time limit.",
 		},
 		{
 			question:
 				"Can I keep code review recordings private or password-protected?",
-			answer: "Yes. Cap supports password protection on individual recordings.",
+			answer: "Yes. RocStarr VideoShare supports password protection on individual recordings.",
 		},
 		{
 			question: "What is the best tool for async video code reviews?",
 			answer:
-				"Cap is the best tool for async video code reviews for engineering teams.",
+				"RocStarr VideoShare is the best tool for async video code reviews for engineering teams.",
 		},
 	];
 

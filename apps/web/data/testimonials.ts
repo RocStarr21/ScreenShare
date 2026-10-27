@@ -4,7 +4,7 @@ export const testimonials = [
 		handle: "Dub.co",
 		image: "/testimonials/steven_tey.jpg",
 		content:
-			"Cap is one of my favorite pieces of software I've used in the recent years – best part is you get to own your data since they're fully open-source + via their S3 integration. Incredibly excited for this launch!",
+			"RocStarr VideoShare is one of my favorite pieces of software I've used in the recent years – best part is you get to own your data since they're fully open-source + via their S3 integration. Incredibly excited for this launch!",
 		url: "https://www.producthunt.com/products/cap-3?comment=4174427#cap-4",
 	},
 	{
@@ -19,7 +19,7 @@ export const testimonials = [
 		handle: "@olivialawson.co",
 		image: "/testimonials/olivialawson.jpg",
 		content:
-			"I've been testing Cap.so for no other reason than some old habits die hard for this former software analyst. Whew that UI is so polished and crispy. Between the open source code, self hosted vids, editing features and price point -- gone give Loom some competition 🤞🏽",
+			"I've been testing RocStarr VideoShare.so for no other reason than some old habits die hard for this former software analyst. Whew that UI is so polished and crispy. Between the open source code, self hosted vids, editing features and price point -- gone give Loom some competition 🤞🏽",
 		url: "https://www.threads.com/@olivialawson.co/post/DIj1kOfpPgX",
 	},
 	{
@@ -34,7 +34,7 @@ export const testimonials = [
 		handle: "@_rogermattos",
 		image: "/testimonials/_rogermattos.jpg",
 		content:
-			"Tip for people that need to make screen recordings: Cap is the open source alternative to Loom. Lightweight, powerful, and stunning. Record and share in seconds.",
+			"Tip for people that need to make screen recordings: RocStarr VideoShare is the open source alternative to Loom. Lightweight, powerful, and stunning. Record and share in seconds.",
 		url: "https://x.com/_rogermattos/status/1844398522650722596",
 	},
 	{
@@ -48,7 +48,7 @@ export const testimonials = [
 		name: "Azzam",
 		handle: "@azrrow_s",
 		image: "/testimonials/azrrow_s.jpg",
-		content: "you can try Cap.so, it's just better!",
+		content: "you can try RocStarr VideoShare.so, it's just better!",
 		url: "https://x.com/azrrow_s/status/1863202543725121586",
 	},
 	{
@@ -71,7 +71,7 @@ export const testimonials = [
 		handle: "@BilalBudhani",
 		image: "/testimonials/BilalBudhani.jpg",
 		content:
-			"Tried @Cap v 0.3.beta and found an issue while exporting video.\n\nWrote to @richiemcilroy about the problem and ~40 mins later the issue is fixed.\n\nI'm sold. Checkout Cap.so",
+			"Tried @RocStarr VideoShare v 0.3.beta and found an issue while exporting video.\n\nWrote to @richiemcilroy about the problem and ~40 mins later the issue is fixed.\n\nI'm sold. Checkout RocStarr VideoShare.so",
 		url: "https://x.com/BilalBudhani/status/1842198507756675104",
 	},
 	{
@@ -94,7 +94,7 @@ export const testimonials = [
 		handle: "@eveningkid",
 		image: "/testimonials/eveningkid.jpg",
 		content:
-			"I've been looking for *ages* for a screen recording app that does the job + allows to zoom in/out easily and @Cap is AWESOME!\n\nFree, cross-platform, fully-featured, open-source. I mean...unless you love spending +$200 for recording your screen, use Cap!",
+			"I've been looking for *ages* for a screen recording app that does the job + allows to zoom in/out easily and @RocStarr VideoShare is AWESOME!\n\nFree, cross-platform, fully-featured, open-source. I mean...unless you love spending +$200 for recording your screen, use RocStarr VideoShare!",
 		url: "https://x.com/eveningkid/status/1916136666898813076",
 	},
 	{
@@ -102,7 +102,7 @@ export const testimonials = [
 		handle: "@prayagtushar",
 		image: "/testimonials/prayagtushar.jpg",
 		content:
-			"I think I just found my go to screen recording app which is free @Cap",
+			"I think I just found my go to screen recording app which is free @RocStarr VideoShare",
 		url: "https://x.com/prayagtushar/status/1910037657482113272",
 	},
 	{
@@ -118,7 +118,7 @@ export const testimonials = [
 		handle: "Postly",
 		image: "/testimonials/emekaonu.jpg",
 		content:
-			"Congratulations on the launch! I tried Cap some time ago, and it's such a great product.",
+			"Congratulations on the launch! I tried RocStarr VideoShare some time ago, and it's such a great product.",
 		url: "https://www.producthunt.com/products/cap-3?comment=4174570#cap-4",
 	},
 	{
@@ -126,7 +126,7 @@ export const testimonials = [
 		handle: "@BeLikeBumblebee",
 		image: "/testimonials/BeLikeBumblebee.jpg",
 		content:
-			"Just purchased Cap commercial lifetime. If you need to capture product videos for your startup cap is the easiest one to get started along with solid feature roadmap.",
+			"Just purchased RocStarr VideoShare commercial lifetime. If you need to capture product videos for your startup cap is the easiest one to get started along with solid feature roadmap.",
 		url: "https://x.com/BeLikeBumblebee/status/1916330489528431058",
 	},
 	{
@@ -140,7 +140,7 @@ export const testimonials = [
 		name: "Geet Khosla",
 		handle: "proem.ai",
 		image: "/testimonials/geet_khosla.jpg",
-		content: "I tried Cap sometime ago, great product - well executed.",
+		content: "I tried RocStarr VideoShare sometime ago, great product - well executed.",
 		url: "https://www.producthunt.com/products/cap-3?comment=4172443#cap-4",
 	},
 	{
@@ -161,7 +161,7 @@ export const testimonials = [
 		name: "JoséPablo*",
 		handle: "@jdomito_",
 		image: "/testimonials/jdomito_.jpg",
-		content: "@Cap is actually way better than loom",
+		content: "@RocStarr VideoShare is actually way better than loom",
 		url: "https://x.com/jdomito_/status/1900395567550742956",
 	},
 	{
@@ -183,7 +183,7 @@ export const testimonials = [
 		name: "Dozie",
 		handle: "@dozibe",
 		image: "/testimonials/dozibe.jpg",
-		content: "Came at the right time. Cap.so was well needed.",
+		content: "Came at the right time. RocStarr VideoShare.so was well needed.",
 		url: "https://x.com/dozibe/status/1842653324635455914",
 	},
 	{
@@ -191,7 +191,7 @@ export const testimonials = [
 		handle: "@NerdyProgramme2",
 		image: "/testimonials/NerdyProgramme2.jpg",
 		content:
-			"thanks for creating this @richiemcilroy. Cap is so good especially the zoom effects still playing around and figuring things out tho... you guys need to try it out @cap - an opensource alternative to loom",
+			"thanks for creating this @richiemcilroy. RocStarr VideoShare is so good especially the zoom effects still playing around and figuring things out tho... you guys need to try it out @cap - an opensource alternative to loom",
 		url: "https://x.com/NerdyProgramme2/status/1913593977124671956",
 	},
 	{
@@ -205,7 +205,7 @@ export const testimonials = [
 		name: "Cam Pak",
 		handle: "",
 		image: "/testimonials/campak.jpg",
-		content: "Thank you for Cap!",
+		content: "Thank you for RocStarr VideoShare!",
 		url: "https://www.producthunt.com/products/cap-3?comment=4174238#cap-4",
 	},
 ] as const;

@@ -26,7 +26,7 @@ describe("MP4 to GIF page metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -59,7 +59,7 @@ describe("MP4 to GIF FAQ schema validity", () => {
 		{
 			question: "How do I convert MP4 to GIF?",
 			answer:
-				"Open the Cap MP4 to GIF converter, drag and drop your MP4 file (or click to browse), adjust your settings if needed, then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, download the GIF instantly.",
+				"Open the RocStarr VideoShare MP4 to GIF converter, drag and drop your MP4 file (or click to browse), adjust your settings if needed, then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, download the GIF instantly.",
 		},
 		{
 			question: "Is the MP4 to GIF converter free?",
@@ -132,7 +132,7 @@ describe("MP4 to GIF HowTo schema validity", () => {
 	const howToSteps = [
 		{
 			name: "Upload your MP4 file",
-			text: "Open the Cap MP4 to GIF converter and drag and drop your MP4 file into the upload area, or click to browse your files.",
+			text: "Open the RocStarr VideoShare MP4 to GIF converter and drag and drop your MP4 file into the upload area, or click to browse your files.",
 		},
 		{
 			name: "Adjust conversion settings",
@@ -148,7 +148,7 @@ describe("MP4 to GIF HowTo schema validity", () => {
 		const schema = createHowToSchema({
 			name: "How to Convert MP4 to GIF Online",
 			description:
-				"Convert MP4 video files to animated GIF format for free using Cap's browser-based converter. No upload required.",
+				"Convert MP4 video files to animated GIF format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 			steps: howToSteps,
 		});
 

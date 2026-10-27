@@ -30,7 +30,7 @@ const primaryLinks: NavLink[] = [
 
 const secondaryLinks: NavLink[] = [
 	{
-		href: "https://github.com/CapSoftware/Cap",
+		href: "https://github.com/CapSoftware/RocStarr VideoShare",
 		text: "Open Source",
 		external: true,
 		icon: (
@@ -198,7 +198,7 @@ const MobileMenu = ({ stars }: MobileMenuProps) => {
 								<div className="flex shrink-0 justify-between items-center px-5 h-[72px] pt-[env(safe-area-inset-top)]">
 									<Link
 										href="/home"
-										aria-label="Cap home"
+										aria-label="RocStarr VideoShare home"
 										onClick={() => setOpen(false)}
 									>
 										<Logo

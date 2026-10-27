@@ -8,19 +8,19 @@ import { createFAQSchema } from "@/utils/web-schema";
 export const metadata: Metadata = {
 	title: "Free Screen Recorder: High-Quality Recording at No Cost",
 	description:
-		"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
+		"RocStarr VideoShare offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
 	openGraph: {
 		title: "Free Screen Recorder: High-Quality Recording at No Cost",
 		description:
-			"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
+			"RocStarr VideoShare offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
 		url: "https://cap.so/free-screen-recorder",
-		siteName: "Cap",
+		siteName: "RocStarr VideoShare",
 		images: [
 			{
 				url: "https://cap.so/og.png",
 				width: 1200,
 				height: 630,
-				alt: "Cap: Free Screen Recorder",
+				alt: "RocStarr VideoShare: Free Screen Recorder",
 			},
 		],
 		locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Free Screen Recorder: High-Quality Recording at No Cost",
 		description:
-			"Cap offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
+			"RocStarr VideoShare offers a top-rated, free screen recorder with high-quality video capture, making it perfect for creating tutorials, educational content, and professional demos without any hidden fees.",
 		images: ["https://cap.so/og.png"],
 	},
 	alternates: {

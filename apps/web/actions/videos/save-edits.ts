@@ -114,7 +114,7 @@ async function markEditProcessing({
 async function loadEditableVideo(videoId: Video.VideoId) {
 	const user = await getCurrentUser();
 	if (!user) throw new Error("Unauthorized");
-	if (!userIsPro(user)) throw new Error("Cap Pro is required to edit videos");
+	if (!userIsPro(user)) throw new Error("RocStarr VideoShare Pro is required to edit videos");
 
 	const [video] = await db()
 		.select()

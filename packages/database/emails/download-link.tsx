@@ -18,7 +18,7 @@ export function DownloadLink({ email = "" }: { email: string }) {
 	return (
 		<Html>
 			<Head />
-			<Preview>Download Cap — the open source Loom alternative</Preview>
+			<Preview>Download RocStarr VideoShare — the open source Loom alternative</Preview>
 			<Tailwind>
 				<Body className="mx-auto my-auto bg-gray-1 font-sans">
 					<Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -27,15 +27,15 @@ export function DownloadLink({ email = "" }: { email: string }) {
 								src={CAP_LOGO_URL}
 								width="40"
 								height="40"
-								alt="Cap"
+								alt="RocStarr VideoShare"
 								className="mx-auto my-0"
 							/>
 						</Section>
 						<Heading className="mx-0 my-7 p-0 text-center text-xl font-semibold text-black">
-							Your Cap download links are here
+							Your RocStarr VideoShare download links are here
 						</Heading>
 						<Text className="text-sm leading-6 text-black">
-							Thanks for your interest in Cap! Here are the download links for
+							Thanks for your interest in RocStarr VideoShare! Here are the download links for
 							every platform:
 						</Text>
 
@@ -75,7 +75,7 @@ export function DownloadLink({ email = "" }: { email: string }) {
 						</Section>
 
 						<Text className="text-sm leading-6 text-black mt-4">
-							Cap is the open source alternative to Loom. Beautiful, shareable
+							RocStarr VideoShare is the open source alternative to Loom. Beautiful, shareable
 							screen recordings — lightweight, powerful, and privacy-focused.
 						</Text>
 						<Footer email={email} marketing={true} />

@@ -179,6 +179,44 @@ export class Videos extends Effect.Service<Videos>()("Videos", {
 					}
 				}
 
+				if (successfulVideos.length > 0) {
+					const localRows = yield* db
+						.use((db) =>
+							db
+								.select({
+									videoId: Db.videoViews.videoId,
+									views: Dz.count(),
+								})
+								.from(Db.videoViews)
+								.where(
+									Dz.and(
+										Dz.inArray(
+											Db.videoViews.videoId,
+											successfulVideos.map((entry) => entry.videoId),
+										),
+										Dz.gte(Db.videoViews.createdAt, from),
+									),
+								)
+								.groupBy(Db.videoViews.videoId),
+						)
+						.pipe(
+							Effect.catchAll((error) => {
+								console.error("local analytics query failed", error);
+								return Effect.succeed(
+									[] as Array<{ videoId: Video.VideoId; views: number }>,
+								);
+							}),
+						);
+					for (const row of localRows) {
+						const pathname = buildPathname(row.videoId);
+						const local = Number(row.views) || 0;
+						countsByPathname.set(
+							pathname,
+							Math.max(countsByPathname.get(pathname) ?? 0, local),
+						);
+					}
+				}
+
 				for (const { videoId } of successfulVideos) {
 					const pathname = buildPathname(videoId);
 					if (!countsByPathname.has(pathname)) {

@@ -3,15 +3,29 @@
 import { db } from "@cap/database";
 import { getCurrentUser } from "@cap/database/auth/session";
 import { videoEdits, videos } from "@cap/database/schema";
-import { Storage } from "@cap/web-backend";
-import type { Video } from "@cap/web-domain";
+import { provideOptionalAuth, Storage, VideosPolicy } from "@cap/web-backend";
+import { Policy, type Video } from "@cap/web-domain";
 import { eq } from "drizzle-orm";
-import { Effect } from "effect";
+import { Effect, Exit } from "effect";
+import * as EffectRuntime from "@/lib/server";
 import { runPromise } from "@/lib/server";
 import { canUserDownloadVideo } from "@/lib/video-download-permissions";
+import { getVideoShareOptions } from "@/lib/video-share-options";
 import { decodeStorageVideo } from "@/lib/video-storage";
 
 export type VideoDownloadVariant = "current" | "original";
+
+async function canViewerDownloadSharedVideo(videoId: Video.VideoId) {
+	const options = await getVideoShareOptions(videoId);
+	if (!options.allowDownload) return false;
+	const exit = await Effect.gen(function* () {
+		const videosPolicy = yield* VideosPolicy;
+		return yield* Effect.promise(() =>
+			db().select({ id: videos.id }).from(videos).where(eq(videos.id, videoId)),
+		).pipe(Policy.withPublicPolicy(videosPolicy.canView(videoId)));
+	}).pipe(provideOptionalAuth, EffectRuntime.runPromiseExit);
+	return Exit.isSuccess(exit) && exit.value.length > 0;
+}
 
 export async function downloadVideo(videoId: Video.VideoId) {
 	const user = await getCurrentUser();
@@ -65,7 +79,7 @@ export async function getVideoDownloadInfo(
 	variant: VideoDownloadVariant = "current",
 ) {
 	const user = await getCurrentUser();
-	if (!user || !videoId) {
+	if (!videoId) {
 		throw new Error("Missing required data for downloading video");
 	}
 
@@ -76,12 +90,16 @@ export async function getVideoDownloadInfo(
 
 	if (!video) throw new Error("Video not found");
 
-	const allowed = await canUserDownloadVideo({
-		userId: user.id,
-		ownerId: video.ownerId,
-		videoId,
-		orgId: video.orgId,
-	});
+	const allowed =
+		(user
+			? await canUserDownloadVideo({
+					userId: user.id,
+					ownerId: video.ownerId,
+					videoId,
+					orgId: video.orgId,
+				})
+			: false) ||
+		(variant === "current" && (await canViewerDownloadSharedVideo(videoId)));
 
 	if (!allowed) {
 		throw new Error("You don't have permission to download this video");

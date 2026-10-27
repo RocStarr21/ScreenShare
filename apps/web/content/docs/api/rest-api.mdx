@@ -1,10 +1,10 @@
 ---
 title: "REST API"
-summary: "Programmatic access to Cap via the REST API"
+summary: "Programmatic access to RocStarr VideoShare via the REST API"
 tags: "API, Integration"
 ---
 
-The Cap Developer API provides programmatic access to videos created through your developer apps. It is designed for server-to-server integrations, automated workflows, and building custom recording experiences on top of Cap.
+The RocStarr VideoShare Developer API provides programmatic access to videos created through your developer apps. It is designed for server-to-server integrations, automated workflows, and building custom recording experiences on top of RocStarr VideoShare.
 
 There are two APIs:
 
@@ -17,7 +17,7 @@ There are two APIs:
 
 API keys are managed through the Developer dashboard, not the general Settings page.
 
-1. Go to [Cap.so/dashboard/developers](https://cap.so/dashboard/developers).
+1. Go to [RocStarr VideoShare.so/dashboard/developers](https://cap.so/dashboard/developers).
 2. Click **Create App** and give it a name and environment (development or production).
 3. Two keys are generated for each app:
    - **Public key** (`cpk_...`) -- Safe to use in client-side code. Used with the SDK API.
@@ -54,7 +54,7 @@ https://cap.so/api/developer/v1
 https://cap.so/api/developer/sdk/v1
 ```
 
-If you are self-hosting Cap, replace `Cap.so` with your custom domain.
+If you are self-hosting RocStarr VideoShare, replace `RocStarr VideoShare.so` with your custom domain.
 
 ## Error Handling
 
@@ -443,10 +443,10 @@ POST /api/developer/sdk/v1/upload/multipart/abort
 
 ## SDKs
 
-Cap provides official SDK packages to simplify integration:
+RocStarr VideoShare provides official SDK packages to simplify integration:
 
 - **`@cap/sdk-recorder`** -- Recording SDK for capturing video in web applications. Includes React bindings.
-- **`@cap/sdk-embed`** -- Embedding SDK for displaying Cap videos. Available for React and vanilla JavaScript.
+- **`@cap/sdk-embed`** -- Embedding SDK for displaying RocStarr VideoShare videos. Available for React and vanilla JavaScript.
 
 ## Video Object Reference
 

@@ -8,11 +8,19 @@ import {
 	Maximize2,
 	PictureInPicture,
 	RectangleHorizontal,
+	Sparkles,
 	Square,
 	X,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { toast } from "sonner";
+import {
+	type BlurredCamera,
+	createBlurredCamera,
+} from "./camera-background-blur";
+
+const BLUR_PREFERENCE_KEY = "ss-camera-blur";
 
 type CameraPreviewSize = "sm" | "lg";
 type CameraPreviewShape = "round" | "square" | "full";
@@ -77,15 +85,21 @@ const getPreviewMetrics = (
 interface CameraPreviewWindowProps {
 	cameraId: string;
 	onClose: () => void;
+	countdown?: number | null;
 }
 
 export const CameraPreviewWindow = ({
 	cameraId,
 	onClose,
+	countdown = null,
 }: CameraPreviewWindowProps) => {
 	const [size, setSize] = useState<CameraPreviewSize>("sm");
 	const [shape, setShape] = useState<CameraPreviewShape>("round");
 	const [mirrored, setMirrored] = useState(false);
+	const [rawStream, setRawStream] = useState<MediaStream | null>(null);
+	const [blurBackground, setBlurBackground] = useState(false);
+	const [blurLoading, setBlurLoading] = useState(false);
+	const blurRef = useRef<BlurredCamera | null>(null);
 	const [position, setPosition] = useState<{ x: number; y: number } | null>(
 		null,
 	);
@@ -163,10 +177,65 @@ export const CameraPreviewWindow = ({
 
 	useEffect(() => {
 		setMounted(true);
+		try {
+			setBlurBackground(
+				window.localStorage.getItem(BLUR_PREFERENCE_KEY) === "true",
+			);
+		} catch {
+			setBlurBackground(false);
+		}
 		return () => {
 			setMounted(false);
 		};
 	}, []);
+
+	useEffect(() => {
+		const video = videoRef.current;
+		if (!rawStream || !video) return;
+		if (!blurBackground) {
+			video.srcObject = rawStream;
+			return;
+		}
+		let cancelled = false;
+		setBlurLoading(true);
+		createBlurredCamera(rawStream)
+			.then((blurred) => {
+				if (cancelled) {
+					blurred.stop();
+					return;
+				}
+				blurRef.current = blurred;
+				video.srcObject = blurred.stream;
+			})
+			.catch((error) => {
+				console.error("Background blur failed", error);
+				if (!cancelled) {
+					toast.error("Background blur couldn't start in this browser");
+					setBlurBackground(false);
+				}
+			})
+			.finally(() => {
+				if (!cancelled) setBlurLoading(false);
+			});
+		return () => {
+			cancelled = true;
+			blurRef.current?.stop();
+			blurRef.current = null;
+			video.srcObject = rawStream;
+		};
+	}, [blurBackground, rawStream]);
+
+	const toggleBlur = () => {
+		setBlurBackground((current) => {
+			const next = !current;
+			try {
+				window.localStorage.setItem(BLUR_PREFERENCE_KEY, String(next));
+			} catch {
+				return next;
+			}
+			return next;
+		});
+	};
 
 	useEffect(() => {
 		const startCamera = async () => {
@@ -178,6 +247,7 @@ export const CameraPreviewWindow = ({
 				});
 
 				streamRef.current = stream;
+				setRawStream(stream);
 
 				if (videoRef.current) {
 					videoRef.current.srcObject = stream;
@@ -190,6 +260,7 @@ export const CameraPreviewWindow = ({
 		startCamera();
 
 		return () => {
+			setRawStream(null);
 			if (streamRef.current) {
 				streamRef.current.getTracks().forEach((track) => {
 					track.stop();
@@ -545,6 +616,30 @@ export const CameraPreviewWindow = ({
 							>
 								<FlipHorizontal className="size-5.5" />
 							</button>
+							<button
+								type="button"
+								aria-label={
+									blurBackground
+										? "Turn off background blur"
+										: "Blur background"
+								}
+								title={
+									blurBackground ? "Background blur on" : "Blur background"
+								}
+								disabled={blurLoading}
+								onClick={(e) => {
+									e.stopPropagation();
+									toggleBlur();
+								}}
+								className={clsx(
+									"p-2 rounded-lg data-pressed:bg-gray-3 data-pressed:text-gray-12 hover:bg-gray-3 hover:text-gray-12 disabled:opacity-50",
+									blurBackground && "bg-gray-3 text-gray-12",
+								)}
+							>
+								<Sparkles
+									className={clsx("size-5.5", blurLoading && "animate-pulse")}
+								/>
+							</button>
 							{isPictureInPictureSupported && (
 								<button
 									type="button"
@@ -600,6 +695,13 @@ export const CameraPreviewWindow = ({
 							}
 						}}
 					/>
+					{countdown !== null && (
+						<div className="flex absolute inset-0 z-20 justify-center items-center bg-black/50">
+							<span className="text-5xl font-semibold text-white tabular-nums">
+								{countdown}
+							</span>
+						</div>
+					)}
 					{!videoDimensions && (
 						<div className="absolute inset-0 flex items-center justify-center">
 							<LoadingSpinner size={32} themeColors />

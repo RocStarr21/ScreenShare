@@ -52,7 +52,7 @@ export function CommercialGetStarted() {
 						Enterprise-grade screen recording, on your infrastructure.
 					</h2>
 					<p className="text-[1rem] sm:text-lg text-white">
-						Deploy Cap on your own servers with complete data sovereignty.
+						Deploy RocStarr VideoShare on your own servers with complete data sovereignty.
 						Maintain full control over your sensitive information while enabling
 						seamless team collaboration.
 					</p>

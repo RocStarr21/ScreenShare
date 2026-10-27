@@ -3,7 +3,10 @@ name: cap
 services:
   cap-web:
     container_name: cap-web
-    image: ghcr.io/capsoftware/cap-web:latest
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    image: rocstarr-screenshare-web:local
     restart: unless-stopped
     depends_on:
       mysql:
@@ -28,6 +31,18 @@ services:
       RESEND_FROM_DOMAIN: ${RESEND_FROM_DOMAIN:-}
       MEDIA_SERVER_URL: http://media-server:3456
       MEDIA_SERVER_WEBHOOK_URL: http://cap-web:3000
+      SCREENSHARE_DISABLE_AUTH: ${SCREENSHARE_DISABLE_AUTH:-true}
+      # Owner bypass is restricted to these hosts. Tunnelled traffic arrives with
+      # the public Host and must authenticate through Cloudflare Access instead.
+      SCREENSHARE_LOCAL_HOSTS: ${SCREENSHARE_LOCAL_HOSTS:-}
+      SCREENSHARE_OWNER_EMAIL: ${SCREENSHARE_OWNER_EMAIL:-}
+      CLOUDFLARE_ACCESS_TEAM_DOMAIN: ${CLOUDFLARE_ACCESS_TEAM_DOMAIN:-}
+      CLOUDFLARE_ACCESS_AUD: ${CLOUDFLARE_ACCESS_AUD:-}
+      # Transcription and AI titles/summaries/chapters stay disabled until keys exist.
+      DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
     ports:
       - "${CAP_PORT:-3000}:3000"
     healthcheck:
@@ -49,7 +64,13 @@ services:
       PORT: 3456
       MEDIA_SERVER_WEBHOOK_SECRET: ${MEDIA_SERVER_WEBHOOK_SECRET:-fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210}
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:3456/health"]
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3456/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
       interval: 30s
       timeout: 10s
       retries: 3

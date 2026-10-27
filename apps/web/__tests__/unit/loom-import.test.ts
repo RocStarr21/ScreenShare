@@ -236,7 +236,7 @@ describe("importFromLoom", () => {
 		vi.stubGlobal("fetch", vi.fn());
 	});
 
-	it("rejects a Loom import when the linked Cap still exists", async () => {
+	it("rejects a Loom import when the linked RocStarr VideoShare still exists", async () => {
 		whereMock.mockResolvedValueOnce([
 			{ importedVideoId: "video-123", videoId: "video-123" },
 		]);
@@ -283,7 +283,7 @@ describe("importFromLoom", () => {
 		expect(valuesMock).not.toHaveBeenCalled();
 	});
 
-	it("removes a stale Loom row and recreates it with the Cap video id", async () => {
+	it("removes a stale Loom row and recreates it with the RocStarr VideoShare video id", async () => {
 		whereMock
 			.mockResolvedValueOnce([{ importedVideoId: "stale-row", videoId: null }])
 			.mockResolvedValueOnce(undefined);

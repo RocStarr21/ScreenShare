@@ -178,7 +178,7 @@ export function LoginForm() {
 					layout="position"
 					className="text-2xl font-semibold text-gray-12"
 				>
-					Sign in to Cap
+					Sign in to RocStarr VideoShare
 				</motion.h1>
 				<motion.p
 					key="subtitle"
@@ -312,7 +312,7 @@ export function LoginForm() {
 							className="pt-3 text-xs text-center text-gray-9"
 						>
 							By typing your email and clicking continue, you acknowledge that
-							you have both read and agree to Cap's{" "}
+							you have both read and agree to RocStarr VideoShare's{" "}
 							<Link
 								href="/terms"
 								target="_blank"
@@ -425,16 +425,13 @@ const NormalLogin = ({
 				>
 					{loading ? "Sending code..." : "Login with email"}
 				</MotionButton>
-				{/* {NODE_ENV === "development" && (
-                  <div className="flex justify-center items-center px-6 py-3 mt-3 bg-red-600 rounded-xl">
-                    <p className="text-lg text-white">
-                      <span className="font-medium text-white">
-                        Development mode:
-                      </span>{" "}
-                      Auth URL will be logged to your dev console.
-                    </p>
-                  </div>
-                )} */}
+				{!publicEnv.emailDeliveryAvailable && (
+					<p className="px-3 py-2 text-xs text-center rounded-lg border text-gray-11 bg-gray-3 border-gray-5">
+						Email delivery isn't set up on this server, so no email will
+						arrive. The server operator can read the code from the server
+						log.
+					</p>
+				)}
 			</motion.div>
 			<motion.p
 				layout="position"

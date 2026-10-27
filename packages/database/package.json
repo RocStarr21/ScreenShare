@@ -59,6 +59,7 @@
 		".": "./index.ts",
 		"./auth/auth-options": "./auth/auth-options.ts",
 		"./auth/session": "./auth/session.ts",
+		"./auth/cloudflare-access": "./auth/cloudflare-access.ts",
 		"./schema": "./schema.ts",
 		"./crypto": "./crypto.ts",
 		"./helpers": "./helpers.ts",

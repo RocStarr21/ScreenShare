@@ -23,7 +23,7 @@ const supportChannels: SupportChannel[] = [
 	{
 		title: "Join our Discord",
 		description:
-			"Chat with the Cap team and community in real time. The fastest way to get help, share feedback, and stay up to date.",
+			"Chat with the RocStarr VideoShare team and community in real time. The fastest way to get help, share feedback, and stay up to date.",
 		icon: MessageCircle,
 		href: "https://discord.gg/y8gdQ3WRN3",
 		cta: "Open Discord",
@@ -48,9 +48,9 @@ const supportChannels: SupportChannel[] = [
 	{
 		title: "Report an issue",
 		description:
-			"Found a bug or want to request a feature? Cap is open source, so you can open an issue directly on GitHub.",
+			"Found a bug or want to request a feature? RocStarr VideoShare is open source, so you can open an issue directly on GitHub.",
 		icon: Github,
-		href: "https://github.com/CapSoftware/Cap/issues",
+		href: "https://github.com/CapSoftware/RocStarr VideoShare/issues",
 		cta: "Open an issue",
 		isExternal: true,
 	},
@@ -65,7 +65,7 @@ const quickLinks = [
 		isExternal: true,
 	},
 	{ label: "Trust portal", href: "https://trust.cap.so", isExternal: true },
-	{ label: "Download Cap", href: "/download" },
+	{ label: "Download RocStarr VideoShare", href: "/download" },
 ];
 
 export const SupportPage = () => {
@@ -82,7 +82,7 @@ export const SupportPage = () => {
 						</h1>
 						<p className="mx-auto max-w-[560px] text-lg md:text-xl leading-relaxed text-gray-10">
 							Whether you're stuck, curious, or just want to say hi, here's how
-							to reach the Cap team and community.
+							to reach the RocStarr VideoShare team and community.
 						</p>
 					</div>
 

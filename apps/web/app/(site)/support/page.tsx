@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { SupportPage } from "@/components/pages/SupportPage";
 
 export const metadata: Metadata = {
-	title: "Support — Cap",
+	title: "Support — RocStarr VideoShare",
 	description:
-		"Get help with Cap. Join our Discord community, email support@cap.so, read the docs, or report an issue on GitHub.",
+		"Get help with RocStarr VideoShare. Join our Discord community, email support@cap.so, read the docs, or report an issue on GitHub.",
 };
 
 export default function App() {

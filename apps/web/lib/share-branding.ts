@@ -2,8 +2,8 @@ import type { ImageUpload } from "@cap/web-domain";
 
 /**
  * Branding shown on public-facing pages (`/s/[videoId]` and `/c/[id]`).
- * Pro organizations can show a custom icon or hide the Cap logo entirely;
- * free organizations always fall back to the Cap logo.
+ * Pro organizations can show a custom icon or hide the RocStarr VideoShare logo entirely;
+ * free organizations always fall back to the RocStarr VideoShare logo.
  */
 export type SharePageBranding =
 	| {
@@ -28,7 +28,7 @@ export type SharePageBrandingInput = {
 
 /**
  * Resolves how a shared page should be branded. Returns `null` when a Pro
- * organization has opted to hide the Cap logo and has no custom icon set.
+ * organization has opted to hide the RocStarr VideoShare logo and has no custom icon set.
  */
 export function getSharePageBranding(
 	data: SharePageBrandingInput,

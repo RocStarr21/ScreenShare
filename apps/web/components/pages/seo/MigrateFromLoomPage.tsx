@@ -41,7 +41,7 @@ const comparisonTable: {
 	headers: string[];
 	rows: (string | ComparisonCell)[][];
 } = {
-	headers: ["Feature", "Cap", "Loom"],
+	headers: ["Feature", "RocStarr VideoShare", "Loom"],
 	rows: [
 		[
 			"Pricing",
@@ -94,19 +94,19 @@ const features = [
 		icon: FileDown,
 		title: "Built-in Loom importer",
 		description:
-			"Paste a Loom share link or upload a CSV of your whole library. Cap downloads and re-hosts every recording for you, with no manual downloads or re-uploads.",
+			"Paste a Loom share link or upload a CSV of your whole library. RocStarr VideoShare downloads and re-hosts every recording for you, with no manual downloads or re-uploads.",
 	},
 	{
 		icon: BadgeDollarSign,
 		title: "Half the price of Loom",
 		description:
-			"Cap Pro starts at just $8.16/month per user versus Loom's $18. A genuinely generous free plan is included, with Studio mode free for personal use.",
+			"RocStarr VideoShare Pro starts at just $8.16/month per user versus Loom's $18. A genuinely generous free plan is included, with Studio mode free for personal use.",
 	},
 	{
 		icon: ShieldCheck,
 		title: "Open source & private",
 		description:
-			"Cap is fully open source and privacy-first. Audit the code, self-host the whole stack, or password-protect sensitive shares. Your call.",
+			"RocStarr VideoShare is fully open source and privacy-first. Audit the code, self-host the whole stack, or password-protect sensitive shares. Your call.",
 	},
 	{
 		icon: Database,
@@ -122,7 +122,7 @@ const features = [
 	},
 	{
 		icon: Sparkles,
-		title: "Cap AI does the busywork",
+		title: "RocStarr VideoShare AI does the busywork",
 		description:
 			"Every recording gets an AI-generated title, summary, clickable chapters, and a searchable transcript, so the work after recording is already done.",
 	},
@@ -130,7 +130,7 @@ const features = [
 
 const steps = [
 	{
-		title: "Create your free Cap account",
+		title: "Create your free RocStarr VideoShare account",
 		description: "Sign up in seconds. No credit card required to get started.",
 	},
 	{
@@ -146,40 +146,40 @@ const steps = [
 	{
 		title: "We import everything in the background",
 		description:
-			"Cap re-hosts your videos and they appear in your caps, ready to share with links, comments and analytics.",
+			"RocStarr VideoShare re-hosts your videos and they appear in your caps, ready to share with links, comments and analytics.",
 	},
 ];
 
 const faqs = [
 	{
-		question: "Can I import my existing Loom videos into Cap?",
+		question: "Can I import my existing Loom videos into RocStarr VideoShare?",
 		answer:
-			"Yes. Cap Pro includes a built-in Loom video importer. Paste a Loom share link to bring a single video across, or upload a CSV to bulk import your whole library directly into Cap.",
+			"Yes. RocStarr VideoShare Pro includes a built-in Loom video importer. Paste a Loom share link to bring a single video across, or upload a CSV to bulk import your whole library directly into RocStarr VideoShare.",
 	},
 	{
 		question: "How does bulk migrating from Loom work?",
 		answer:
-			"Download our CSV template, add a row per video with the Loom URL, the user's email, and an optional space name, then upload it. Cap imports each recording for the matching organization member and places it in the right space, up to 500 videos at a time.",
+			"Download our CSV template, add a row per video with the Loom URL, the user's email, and an optional space name, then upload it. RocStarr VideoShare imports each recording for the matching organization member and places it in the right space, up to 500 videos at a time.",
 	},
 	{
 		question: "Do I need to download my Loom videos first?",
 		answer:
-			"No. Cap fetches each Loom recording directly from the share link and re-hosts it for you. There's no manual downloading or re-uploading involved.",
+			"No. RocStarr VideoShare fetches each Loom recording directly from the share link and re-hosts it for you. There's no manual downloading or re-uploading involved.",
 	},
 	{
 		question: "Is migrating from Loom free?",
 		answer:
-			"Creating a Cap account is free, and you can try Cap with no credit card. The built-in Loom importer is a Cap Pro feature, which starts at just $8.16/month per user, less than half the price of Loom.",
+			"Creating a RocStarr VideoShare account is free, and you can try RocStarr VideoShare with no credit card. The built-in Loom importer is a RocStarr VideoShare Pro feature, which starts at just $8.16/month per user, less than half the price of Loom.",
 	},
 	{
 		question: "Will I keep ownership of my recordings?",
 		answer:
-			"Absolutely. Cap is open source, and you can connect your own S3 storage and custom domain for 100% ownership and control of your content. You're never locked into our platform.",
+			"Absolutely. RocStarr VideoShare is open source, and you can connect your own S3 storage and custom domain for 100% ownership and control of your content. You're never locked into our platform.",
 	},
 	{
-		question: "How is Cap different from Loom?",
+		question: "How is RocStarr VideoShare different from Loom?",
 		answer:
-			"Cap gives you the simplicity of Loom with the power of professional tools: open source, bring-your-own-storage, better pricing, and a native desktop app that works offline. Plus you actually own your content, and our importer makes switching effortless.",
+			"RocStarr VideoShare gives you the simplicity of Loom with the power of professional tools: open source, bring-your-own-storage, better pricing, and a native desktop app that works offline. Plus you actually own your content, and our importer makes switching effortless.",
 	},
 ];
 
@@ -314,7 +314,7 @@ const ImportDemo = () => {
 							Import from Loom
 						</h2>
 						<p className="mt-1 max-w-xl text-sm text-gray-10">
-							Bring a single Loom video into Cap, or bulk import your whole
+							Bring a single Loom video into RocStarr VideoShare, or bulk import your whole
 							library for organization members from a CSV.
 						</p>
 					</div>
@@ -483,7 +483,7 @@ export const MigrateFromLoomPage = () => {
 					>
 						<span className="inline-flex gap-2 items-center px-3 py-1 text-sm font-medium rounded-full border border-gray-4 bg-gray-2 text-gray-11">
 							<LoomMark size={14} />
-							Loom → Cap migration
+							Loom → RocStarr VideoShare migration
 						</span>
 					</motion.div>
 
@@ -494,7 +494,7 @@ export const MigrateFromLoomPage = () => {
 						variants={fadeUp}
 						className="text-[2.25rem] leading-[2.5rem] md:text-[3.5rem] md:leading-[3.75rem] font-medium text-gray-12 text-balance"
 					>
-						Migrate from Loom to Cap in minutes
+						Migrate from Loom to RocStarr VideoShare in minutes
 					</motion.h1>
 
 					<motion.p
@@ -504,7 +504,7 @@ export const MigrateFromLoomPage = () => {
 						variants={fadeUp}
 						className="mx-auto mt-6 max-w-2xl text-lg leading-7 text-gray-10"
 					>
-						Bring your existing Loom videos into Cap with the built-in importer.
+						Bring your existing Loom videos into RocStarr VideoShare with the built-in importer.
 						Paste a single share link or bulk import your entire library from a
 						CSV. Open source, privacy-first, and half the price of Loom.
 					</motion.p>
@@ -530,7 +530,7 @@ export const MigrateFromLoomPage = () => {
 							size="lg"
 							className="w-full font-medium sm:w-auto"
 						>
-							Compare Cap vs Loom
+							Compare RocStarr VideoShare vs Loom
 						</Button>
 					</motion.div>
 
@@ -553,7 +553,7 @@ export const MigrateFromLoomPage = () => {
 				>
 					<ImportDemo />
 					<p className="mx-auto mt-4 text-sm text-center text-gray-9">
-						This is the Loom importer inside Cap.{" "}
+						This is the Loom importer inside RocStarr VideoShare.{" "}
 						<a
 							href={IMPORT_HREF}
 							className="font-medium text-blue-500 transition-colors hover:text-blue-600"
@@ -570,7 +570,7 @@ export const MigrateFromLoomPage = () => {
 						Everything you loved about Loom, without the lock-in
 					</h2>
 					<p className="text-xl leading-relaxed text-gray-10">
-						Cap is the open-source screen recorder built to be yours: your
+						RocStarr VideoShare is the open-source screen recorder built to be yours: your
 						storage, your platform, your workflow.
 					</p>
 				</div>
@@ -605,7 +605,7 @@ export const MigrateFromLoomPage = () => {
 			<div className="px-5 mx-auto mt-32 max-w-4xl md:mt-44">
 				<div className="mx-auto mb-12 text-center max-w-[800px]">
 					<h2 className="text-3xl font-medium md:text-4xl text-gray-12">
-						Cap vs Loom at a glance
+						RocStarr VideoShare vs Loom at a glance
 					</h2>
 				</div>
 				<div className="overflow-x-auto">

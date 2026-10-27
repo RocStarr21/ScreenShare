@@ -1,23 +1,23 @@
 ---
 title: Agent CLI, Split-Screen Scenes, Recording Recovery & Export Fixes
-app: Cap Desktop
+app: RocStarr VideoShare Desktop
 publishedAt: "2026-06-06"
 version: 0.5.1
 image:
 ---
 
-This release turns Cap Desktop into a stronger recorder for both humans and agents. The desktop app now ships with the Cap CLI, adds a dedicated CLI settings page, and gives automated workflows a reliable way to record, export, inspect, upload, update, and diagnose Cap from the command line.
+This release turns RocStarr VideoShare Desktop into a stronger recorder for both humans and agents. The desktop app now ships with the RocStarr VideoShare CLI, adds a dedicated CLI settings page, and gives automated workflows a reliable way to record, export, inspect, upload, update, and diagnose RocStarr VideoShare from the command line.
 
 It also brings a new split-screen editing mode, self-hosted server routing, tighter recording defaults, more resilient fragmented and segmented upload recovery, and another round of export, audio timing, auth, and macOS stability fixes.
 
-- **Bundled Cap CLI** — Cap Desktop now bundles the `cap` command-line tool and can install or repair it from Settings -> CLI. The installer detects existing Cap-managed shims, repoints stale links, handles symlinked targets, and recognizes persisted Windows PATH entries.
-- **Agent-ready recording workflows** — The CLI now supports targets, screenshots, detached recording sessions, JSON output, recording listing, project inspection, project validation, exporting, uploading, doctor diagnostics, and machine-readable guide output so agents and scripts can drive Cap without relying on UI automation.
+- **Bundled RocStarr VideoShare CLI** — RocStarr VideoShare Desktop now bundles the `cap` command-line tool and can install or repair it from Settings -> CLI. The installer detects existing RocStarr VideoShare-managed shims, repoints stale links, handles symlinked targets, and recognizes persisted Windows PATH entries.
+- **Agent-ready recording workflows** — The CLI now supports targets, screenshots, detached recording sessions, JSON output, recording listing, project inspection, project validation, exporting, uploading, doctor diagnostics, and machine-readable guide output so agents and scripts can drive RocStarr VideoShare without relying on UI automation.
 - **Split-screen scene mode** — The editor can now compose screen and camera as split-screen panes, with per-segment scene transitions, split factor controls, position pads, preview overlays, timeline scene support, and smooth layout morphing in exports.
 - **Camera size during zoom** — A new editor control keeps the camera size stable while zoom effects move the screen content, making split-screen and picture-in-picture edits easier to tune.
 - **Cleaner background choices** — Scene defaults now include a no-background option, so recordings can use split-screen, transparent, or plain layouts without forcing a decorative background.
 - **Zoom editing shortcut** — Double-click a zoom handle in the timeline to expand the segment quickly instead of manually dragging its edge.
 - **Shared recording defaults** — Desktop and CLI recording flows now use the same default settings, including the default instant-mode frame rate, so recordings started from automation match recordings started from the app.
-- **Fragmented recording recovery** — Cap can remux fragmented recordings when needed, including before export and after CLI-driven Studio recordings, making recovered or interrupted sessions easier to open and share.
+- **Fragmented recording recovery** — RocStarr VideoShare can remux fragmented recordings when needed, including before export and after CLI-driven Studio recordings, making recovered or interrupted sessions easier to open and share.
 - **Desktop segment upload recovery** — Stale desktop-segment uploads can now be recovered on share-page load, finalized manually by the owner, retried automatically after transient finalization errors, and swept by the scheduled recovery job.
 - **Segment manifest hardening** — Finalization now treats segment manifest failures as retryable mux failures and can auto-complete the manifest before muxing.
 - **Audio timing repair** — Studio recordings now persist audio gap summaries and startup overlap trim, repair stale drift during editor startup, support negative timing offsets, and avoid playback readiness hangs when audio stops or timelines are invalid.

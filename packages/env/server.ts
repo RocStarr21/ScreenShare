@@ -84,6 +84,33 @@ function createServerEnv() {
 				.string()
 				.optional()
 				.describe("Comma-separated list of permitted signup domains"),
+			SCREENSHARE_DISABLE_AUTH: boolString(false).describe(
+				"Self-host mode: bypass hosted Cap login and use a local owner account. Only applies to requests whose Host is local — never to tunnelled traffic",
+			),
+			SCREENSHARE_LOCAL_HOSTS: z
+				.string()
+				.optional()
+				.describe(
+					"Extra hostnames, comma separated, that count as local for the owner bypass",
+				),
+			SCREENSHARE_OWNER_EMAIL: z
+				.string()
+				.optional()
+				.describe(
+					"Cloudflare Access email that maps onto the owner account rather than a team member account",
+				),
+			CLOUDFLARE_ACCESS_TEAM_DOMAIN: z
+				.string()
+				.optional()
+				.describe(
+					"Zero Trust team domain, e.g. acme or acme.cloudflareaccess.com. Required to accept Access identities",
+				),
+			CLOUDFLARE_ACCESS_AUD: z
+				.string()
+				.optional()
+				.describe(
+					"Application Audience (AUD) tag(s) of the Access application, comma separated",
+				),
 
 			/// AI providers
 			DEEPGRAM_API_KEY: z.string().optional().describe("Audio transcription"),

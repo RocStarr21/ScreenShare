@@ -26,7 +26,7 @@ describe("MOV to MP4 page metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -59,7 +59,7 @@ describe("MOV to MP4 FAQ schema validity", () => {
 		{
 			question: "How do I convert MOV to MP4 online?",
 			answer:
-				"Open Cap's MOV to MP4 converter, drag and drop your MOV file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
+				"Open RocStarr VideoShare's MOV to MP4 converter, drag and drop your MOV file (or click to browse), then click Convert. The entire process runs in your browser — your file never leaves your device. Once complete, click Download to save the MP4 file.",
 		},
 		{
 			question: "Is the MOV to MP4 converter free?",
@@ -84,7 +84,7 @@ describe("MOV to MP4 FAQ schema validity", () => {
 		{
 			question: "Does this work with iPhone MOV files?",
 			answer:
-				"Yes. iPhones and iPads record video in the MOV (QuickTime) container using HEVC or H.264. Cap's converter handles both formats and outputs a widely compatible MP4 file you can share, upload, or play on any device.",
+				"Yes. iPhones and iPads record video in the MOV (QuickTime) container using HEVC or H.264. RocStarr VideoShare's converter handles both formats and outputs a widely compatible MP4 file you can share, upload, or play on any device.",
 		},
 		{
 			question: "Does the converter work on mobile?",
@@ -132,7 +132,7 @@ describe("MOV to MP4 HowTo schema validity", () => {
 	const howToSteps = [
 		{
 			name: "Upload your MOV file",
-			text: "Open Cap's MOV to MP4 converter and drag and drop your MOV file into the upload area, or click to browse your files. Supports QuickTime MOV files up to 500 MB.",
+			text: "Open RocStarr VideoShare's MOV to MP4 converter and drag and drop your MOV file into the upload area, or click to browse your files. Supports QuickTime MOV files up to 500 MB.",
 		},
 		{
 			name: "Start the conversion",
@@ -148,7 +148,7 @@ describe("MOV to MP4 HowTo schema validity", () => {
 		const schema = createHowToSchema({
 			name: "How to Convert MOV to MP4 Online",
 			description:
-				"Convert Apple QuickTime MOV video files to MP4 format for free using Cap's browser-based converter. No upload required.",
+				"Convert Apple QuickTime MOV video files to MP4 format for free using RocStarr VideoShare's browser-based converter. No upload required.",
 			steps: howToSteps,
 		});
 

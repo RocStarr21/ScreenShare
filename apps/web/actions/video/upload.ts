@@ -200,7 +200,7 @@ export async function createVideoAndGetUploadUrl({
 
 		const videoData = {
 			id: idToUse,
-			name: `Cap ${
+			name: `RocStarr VideoShare ${
 				isScreenshot ? "Screenshot" : isUpload ? "Upload" : "Recording"
 			} - ${formattedDate}`,
 			ownerId: user.id,

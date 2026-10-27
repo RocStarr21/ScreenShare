@@ -90,7 +90,7 @@ export async function createVideoForServerProcessing({
 		.insert(videos)
 		.values({
 			id: videoId,
-			name: `Cap Upload - ${formattedDate}`,
+			name: `RocStarr VideoShare Upload - ${formattedDate}`,
 			ownerId: user.id,
 			orgId,
 			source: { type: "webMP4" as const },

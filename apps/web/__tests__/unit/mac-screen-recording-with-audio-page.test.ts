@@ -33,7 +33,7 @@ describe("MacScreenRecordingWithAudioPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -125,38 +125,38 @@ describe("MacScreenRecordingWithAudioPage FAQ schema", () => {
 		{
 			question: "How do I record my Mac screen with internal audio?",
 			answer:
-				"The easiest way to record your Mac screen with internal audio is to use Cap.",
+				"The easiest way to record your Mac screen with internal audio is to use RocStarr VideoShare.",
 		},
 		{
 			question:
 				"Can I record Mac screen with both microphone and system audio?",
 			answer:
-				"Yes — with Cap you can record both microphone and system audio simultaneously on Mac.",
+				"Yes — with RocStarr VideoShare you can record both microphone and system audio simultaneously on Mac.",
 		},
 		{
-			question: "Does Cap require BlackHole or Loopback for audio on Mac?",
+			question: "Does RocStarr VideoShare require BlackHole or Loopback for audio on Mac?",
 			answer:
-				"No. Cap handles Mac system audio capture natively without requiring BlackHole, Loopback, or any virtual audio driver.",
+				"No. RocStarr VideoShare handles Mac system audio capture natively without requiring BlackHole, Loopback, or any virtual audio driver.",
 		},
 		{
 			question: "Is there a free way to record Mac screen with audio?",
 			answer:
-				"Yes. Cap is completely free for Mac screen recording with audio. Studio Mode has no time limits, no watermarks, and no fees.",
+				"Yes. RocStarr VideoShare is completely free for Mac screen recording with audio. Studio Mode has no time limits, no watermarks, and no fees.",
 		},
 		{
-			question: "Does Cap record Mac screen with audio in 4K?",
+			question: "Does RocStarr VideoShare record Mac screen with audio in 4K?",
 			answer:
-				"Yes. Cap records your Mac screen at up to 4K resolution at 60fps while simultaneously capturing system audio and microphone input.",
+				"Yes. RocStarr VideoShare records your Mac screen at up to 4K resolution at 60fps while simultaneously capturing system audio and microphone input.",
 		},
 		{
 			question: "How do I share a Mac screen recording with audio?",
 			answer:
-				"With Cap, sharing is automatic. When you stop recording, Cap generates a shareable link in seconds.",
+				"With RocStarr VideoShare, sharing is automatic. When you stop recording, RocStarr VideoShare generates a shareable link in seconds.",
 		},
 		{
 			question: "Can I record a specific app window with audio on Mac?",
 			answer:
-				"Yes. Cap lets you record a specific application window on Mac while capturing that app's system audio along with your microphone.",
+				"Yes. RocStarr VideoShare lets you record a specific application window on Mac while capturing that app's system audio along with your microphone.",
 		},
 	];
 

@@ -25,7 +25,7 @@ describe("BestScreenRecorderPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -88,42 +88,42 @@ describe("BestScreenRecorderPage FAQ schema", () => {
 		{
 			question: "What is the best screen recorder?",
 			answer:
-				"Cap is the best screen recorder for most users — it records in 4K at 60fps, works on Mac and Windows, has no watermarks, and generates shareable links instantly.",
+				"RocStarr VideoShare is the best screen recorder for most users — it records in 4K at 60fps, works on Mac and Windows, has no watermarks, and generates shareable links instantly.",
 		},
 		{
 			question: "What is the best free screen recorder?",
 			answer:
-				'Cap is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. <a href="/free-screen-recorder">Download Cap free</a> to get started.',
+				'RocStarr VideoShare is the best free screen recorder available. Studio Mode is 100% free for personal use with unlimited recording time, no watermarks, and no time limits. <a href="/free-screen-recorder">Download RocStarr VideoShare free</a> to get started.',
 		},
 		{
 			question: "What is the best screen recorder for Mac?",
 			answer:
-				"Cap is the best screen recorder for Mac. It is natively optimized for macOS and records at up to 4K with system audio and webcam overlay.",
+				"RocStarr VideoShare is the best screen recorder for Mac. It is natively optimized for macOS and records at up to 4K with system audio and webcam overlay.",
 		},
 		{
 			question: "What is the best screen recorder for Windows?",
 			answer:
-				"Cap is the best screen recorder for Windows. It supports Windows 10 and 11 and records your full screen, specific windows, or custom regions.",
+				"RocStarr VideoShare is the best screen recorder for Windows. It supports Windows 10 and 11 and records your full screen, specific windows, or custom regions.",
 		},
 		{
 			question: "Which screen recorder has no watermark?",
 			answer:
-				"Cap has no watermark on any recording, including the free plan. Studio Mode produces completely clean recordings with no branding overlays.",
+				"RocStarr VideoShare has no watermark on any recording, including the free plan. Studio Mode produces completely clean recordings with no branding overlays.",
 		},
 		{
 			question: "What is the best screen recorder for beginners?",
 			answer:
-				"Cap is designed to be the best screen recorder for beginners. Download the app, click record, and get a shareable link when you stop.",
+				"RocStarr VideoShare is designed to be the best screen recorder for beginners. Download the app, click record, and get a shareable link when you stop.",
 		},
 		{
-			question: "Does Cap screen recorder capture system audio?",
+			question: "Does RocStarr VideoShare screen recorder capture system audio?",
 			answer:
-				"Yes, Cap captures both system audio and microphone input simultaneously. Both audio tracks are captured and synchronized automatically.",
+				"Yes, RocStarr VideoShare captures both system audio and microphone input simultaneously. Both audio tracks are captured and synchronized automatically.",
 		},
 		{
 			question: "What is the best screen recorder for teams?",
 			answer:
-				"Cap is the best screen recorder for teams because of its built-in sharing and collaboration features, including instant shareable links and timestamped comments.",
+				"RocStarr VideoShare is the best screen recorder for teams because of its built-in sharing and collaboration features, including instant shareable links and timestamped comments.",
 		},
 	];
 
@@ -151,7 +151,7 @@ describe("BestScreenRecorderPage FAQ schema", () => {
 	it("strips HTML tags from answers", () => {
 		const schema = createFAQSchema(faqs);
 		expect(schema.mainEntity[1]?.acceptedAnswer.text).not.toContain("<a");
-		expect(schema.mainEntity[1]?.acceptedAnswer.text).toContain("Cap free");
+		expect(schema.mainEntity[1]?.acceptedAnswer.text).toContain("RocStarr VideoShare free");
 	});
 
 	it("produces JSON-serializable output", () => {

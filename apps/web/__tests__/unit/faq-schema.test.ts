@@ -4,7 +4,7 @@ import { createFAQSchema } from "@/utils/web-schema";
 describe("createFAQSchema", () => {
 	it("produces valid FAQPage schema structure", () => {
 		const faqs = [
-			{ question: "What is Cap?", answer: "Cap is a screen recorder." },
+			{ question: "What is RocStarr VideoShare?", answer: "RocStarr VideoShare is a screen recorder." },
 		];
 		const schema = createFAQSchema(faqs);
 
@@ -16,9 +16,9 @@ describe("createFAQSchema", () => {
 
 	it("maps each FAQ to a Question entity with acceptedAnswer", () => {
 		const faqs = [
-			{ question: "Is Cap free?", answer: "Yes, Cap is free." },
+			{ question: "Is RocStarr VideoShare free?", answer: "Yes, RocStarr VideoShare is free." },
 			{
-				question: "What platforms does Cap support?",
+				question: "What platforms does RocStarr VideoShare support?",
 				answer: "Mac and Windows.",
 			},
 		];
@@ -26,13 +26,13 @@ describe("createFAQSchema", () => {
 
 		expect(schema.mainEntity[0]).toEqual({
 			"@type": "Question",
-			name: "Is Cap free?",
+			name: "Is RocStarr VideoShare free?",
 			acceptedAnswer: {
 				"@type": "Answer",
-				text: "Yes, Cap is free.",
+				text: "Yes, RocStarr VideoShare is free.",
 			},
 		});
-		expect(schema.mainEntity[1]?.name).toBe("What platforms does Cap support?");
+		expect(schema.mainEntity[1]?.name).toBe("What platforms does RocStarr VideoShare support?");
 		expect(schema.mainEntity).toHaveLength(2);
 	});
 
@@ -55,15 +55,15 @@ describe("createFAQSchema", () => {
 	it("strips multiple different HTML tags", () => {
 		const faqs = [
 			{
-				question: "What features does Cap have?",
+				question: "What features does RocStarr VideoShare have?",
 				answer:
-					"Cap offers <strong>4K recording</strong>, <em>instant sharing</em>, and <a href='/pricing'>affordable pricing</a>.",
+					"RocStarr VideoShare offers <strong>4K recording</strong>, <em>instant sharing</em>, and <a href='/pricing'>affordable pricing</a>.",
 			},
 		];
 		const schema = createFAQSchema(faqs);
 
 		expect(schema.mainEntity[0]?.acceptedAnswer.text).toBe(
-			"Cap offers 4K recording, instant sharing, and affordable pricing.",
+			"RocStarr VideoShare offers 4K recording, instant sharing, and affordable pricing.",
 		);
 	});
 
@@ -98,29 +98,29 @@ describe("createFAQSchema", () => {
 	it("applies FAQPage schema to screen-recorder page FAQs", () => {
 		const screenRecorderFaqs = [
 			{
-				question: "Is Cap a free screen recorder?",
+				question: "Is RocStarr VideoShare a free screen recorder?",
 				answer:
-					"Yes, Cap offers a powerful free version, making it one of the best free screen recorders available.",
+					"Yes, RocStarr VideoShare offers a powerful free version, making it one of the best free screen recorders available.",
 			},
 			{
-				question: "How does Cap compare to OBS?",
+				question: "How does RocStarr VideoShare compare to OBS?",
 				answer:
-					"Cap is designed to be highly user-friendly while delivering high recording quality.",
+					"RocStarr VideoShare is designed to be highly user-friendly while delivering high recording quality.",
 			},
 			{
-				question: "Can I download Cap on multiple devices?",
+				question: "Can I download RocStarr VideoShare on multiple devices?",
 				answer:
-					"Yes, Cap is cross-platform and can be downloaded on macOS and Windows.",
+					"Yes, RocStarr VideoShare is cross-platform and can be downloaded on macOS and Windows.",
 			},
 			{
-				question: "What platforms does Cap support?",
+				question: "What platforms does RocStarr VideoShare support?",
 				answer:
-					"Cap is compatible with <a href='/screen-recorder-mac'>macOS</a> and <a href='/screen-recorder-windows'>Windows</a>.",
+					"RocStarr VideoShare is compatible with <a href='/screen-recorder-mac'>macOS</a> and <a href='/screen-recorder-windows'>Windows</a>.",
 			},
 			{
-				question: "How does Cap improve team productivity?",
+				question: "How does RocStarr VideoShare improve team productivity?",
 				answer:
-					"Cap's advanced collaboration features make it easy to share, review, and provide feedback.",
+					"RocStarr VideoShare's advanced collaboration features make it easy to share, review, and provide feedback.",
 			},
 		];
 		const schema = createFAQSchema(screenRecorderFaqs);
@@ -134,28 +134,28 @@ describe("createFAQSchema", () => {
 	it("applies FAQPage schema to free-screen-recorder page FAQs", () => {
 		const freeScreenRecorderFaqs = [
 			{
-				question: "Is Cap really free?",
+				question: "Is RocStarr VideoShare really free?",
 				answer:
-					"Yes, Cap is completely free, with no hidden fees. You get access to professional-grade <a href='/screen-recorder'>screen recording</a> tools without a subscription.",
+					"Yes, RocStarr VideoShare is completely free, with no hidden fees. You get access to professional-grade <a href='/screen-recorder'>screen recording</a> tools without a subscription.",
 			},
 			{
 				question: "How long can I record for on the free plan?",
 				answer:
-					"Cap's free plan allows for unlimited recording time, so you can capture your screen without interruptions.",
+					"RocStarr VideoShare's free plan allows for unlimited recording time, so you can capture your screen without interruptions.",
 			},
 			{
 				question: "Can I store my recordings in the cloud?",
-				answer: "Yes, from just $6/month, Cap offers unlimited cloud storage.",
+				answer: "Yes, from just $6/month, RocStarr VideoShare offers unlimited cloud storage.",
 			},
 			{
-				question: "What makes Cap's free screen recorder different?",
+				question: "What makes RocStarr VideoShare's free screen recorder different?",
 				answer:
-					"Cap offers advanced features for free, such as high-quality video capture and an intuitive interface.",
+					"RocStarr VideoShare offers advanced features for free, such as high-quality video capture and an intuitive interface.",
 			},
 			{
-				question: "Do I need an account to use Cap's free screen recorder?",
+				question: "Do I need an account to use RocStarr VideoShare's free screen recorder?",
 				answer:
-					"Yes, creating a free account allows you to access Cap 100% free locally.",
+					"Yes, creating a free account allows you to access RocStarr VideoShare 100% free locally.",
 			},
 		];
 		const schema = createFAQSchema(freeScreenRecorderFaqs);

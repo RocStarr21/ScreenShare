@@ -2,7 +2,7 @@ export const createOrganizationSchema = () => ({
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"@id": "https://cap.so/#organization",
-	name: "Cap",
+	name: "RocStarr VideoShare",
 	url: "https://cap.so",
 	logo: {
 		"@type": "ImageObject",
@@ -11,7 +11,7 @@ export const createOrganizationSchema = () => ({
 		height: 512,
 	},
 	description:
-		"Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform screen recorder.",
+		"RocStarr VideoShare is the open source alternative to Loom. Lightweight, powerful, and cross-platform screen recorder.",
 	sameAs: [
 		"https://github.com/capsoftware/cap",
 		"https://twitter.com/cap",
@@ -30,7 +30,7 @@ export const createWebSiteSchema = () => ({
 	"@type": "WebSite",
 	"@id": "https://cap.so/#website",
 	url: "https://cap.so",
-	name: "Cap",
+	name: "RocStarr VideoShare",
 	description:
 		"Beautiful screen recordings, owned by you. The open source alternative to Loom.",
 	publisher: {
@@ -77,18 +77,18 @@ export const createSoftwareApplicationSchema = (
 		"@context": "https://schema.org",
 		"@type": "SoftwareApplication",
 		"@id": "https://cap.so/#software",
-		name: "Cap",
+		name: "RocStarr VideoShare",
 		applicationCategory: "MultimediaApplication",
 		operatingSystem: ["macOS", "Windows"],
 		description:
-			"Cap is a powerful, open-source screen recording software that offers instant sharing, studio mode, and privacy-focused features.",
+			"RocStarr VideoShare is a powerful, open-source screen recording software that offers instant sharing, studio mode, and privacy-focused features.",
 		url: "https://cap.so",
 		downloadUrl: "https://cap.so/download",
 		screenshot: [
 			{
 				"@type": "ImageObject",
 				url: "https://cap.so/og.png",
-				caption: "Cap screen recorder interface",
+				caption: "RocStarr VideoShare screen recorder interface",
 			},
 		],
 		featureList: [
@@ -190,12 +190,12 @@ export const createFAQSchema = (
 export const createProductSchema = () => ({
 	"@context": "https://schema.org",
 	"@type": "Product",
-	name: "Cap Screen Recorder",
+	name: "RocStarr VideoShare Screen Recorder",
 	description:
 		"Open-source screen recording software with instant sharing and studio mode capabilities",
 	brand: {
 		"@type": "Brand",
-		name: "Cap",
+		name: "RocStarr VideoShare",
 	},
 	offers: {
 		"@type": "AggregateOffer",
@@ -214,7 +214,7 @@ export const createProductSchema = () => ({
 export const createComparisonTableSchema = () => ({
 	"@context": "https://schema.org",
 	"@type": "Table",
-	about: "Feature comparison between Cap and Loom screen recorders",
+	about: "Feature comparison between RocStarr VideoShare and Loom screen recorders",
 	mainEntity: {
 		"@type": "ItemList",
 		itemListElement: [
@@ -224,7 +224,7 @@ export const createComparisonTableSchema = () => ({
 				name: "Open Source",
 				item: {
 					"@type": "PropertyValue",
-					name: "Cap",
+					name: "RocStarr VideoShare",
 					value: "Yes",
 				},
 			},
@@ -234,7 +234,7 @@ export const createComparisonTableSchema = () => ({
 				name: "Pricing",
 				item: {
 					"@type": "PropertyValue",
-					name: "Cap",
+					name: "RocStarr VideoShare",
 					value: "$8.16/month per user",
 				},
 			},
@@ -244,7 +244,7 @@ export const createComparisonTableSchema = () => ({
 				name: "4K Recording",
 				item: {
 					"@type": "PropertyValue",
-					name: "Cap",
+					name: "RocStarr VideoShare",
 					value: "Available in free & paid plans",
 				},
 			},
@@ -274,7 +274,7 @@ export const createHowToSchema = (params: {
 export const createLocalBusinessSchema = () => ({
 	"@context": "https://schema.org",
 	"@type": "LocalBusiness",
-	name: "Cap",
+	name: "RocStarr VideoShare",
 	image: "https://cap.so/og.png",
 	"@id": "https://cap.so",
 	url: "https://cap.so",

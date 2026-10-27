@@ -1020,3 +1020,14 @@ export function redoTimelineHistory(history: TimelineHistory): TimelineHistory {
 		index: Math.min(history.entries.length - 1, history.index + 1),
 	};
 }
+
+export function addTimelineDeletedRanges(
+	state: VideoTimelineState,
+	ranges: VideoEditRange[],
+): VideoTimelineState {
+	return normalizeTimelineState({
+		...state,
+		deletedRanges: [...state.deletedRanges, ...ranges],
+		selectedSegmentId: null,
+	});
+}

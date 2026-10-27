@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "OSS Friends — Cap",
+	title: "OSS Friends — RocStarr VideoShare",
 	description:
 		"Discover amazing open source projects and tools built by our friends in the community.",
 };
@@ -20,17 +20,17 @@ interface OSSFriendsResponse {
 async function fetchOSSFriends(): Promise<OSSFriendsResponse> {
 	const response = await fetch("https://formbricks.com/api/oss-friends", {
 		next: { revalidate: 3600 },
-	});
+	}).catch(() => null);
 
-	if (!response.ok) {
-		throw new Error("Failed to fetch OSS friends");
+	if (!response?.ok) {
+		return { data: [] };
 	}
 
 	const data = await response.json();
 
 	const filteredData = {
 		...data,
-		data: data.data.filter((friend: any) => friend.name !== "Cap"),
+		data: data.data.filter((friend: OSSFriend) => friend.name !== "Cap"),
 	};
 
 	return filteredData;

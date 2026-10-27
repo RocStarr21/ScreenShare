@@ -212,7 +212,7 @@ export function Devtools() {
 			plugins={[
 				{
 					id: "cap",
-					name: "Cap",
+					name: "RocStarr VideoShare",
 					render: <CapDevtools />,
 				},
 				{
@@ -228,9 +228,9 @@ export function Devtools() {
 function CapDevtools() {
 	return (
 		<div className="flex flex-col p-4 space-y-4">
-			<h1 className="text-2xl font-semibold">Cap Devtools</h1>
+			<h1 className="text-2xl font-semibold">RocStarr VideoShare Devtools</h1>
 			<div className="space-y-2">
-				<h1 className="text-lg font-semibold">Cap Pro</h1>
+				<h1 className="text-lg font-semibold">RocStarr VideoShare Pro</h1>
 				<p className="text-xs text-muted-foreground">
 					Toggle the current user's Pro status (dev only)
 				</p>

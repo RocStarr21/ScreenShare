@@ -466,7 +466,7 @@ const CustomDomainDialog = ({
 											handleClose();
 										}}
 									>
-										Upgrade To Cap Pro
+										Upgrade To RocStarr VideoShare Pro
 									</Button>
 								))}
 						</DialogFooter>

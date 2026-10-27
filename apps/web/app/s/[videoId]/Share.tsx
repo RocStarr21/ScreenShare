@@ -21,10 +21,19 @@ import {
 } from "@/actions/videos/get-status";
 import type { OrganizationSettings } from "@/app/(org)/dashboard/dashboard-data";
 import { CaptionProvider } from "./_components/CaptionContext";
+import {
+	type CallToAction,
+	CallToActionBar,
+	CallToActionEndOverlay,
+} from "./_components/ShareCallToAction";
 import { ShareVideo } from "./_components/ShareVideo";
 import { Sidebar } from "./_components/Sidebar";
 import SummaryChapters from "./_components/SummaryChapters";
 import { Toolbar } from "./_components/Toolbar";
+import {
+	ensureAnalyticsSessionId,
+	useViewTracking,
+} from "./_components/useViewTracking";
 import type { VideoData } from "./types";
 
 type CommentWithAuthor = typeof commentsSchema.$inferSelect & {
@@ -36,33 +45,6 @@ export type CommentType = typeof commentsSchema.$inferSelect & {
 	authorName?: string | null;
 	authorImage?: ImageUpload.ImageUrl | null;
 	sending?: boolean;
-};
-
-const SESSION_STORAGE_KEY = "cap_tb_session_id";
-const SESSION_TTL_MS = 30 * 60 * 1000; // 30 minutes
-
-const ensureAnalyticsSessionId = () => {
-	if (typeof window === "undefined") return "anonymous";
-	try {
-		const raw = window.localStorage.getItem(SESSION_STORAGE_KEY);
-		const now = Date.now();
-		if (raw) {
-			const parsed = JSON.parse(raw) as { value: string; expiry: number };
-			if (parsed?.value && parsed.expiry > now) return parsed.value;
-		}
-		const newId =
-			typeof crypto !== "undefined" && "randomUUID" in crypto
-				? crypto.randomUUID()
-				: Math.random().toString(36).slice(2);
-		window.localStorage.setItem(
-			SESSION_STORAGE_KEY,
-			JSON.stringify({ value: newId, expiry: now + SESSION_TTL_MS }),
-		);
-		return newId;
-	} catch (error) {
-		console.warn("Failed to persist analytics session id", error);
-		return "anonymous";
-	}
 };
 
 const trackVideoView = (payload: {
@@ -168,6 +150,7 @@ interface ShareProps {
 	} | null;
 	aiGenerationAvailable: boolean;
 	transcriptionGenerationAvailable: boolean;
+	callToAction?: CallToAction | null;
 }
 
 const useVideoStatus = (
@@ -282,6 +265,7 @@ export const Share = ({
 	defaultPlaybackSpeed,
 	aiGenerationAvailable,
 	transcriptionGenerationAvailable,
+	callToAction,
 }: ShareProps) => {
 	const effectiveDate: Date = data.metadata?.customCreatedAt
 		? new Date(data.metadata.customCreatedAt)
@@ -337,6 +321,21 @@ export const Share = ({
 			ownerId: data.owner.id,
 		});
 	}, [data.id, data.orgId, data.owner.id, viewerId]);
+
+	const { ended: playbackEnded, trackCtaClick } = useViewTracking({
+		videoId: data.id,
+		enabled: viewerId !== data.owner.id,
+		playerRef,
+	});
+
+	const replayVideo = useCallback(() => {
+		const video =
+			playerRef.current ??
+			(document.querySelector("video") as HTMLVideoElement | null);
+		if (!video) return;
+		video.currentTime = 0;
+		void video.play().catch(() => undefined);
+	}, []);
 
 	const isDisabled = (setting: ViewerSettingKey) =>
 		videoSettings?.[setting] ?? data.orgSettings?.[setting] ?? false;
@@ -534,8 +533,20 @@ export const Share = ({
 									defaultPlaybackSpeed={defaultPlaybackSpeed}
 									ref={playerRef}
 								/>
+								{callToAction && playbackEnded && (
+									<CallToActionEndOverlay
+										cta={callToAction}
+										onClick={trackCtaClick}
+										onReplay={replayVideo}
+									/>
+								)}
 							</div>
 						</div>
+						{callToAction && (
+							<div className="mt-4">
+								<CallToActionBar cta={callToAction} onClick={trackCtaClick} />
+							</div>
+						)}
 						<div className="mt-4 lg:hidden">
 							<Toolbar
 								onOptimisticComment={handleOptimisticComment}
@@ -547,7 +558,7 @@ export const Share = ({
 						</div>
 					</div>
 
-					{!allSettingsDisabled && (
+					{(!allSettingsDisabled || viewerId === data.owner.id) && (
 						<div className="flex flex-col lg:w-80">
 							<Sidebar
 								data={{
@@ -566,6 +577,9 @@ export const Share = ({
 								videoId={data.id}
 								aiData={aiData}
 								aiGenerationEnabled={aiGenerationAvailable}
+								transcriptionGenerationAvailable={
+									transcriptionGenerationAvailable
+								}
 								ref={activityRef}
 							/>
 						</div>

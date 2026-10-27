@@ -534,8 +534,8 @@ export const ImportLoomPage = () => {
 						</h1>
 						<p className="mt-1 max-w-xl text-sm text-gray-10">
 							{canUseCsvImport
-								? "Bring a single Loom video into Cap, or bulk import recordings for organization members and new users from a CSV."
-								: "Paste a Loom share link to bring it into Cap."}
+								? "Bring a single Loom video into RocStarr VideoShare, or bulk import recordings for organization members and new users from a CSV."
+								: "Paste a Loom share link to bring it into RocStarr VideoShare."}
 						</p>
 					</div>
 				</div>

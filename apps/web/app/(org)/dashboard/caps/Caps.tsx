@@ -174,7 +174,7 @@ export const Caps = ({
 			yield* rpc.VideoDelete(id);
 		}),
 		onSuccess: () => {
-			toast.success("Cap deleted successfully");
+			toast.success("RocStarr VideoShare deleted successfully");
 			router.refresh();
 		},
 		onError: (_error: unknown) => toast.error("Failed to delete cap"),

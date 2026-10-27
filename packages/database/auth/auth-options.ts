@@ -120,15 +120,36 @@ export const authOptions = (): NextAuthOptions => {
 							);
 							console.log("\n");
 						} else {
-							console.log({ identifier, token });
+							// sendEmail builds the sender as auth@RESEND_FROM_DOMAIN. Without
+							// the domain it sends from "auth@undefined", which Resend rejects —
+							// and nothing ever said why the email never came.
+							if (!serverEnv().RESEND_FROM_DOMAIN) {
+								throw new Error(
+									"RESEND_API_KEY is set but RESEND_FROM_DOMAIN is not; cannot send the sign-in email",
+								);
+							}
+
 							const { OTPEmail } = await import("../emails/otp-email");
 							const email = OTPEmail({ code: token, email: identifier });
-							console.log({ email });
-							await sendEmail({
+							const result = await sendEmail({
 								email: identifier,
-								subject: `Your Cap Verification Code`,
+								subject: "Your RocStarr ScreenShare sign-in code",
 								react: email,
 							});
+
+							// The Resend SDK reports failures — unverified domain, bad key,
+							// blocked recipient — by resolving with `error` instead of throwing.
+							// Unchecked, a rejected send looked exactly like a delivered one:
+							// the page said the code was on its way and nothing arrived.
+							if (result && "error" in result && result.error) {
+								console.error(
+									"[auth] Resend rejected the sign-in email:",
+									result.error,
+								);
+								throw new Error(
+									`Resend rejected the sign-in email: ${result.error.message}`,
+								);
+							}
 						}
 					},
 				}),

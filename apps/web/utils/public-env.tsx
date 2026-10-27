@@ -6,6 +6,12 @@ type PublicEnvContext = {
 	webUrl: string;
 	googleAuthAvailable: boolean;
 	workosAuthAvailable: boolean;
+	/**
+	 * Whether this server can actually deliver sign-in emails. Without Resend,
+	 * a self-hosted deployment writes the code to the server log instead, and
+	 * the sign-in screens must say so rather than claim an email went out.
+	 */
+	emailDeliveryAvailable: boolean;
 };
 
 const Context = createContext<PublicEnvContext | null>(null);

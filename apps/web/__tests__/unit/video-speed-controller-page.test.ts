@@ -26,7 +26,7 @@ describe("Video Speed Controller page metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -59,7 +59,7 @@ describe("Video Speed Controller FAQ schema validity", () => {
 		{
 			question: "How do I change the speed of a video online?",
 			answer:
-				"Open Cap's Video Speed Controller, drag and drop your video file (or click to browse), select your target speed from 0.25× to 3×, then click Speed Up or Slow Down Video. The entire process runs in your browser — your file never leaves your device. Once processing is complete, preview and download the result.",
+				"Open RocStarr VideoShare's Video Speed Controller, drag and drop your video file (or click to browse), select your target speed from 0.25× to 3×, then click Speed Up or Slow Down Video. The entire process runs in your browser — your file never leaves your device. Once processing is complete, preview and download the result.",
 		},
 		{
 			question: "What video formats does the speed controller support?",
@@ -132,7 +132,7 @@ describe("Video Speed Controller HowTo schema validity", () => {
 	const howToSteps = [
 		{
 			name: "Upload your video file",
-			text: "Open Cap's Video Speed Controller and drag and drop your video into the upload area, or click to browse your files. Supported formats include MP4, WebM, MOV, AVI, and MKV up to 500 MB.",
+			text: "Open RocStarr VideoShare's Video Speed Controller and drag and drop your video into the upload area, or click to browse your files. Supported formats include MP4, WebM, MOV, AVI, and MKV up to 500 MB.",
 		},
 		{
 			name: "Select your target speed",
@@ -148,7 +148,7 @@ describe("Video Speed Controller HowTo schema validity", () => {
 		const schema = createHowToSchema({
 			name: "How to Change Video Speed Online",
 			description:
-				"Adjust the playback speed of any video for free using Cap's browser-based speed controller. No upload required.",
+				"Adjust the playback speed of any video for free using RocStarr VideoShare's browser-based speed controller. No upload required.",
 			steps: howToSteps,
 		});
 

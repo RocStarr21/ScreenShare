@@ -10,14 +10,14 @@ export const recordScreenMacContent = {
 	gradientColors: ["#fed7aa", "#fdba74", "#fb923c"], // pastel oranges/yellows for macOS Big Sur
 
 	heroTLDR:
-		"Want to record your Mac screen with internal audio without expensive software? Here's how to do it in 2 clicks with Cap—completely free, no audio routing hacks needed.",
+		"Want to record your Mac screen with internal audio without expensive software? Here's how to do it in 2 clicks with RocStarr VideoShare—completely free, no audio routing hacks needed.",
 
 	comparisonTable: {
 		title: "4 Ways to Capture System Audio on macOS",
 		headers: ["Method", "Price", "Complexity", "Notes"],
 		rows: [
 			[
-				"<strong>Cap</strong>",
+				"<strong>RocStarr VideoShare</strong>",
 				"Free (open-source)",
 				'<span className="rating">★☆☆☆☆</span> (2 clicks)',
 				"Works on all macOS versions including Sonoma, M-series chips",
@@ -45,26 +45,26 @@ export const recordScreenMacContent = {
 
 	methods: [
 		{
-			title: "Method 1: Cap (2-Click Tutorial)",
+			title: "Method 1: RocStarr VideoShare (2-Click Tutorial)",
 			description:
-				"Cap makes it ridiculously simple to record your Mac screen with system audio:",
+				"RocStarr VideoShare makes it ridiculously simple to record your Mac screen with system audio:",
 			steps: [
 				{
-					title: "Step 1: Install Cap",
+					title: "Step 1: Install RocStarr VideoShare",
 					content:
-						'Download and install Cap from <a href="/download">Cap.so/download</a>.',
+						'Download and install RocStarr VideoShare from <a href="/download">RocStarr VideoShare.so/download</a>.',
 				},
 				{
 					title: "Step 2: Start a Recording",
 					content: `
             <ol>
-              <li>Click the Cap icon in your menu bar</li>
+              <li>Click the RocStarr VideoShare icon in your menu bar</li>
               <li>Toggle "No System Audio" to "Record System Audio"</li>
               <li>Select the screen area you want to capture</li>
               <li>Click "Start Recording"</li>
             </ol>
-            <p>That's it! Cap now captures both your screen and all system audio without any complex setup.</p>
-            <p><strong>Pro Tip:</strong> Cap works without kernel extensions and is fully compatible with macOS Sonoma and all M-series chips.</p>
+            <p>That's it! RocStarr VideoShare now captures both your screen and all system audio without any complex setup.</p>
+            <p><strong>Pro Tip:</strong> RocStarr VideoShare works without kernel extensions and is fully compatible with macOS Sonoma and all M-series chips.</p>
           `,
 				},
 				{
@@ -72,7 +72,7 @@ export const recordScreenMacContent = {
 					content: `
             <p>After recording:</p>
             <ul>
-              <li>Trim unwanted sections with Cap's built-in editor</li>
+              <li>Trim unwanted sections with RocStarr VideoShare's built-in editor</li>
               <li>Adjust audio channels individually - control microphone and system audio levels separately</li>
               <li>Increase or decrease dB gain to make audio louder or quieter as needed</li>
               <li>Add custom backgrounds or padding if needed</li>
@@ -95,7 +95,7 @@ export const recordScreenMacContent = {
               <li>Configure QuickTime to use BlackHole as input</li>
               <li>Remember to switch your audio setup back when done</li>
             </ol>
-            <p><strong>Skip the hacks and try Cap instead</strong> — no audio configuration required.</p>
+            <p><strong>Skip the hacks and try RocStarr VideoShare instead</strong> — no audio configuration required.</p>
           `,
 				},
 			],
@@ -108,22 +108,22 @@ export const recordScreenMacContent = {
 			{
 				question: "I hear echo or feedback in my recording",
 				answer:
-					'This typically happens when both microphone and system audio are being recorded. In Cap, make sure only "Record System Audio" is enabled if you don\'t need microphone input.',
+					'This typically happens when both microphone and system audio are being recorded. In RocStarr VideoShare, make sure only "Record System Audio" is enabled if you don\'t need microphone input.',
 			},
 			{
 				question: "My microphone is muted during system audio recording",
 				answer:
-					"Cap allows recording both system audio and microphone simultaneously. Toggle both options ON in the recording menu.",
+					"RocStarr VideoShare allows recording both system audio and microphone simultaneously. Toggle both options ON in the recording menu.",
 			},
 			{
 				question: "FaceTime/Zoom audio isn't being captured",
 				answer:
-					'Some apps have special privacy protections. In Cap, make sure to select "Record entire screen" to capture protected app audio.',
+					'Some apps have special privacy protections. In RocStarr VideoShare, make sure to select "Record entire screen" to capture protected app audio.',
 			},
 			{
 				question: "System audio recording stopped working after update",
 				answer:
-					"After macOS updates, you may need to re-authorize screen recording permissions. Go to System Preferences → Security & Privacy → Privacy → Screen Recording and ensure Cap is checked.",
+					"After macOS updates, you may need to re-authorize screen recording permissions. Go to System Preferences → Security & Privacy → Privacy → Screen Recording and ensure RocStarr VideoShare is checked.",
 			},
 		],
 	},
@@ -134,7 +134,7 @@ export const recordScreenMacContent = {
 			{
 				title: "60 FPS Recording",
 				description:
-					"Enable high frame rate recording in Cap settings for smoother demos of animations and transitions.",
+					"Enable high frame rate recording in RocStarr VideoShare settings for smoother demos of animations and transitions.",
 			},
 			{
 				title: "Audio Channel Control",
@@ -144,12 +144,12 @@ export const recordScreenMacContent = {
 			{
 				title: "Auto-Subtitles",
 				description:
-					"Cap can automatically generate captions for your recording, making content more accessible.",
+					"RocStarr VideoShare can automatically generate captions for your recording, making content more accessible.",
 			},
 			{
 				title: "Custom Sharing",
 				description:
-					"Use Cap.link or set up your own custom domain for a branded sharing experience.",
+					"Use RocStarr VideoShare.link or set up your own custom domain for a branded sharing experience.",
 			},
 		],
 	},
@@ -157,49 +157,49 @@ export const recordScreenMacContent = {
 	videoDemo: {
 		title: "See It in Action",
 		videoSrc: "https://cap.link/video/system-audio-demo.mp4",
-		caption: "Cap recording Mac screen with system audio in 2 clicks",
+		caption: "RocStarr VideoShare recording Mac screen with system audio in 2 clicks",
 	},
 
 	faqs: [
 		{
 			question: "Does this work on M1, M2, and M3 Macs?",
 			answer:
-				"Yes, Cap is fully optimized for all Apple Silicon chips, including M1, M2, and M3 series processors.",
+				"Yes, RocStarr VideoShare is fully optimized for all Apple Silicon chips, including M1, M2, and M3 series processors.",
 		},
 		{
 			question: "Will recording system audio affect my computer's performance?",
 			answer:
-				"Cap is designed to be extremely lightweight. You'll experience minimal performance impact even when recording high-resolution screens with system audio.",
+				"RocStarr VideoShare is designed to be extremely lightweight. You'll experience minimal performance impact even when recording high-resolution screens with system audio.",
 		},
 		{
 			question: "Can I record specific application audio only?",
 			answer:
-				"Currently, macOS doesn't provide an API for app-specific audio capture. Cap records all system audio, but you can easily edit out unwanted sections afterward.",
+				"Currently, macOS doesn't provide an API for app-specific audio capture. RocStarr VideoShare records all system audio, but you can easily edit out unwanted sections afterward.",
 		},
 		{
 			question: "Is there a time limit for recordings with system audio?",
 			answer:
-				"Cap's free version has no time limits on recordings. Record as long as you need.",
+				"RocStarr VideoShare's free version has no time limits on recordings. Record as long as you need.",
 		},
 		{
 			question: "Can I record system audio on multiple monitors?",
 			answer:
-				"Yes, Cap can record system audio while capturing a single monitor, multiple monitors, or just a portion of your screen.",
+				"Yes, RocStarr VideoShare can record system audio while capturing a single monitor, multiple monitors, or just a portion of your screen.",
 		},
 	],
 	cta: {
 		title: "Start Recording with System Audio Today",
 		description:
-			"Cap makes recording your Mac screen with system audio incredibly simple. No complex audio routing, no expensive software.",
-		buttonText: "Download Cap",
+			"RocStarr VideoShare makes recording your Mac screen with system audio incredibly simple. No complex audio routing, no expensive software.",
+		buttonText: "Download RocStarr VideoShare",
 		buttonLink: "/download",
 		subtitle:
-			"Download Cap for macOS – free forever • Open-source • 14-day Pro trial",
+			"Download RocStarr VideoShare for macOS – free forever • Open-source • 14-day Pro trial",
 	},
 
 	relatedLinks: [
 		{
-			text: "Cap vs Loom",
+			text: "RocStarr VideoShare vs Loom",
 			url: "/loom-alternative",
 		},
 		{

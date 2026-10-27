@@ -96,7 +96,7 @@ export function DocsHeader() {
 					<ExternalLink className="w-3 h-3" />
 				</Link>
 				<Link
-					href="https://github.com/CapSoftware/Cap"
+					href="https://github.com/CapSoftware/RocStarr VideoShare"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex items-center text-gray-500 hover:text-gray-900 transition-colors"

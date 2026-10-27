@@ -14,7 +14,7 @@ const toolCategories: ToolCategory[] = [
 	{
 		title: "Loom Video Importer",
 		description:
-			"Import your existing Loom recordings directly into Cap — seamless migration",
+			"Import your existing Loom recordings directly into RocStarr VideoShare — seamless migration",
 		href: "/loom-alternative",
 		icon: "M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15",
 	},
@@ -112,7 +112,7 @@ export function PageContent() {
 								The open source Loom alternative
 							</h2>
 							<p className="text-base sm:text-lg md:text-xl mb-5 md:mb-6 text-gray-10">
-								Cap is lightweight, powerful, and cross-platform. Record and
+								RocStarr VideoShare is lightweight, powerful, and cross-platform. Record and
 								share securely in seconds. Import your Loom videos and get
 								started instantly.
 							</p>
@@ -124,7 +124,7 @@ export function PageContent() {
 								size="lg"
 								className="w-full sm:w-auto transition-all duration-300 font-medium px-8 py-3"
 							>
-								Download Cap Free
+								Download RocStarr VideoShare Free
 							</Button>
 						</div>
 					</div>

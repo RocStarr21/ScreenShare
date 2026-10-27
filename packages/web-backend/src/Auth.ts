@@ -1,4 +1,5 @@
 import { getServerSession } from "@cap/database/auth/auth-options";
+import { getCurrentUser as resolveRequestUser } from "@cap/database/auth/session";
 import * as Db from "@cap/database/schema";
 import {
 	CurrentUser,
@@ -12,7 +13,26 @@ import { type Cause, Effect, Layer, Option, Schema } from "effect";
 
 import { Database } from "./Database.ts";
 
+/**
+ * The Effect backend powers every RPC and HTTP API call the dashboard makes,
+ * and it originally recognised only a NextAuth session. Self-host mode has no
+ * such session, so the signed-in owner was rejected with `UnauthenticatedError`
+ * on every one of them — upload progress, renames, sharing, folders, deletes —
+ * even though the pages themselves rendered fine.
+ *
+ * Delegating to the same resolver the pages use keeps one definition of "who is
+ * this request", covering the Cloudflare Access identity, the localhost owner
+ * bypass, and a normal session alike.
+ */
+const getRequestScopedUser = Effect.tryPromise(() => resolveRequestUser()).pipe(
+	Effect.map(Option.fromNullable),
+	Effect.catchAll(() => Effect.succeed(Option.none<typeof Db.users.$inferSelect>())),
+);
+
 export const getCurrentUser = Effect.gen(function* () {
+	const requestUser = yield* getRequestScopedUser;
+	if (Option.isSome(requestUser)) return requestUser;
+
 	const db = yield* Database;
 
 	return yield* Option.fromNullable(

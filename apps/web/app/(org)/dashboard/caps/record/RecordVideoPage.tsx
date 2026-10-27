@@ -47,7 +47,7 @@ export const RecordVideoPage = () => {
 					<div className="mx-auto w-full max-w-[560px] min-w-0">
 						<div className="flex flex-col items-center">
 							<p className="max-w-md text-gray-10 text-md">
-								Choose how you'd like to record your Cap
+								Choose how you'd like to record your RocStarr VideoShare
 							</p>
 						</div>
 						<div className="flex flex-wrap gap-3 justify-center items-center mt-4">
@@ -57,7 +57,7 @@ export const RecordVideoPage = () => {
 								variant="primary"
 							>
 								<FontAwesomeIcon className="size-3.5" icon={faDownload} />
-								Open Cap Desktop
+								Open RocStarr VideoShare Desktop
 							</Button>
 							<p className="text-sm text-gray-10">or</p>
 							<WebRecorderDialog />
@@ -75,8 +75,8 @@ const FaqAccordion = () => {
 	const items = [
 		{
 			id: "what-is-cap",
-			q: "What is a Cap?",
-			a: "A Cap is a quick video recording of your screen, camera, or both that you can share instantly with a link.",
+			q: "What is a RocStarr VideoShare?",
+			a: "A RocStarr VideoShare is a quick video recording of your screen, camera, or both that you can share instantly with a link.",
 		},
 		{
 			id: "how-it-works",
@@ -91,7 +91,7 @@ const FaqAccordion = () => {
 		{
 			id: "pip",
 			q: "How do I keep my webcam visible?",
-			a: "On compatible browsers, selecting a camera opens a picture‑in‑picture window that’s captured when you record fullscreen. We recommend recording fullscreen to keep it on top. If PiP capture isn’t supported, your camera stays within the Cap recorder tab.",
+			a: "On compatible browsers, selecting a camera opens a picture‑in‑picture window that’s captured when you record fullscreen. We recommend recording fullscreen to keep it on top. If PiP capture isn’t supported, your camera stays within the RocStarr VideoShare recorder tab.",
 		},
 		{
 			id: "what-can-i-record",
@@ -101,12 +101,12 @@ const FaqAccordion = () => {
 		{
 			id: "system-audio",
 			q: "Can I record system audio?",
-			a: "Browsers limit system‑wide audio capture. We recommend using Cap Desktop for best results.",
+			a: "Browsers limit system‑wide audio capture. We recommend using RocStarr VideoShare Desktop for best results.",
 		},
 		{
 			id: "install",
 			q: "Do I need to install the app?",
-			a: `No. You can record in your browser. For longer recordings, system audio, and advanced editing, use Cap Desktop. The Free plan supports up to ${freeMinutes} minutes per recording in the browser.`,
+			a: `No. You can record in your browser. For longer recordings, system audio, and advanced editing, use RocStarr VideoShare Desktop. The Free plan supports up to ${freeMinutes} minutes per recording in the browser.`,
 		},
 	];
 

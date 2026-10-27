@@ -27,7 +27,7 @@ describe("SelfHostedScreenRecordingPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -93,35 +93,35 @@ describe("SelfHostedScreenRecordingPage component content", () => {
 describe("SelfHostedScreenRecordingPage FAQ schema", () => {
 	const faqs = [
 		{
-			question: "Can Cap be self-hosted?",
+			question: "Can RocStarr VideoShare be self-hosted?",
 			answer:
-				"Yes. Cap supports two levels of self-hosting. First, you can configure Cap to use your own S3-compatible storage bucket.",
+				"Yes. RocStarr VideoShare supports two levels of self-hosting. First, you can configure RocStarr VideoShare to use your own S3-compatible storage bucket.",
 		},
 		{
-			question: "What storage providers does Cap support for self-hosting?",
+			question: "What storage providers does RocStarr VideoShare support for self-hosting?",
 			answer:
-				"Cap supports any S3-compatible object storage provider, including AWS S3, Cloudflare R2, Backblaze B2, Wasabi, and MinIO.",
+				"RocStarr VideoShare supports any S3-compatible object storage provider, including AWS S3, Cloudflare R2, Backblaze B2, Wasabi, and MinIO.",
 		},
 		{
 			question:
-				"Do recordings touch Cap's servers when using self-hosted storage?",
+				"Do recordings touch RocStarr VideoShare's servers when using self-hosted storage?",
 			answer:
-				"No. When self-hosted storage is configured, the Cap desktop app uploads recordings directly to your S3 bucket.",
+				"No. When self-hosted storage is configured, the RocStarr VideoShare desktop app uploads recordings directly to your S3 bucket.",
 		},
 		{
-			question: "How do I configure self-hosted storage in Cap?",
+			question: "How do I configure self-hosted storage in RocStarr VideoShare?",
 			answer:
-				"Open Cap's settings, navigate to the storage section, and enter your S3 bucket name, region, access key, secret key, and optional custom endpoint URL.",
+				"Open RocStarr VideoShare's settings, navigate to the storage section, and enter your S3 bucket name, region, access key, secret key, and optional custom endpoint URL.",
 		},
 		{
-			question: "Can I self-host the entire Cap platform, not just storage?",
+			question: "Can I self-host the entire RocStarr VideoShare platform, not just storage?",
 			answer:
-				"Yes. Cap is fully open source under the MIT license. You can deploy the complete Cap platform on your own infrastructure.",
+				"Yes. RocStarr VideoShare is fully open source under the MIT license. You can deploy the complete RocStarr VideoShare platform on your own infrastructure.",
 		},
 		{
-			question: "Is self-hosted Cap suitable for HIPAA compliance?",
+			question: "Is self-hosted RocStarr VideoShare suitable for HIPAA compliance?",
 			answer:
-				"Cap with self-hosted AWS S3 storage (covered under your AWS BAA) can support HIPAA-compliant recording workflows.",
+				"RocStarr VideoShare with self-hosted AWS S3 storage (covered under your AWS BAA) can support HIPAA-compliant recording workflows.",
 		},
 		{
 			question:
@@ -132,7 +132,7 @@ describe("SelfHostedScreenRecordingPage FAQ schema", () => {
 		{
 			question: "What is the best self-hosted screen recorder?",
 			answer:
-				"Cap is the best self-hosted screen recorder for teams that need both data control and a modern async video experience.",
+				"RocStarr VideoShare is the best self-hosted screen recorder for teams that need both data control and a modern async video experience.",
 		},
 	];
 
@@ -149,7 +149,7 @@ describe("SelfHostedScreenRecordingPage FAQ schema", () => {
 
 		expect(schema.mainEntity[0]).toEqual({
 			"@type": "Question",
-			name: "Can Cap be self-hosted?",
+			name: "Can RocStarr VideoShare be self-hosted?",
 			acceptedAnswer: {
 				"@type": "Answer",
 				text: faqs[0]?.answer,

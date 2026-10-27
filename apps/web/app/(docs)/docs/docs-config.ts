@@ -33,7 +33,7 @@ export const docsConfig = {
 		{
 			title: "Sharing & Playback",
 			items: [
-				{ title: "Share a Cap", slug: "sharing/share-a-cap" },
+				{ title: "Share a RocStarr VideoShare", slug: "sharing/share-a-cap" },
 				{ title: "Embeds", slug: "sharing/embeds" },
 				{ title: "Comments", slug: "sharing/comments" },
 				{ title: "Analytics", slug: "sharing/analytics" },

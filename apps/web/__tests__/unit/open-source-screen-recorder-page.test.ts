@@ -27,7 +27,7 @@ describe("OpenSourceScreenRecorderPage metadata", () => {
 	});
 
 	it("contains OG siteName field", () => {
-		expect(pageSource).toContain('siteName: "Cap"');
+		expect(pageSource).toContain('siteName: "RocStarr VideoShare"');
 	});
 
 	it("contains OG locale field", () => {
@@ -91,45 +91,45 @@ describe("OpenSourceScreenRecorderPage component content", () => {
 describe("OpenSourceScreenRecorderPage FAQ schema", () => {
 	const faqs = [
 		{
-			question: "Is Cap really open source?",
+			question: "Is RocStarr VideoShare really open source?",
 			answer:
-				"Yes. Cap is fully open source and MIT-licensed. The complete codebase is publicly available on GitHub.",
+				"Yes. RocStarr VideoShare is fully open source and MIT-licensed. The complete codebase is publicly available on GitHub.",
 		},
 		{
-			question: "Can I self-host Cap's screen recordings?",
+			question: "Can I self-host RocStarr VideoShare's screen recordings?",
 			answer:
-				"Yes. Cap supports any S3-compatible storage provider, including AWS S3, Cloudflare R2, and self-hosted MinIO.",
+				"Yes. RocStarr VideoShare supports any S3-compatible storage provider, including AWS S3, Cloudflare R2, and self-hosted MinIO.",
 		},
 		{
 			question: "What is the best open source screen recorder?",
 			answer:
-				"Cap is the best open source screen recorder for most users because it combines full transparency with practical features.",
+				"RocStarr VideoShare is the best open source screen recorder for most users because it combines full transparency with practical features.",
 		},
 		{
-			question: "Is Cap's open source version free?",
+			question: "Is RocStarr VideoShare's open source version free?",
 			answer:
-				"Yes. Cap's Studio Mode is completely free for personal use with no time limits and no watermarks.",
+				"Yes. RocStarr VideoShare's Studio Mode is completely free for personal use with no time limits and no watermarks.",
 		},
 		{
 			question:
-				"How does Cap compare to OBS Studio as an open source recorder?",
+				"How does RocStarr VideoShare compare to OBS Studio as an open source recorder?",
 			answer:
-				"Both Cap and OBS Studio are open source, but OBS is built for live streaming while Cap is designed for async screen sharing.",
+				"Both RocStarr VideoShare and OBS Studio are open source, but OBS is built for live streaming while RocStarr VideoShare is designed for async screen sharing.",
 		},
 		{
-			question: "Can I contribute to Cap's development?",
+			question: "Can I contribute to RocStarr VideoShare's development?",
 			answer:
-				"Absolutely. Cap welcomes contributions of all kinds — bug reports, feature requests, and code contributions.",
+				"Absolutely. RocStarr VideoShare welcomes contributions of all kinds — bug reports, feature requests, and code contributions.",
 		},
 		{
-			question: "Does Cap work on Mac and Windows?",
+			question: "Does RocStarr VideoShare work on Mac and Windows?",
 			answer:
-				"Yes. Cap is available as a native desktop app for macOS and Windows.",
+				"Yes. RocStarr VideoShare is available as a native desktop app for macOS and Windows.",
 		},
 		{
-			question: "What license does Cap use?",
+			question: "What license does RocStarr VideoShare use?",
 			answer:
-				"Cap is released under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and sell copies.",
+				"RocStarr VideoShare is released under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and sell copies.",
 		},
 	];
 
@@ -146,7 +146,7 @@ describe("OpenSourceScreenRecorderPage FAQ schema", () => {
 
 		expect(schema.mainEntity[0]).toEqual({
 			"@type": "Question",
-			name: "Is Cap really open source?",
+			name: "Is RocStarr VideoShare really open source?",
 			acceptedAnswer: {
 				"@type": "Answer",
 				text: faqs[0]?.answer,

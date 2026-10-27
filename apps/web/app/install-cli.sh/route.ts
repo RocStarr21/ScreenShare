@@ -30,7 +30,7 @@ MOUNTED=0
 OS_NAME="$(uname -s)"
 
 find_cap_app_macos() {
-	for candidate in "/Applications/Cap.app" "$HOME_DIR/Applications/Cap.app"; do
+	for candidate in "/Applications/RocStarr VideoShare.app" "$HOME_DIR/Applications/RocStarr VideoShare.app"; do
 		if [ -d "$candidate" ]; then
 			APP_PATH="$candidate"
 			return 0
@@ -69,7 +69,7 @@ linux_require_supported_arch() {
 		x86_64|amd64)
 			;;
 		*)
-			echo "Cap for Linux currently ships x86_64 desktop builds. Unsupported architecture: $(uname -m)" >&2
+			echo "RocStarr VideoShare for Linux currently ships x86_64 desktop builds. Unsupported architecture: $(uname -m)" >&2
 			exit 1
 			;;
 	esac
@@ -92,7 +92,7 @@ find_cli_in_dir() {
 		return 1
 	fi
 
-	for dir in "$root" "$root/usr/bin" "$root/usr/lib/cap" "$root/usr/lib/Cap" "$root/usr/lib64/cap" "$root/opt/Cap" "$root/resources" "$root/Contents/MacOS"; do
+	for dir in "$root" "$root/usr/bin" "$root/usr/lib/cap" "$root/usr/lib/RocStarr VideoShare" "$root/usr/lib64/cap" "$root/opt/RocStarr VideoShare" "$root/resources" "$root/Contents/MacOS"; do
 		for name in cap-cli cap-cli-x86_64-unknown-linux-gnu cap-cli-aarch64-unknown-linux-gnu; do
 			candidate="$dir/$name"
 			if [ -x "$candidate" ]; then
@@ -117,7 +117,7 @@ prepare_appimage_cli() {
 	fi
 
 	if [ -z "$APPDIR_PATH" ]; then
-		APPDIR_PATH="$(linux_app_data_dir)/Cap.AppDir"
+		APPDIR_PATH="$(linux_app_data_dir)/RocStarr VideoShare.AppDir"
 	fi
 
 	if [ -d "$APPDIR_PATH" ] && find_cli_in_dir "$APPDIR_PATH"; then
@@ -134,14 +134,14 @@ prepare_appimage_cli() {
 
 	trap cleanup_desktop_install EXIT HUP INT TERM
 
-	echo "Extracting Cap Desktop AppImage..."
+	echo "Extracting RocStarr VideoShare Desktop AppImage..."
 	if ! (cd "$EXTRACT_DIR" && "$APPIMAGE_PATH" --appimage-extract >/dev/null); then
-		echo "Could not extract Cap Desktop AppImage." >&2
+		echo "Could not extract RocStarr VideoShare Desktop AppImage." >&2
 		exit 1
 	fi
 
 	if [ ! -d "$EXTRACT_DIR/squashfs-root" ]; then
-		echo "Cap Desktop AppImage extraction did not produce an AppDir." >&2
+		echo "RocStarr VideoShare Desktop AppImage extraction did not produce an AppDir." >&2
 		exit 1
 	fi
 
@@ -158,7 +158,7 @@ prepare_appimage_cli() {
 }
 
 find_linux_system_cli() {
-	for root in /usr/bin /usr/local/bin /usr/lib/cap /usr/lib/Cap /usr/lib64/cap /opt/Cap /opt/cap /usr/share/cap /usr/share/Cap; do
+	for root in /usr/bin /usr/local/bin /usr/lib/cap /usr/lib/RocStarr VideoShare /usr/lib64/cap /opt/RocStarr VideoShare /opt/cap /usr/share/cap /usr/share/RocStarr VideoShare; do
 		if find_cli_in_dir "$root"; then
 			return 0
 		fi
@@ -183,7 +183,7 @@ find_linux_cli_target() {
 			case "$APP_PATH" in
 				*.AppImage|*.appimage)
 					APPIMAGE_PATH="$APP_PATH"
-					APPDIR_PATH="$(dirname "$APP_PATH")/Cap.AppDir"
+					APPDIR_PATH="$(dirname "$APP_PATH")/RocStarr VideoShare.AppDir"
 					if prepare_appimage_cli; then
 						return 0
 					fi
@@ -211,15 +211,15 @@ find_linux_cli_target() {
 	fi
 
 	DATA_DIR="$(linux_app_data_dir)"
-	APPDIR_PATH="$DATA_DIR/Cap.AppDir"
+	APPDIR_PATH="$DATA_DIR/RocStarr VideoShare.AppDir"
 	if [ -d "$APPDIR_PATH" ] && find_cli_in_dir "$APPDIR_PATH"; then
 		return 0
 	fi
 
-	for candidate in "$DATA_DIR/Cap.AppImage" "$HOME_DIR/Applications/Cap.AppImage" "$HOME_DIR/Cap.AppImage"; do
+	for candidate in "$DATA_DIR/RocStarr VideoShare.AppImage" "$HOME_DIR/Applications/RocStarr VideoShare.AppImage" "$HOME_DIR/RocStarr VideoShare.AppImage"; do
 		if [ -f "$candidate" ]; then
 			APPIMAGE_PATH="$candidate"
-			APPDIR_PATH="$(dirname "$candidate")/Cap.AppDir"
+			APPDIR_PATH="$(dirname "$candidate")/RocStarr VideoShare.AppDir"
 			if prepare_appimage_cli; then
 				return 0
 			fi
@@ -249,34 +249,34 @@ install_cap_desktop_macos() {
 		APP_DIR="$HOME_DIR/Applications"
 	fi
 
-	APP_PATH="$APP_DIR/Cap.app"
-	APP_TMP="$APP_DIR/.Cap.app.installing"
+	APP_PATH="$APP_DIR/RocStarr VideoShare.app"
+	APP_TMP="$APP_DIR/.RocStarr VideoShare.app.installing"
 	TMP_ROOT="$(mktemp -d "$TMP_BASE/cap-cli-install.XXXXXX")"
-	DMG_PATH="$TMP_ROOT/Cap.dmg"
+	DMG_PATH="$TMP_ROOT/RocStarr VideoShare.dmg"
 	MOUNT_DIR="$TMP_ROOT/mount"
 	mkdir -p "$APP_DIR" "$MOUNT_DIR"
 
 	trap cleanup_desktop_install EXIT HUP INT TERM
 
-	echo "Downloading Cap Desktop..."
+	echo "Downloading RocStarr VideoShare Desktop..."
 	curl -fL "$DOWNLOAD_URL" -o "$DMG_PATH"
 	hdiutil attach "$DMG_PATH" -nobrowse -quiet -mountpoint "$MOUNT_DIR"
 	MOUNTED=1
 
 	SOURCE_APP=""
-	for candidate in "$MOUNT_DIR"/Cap.app "$MOUNT_DIR"/*.app; do
-		if [ -d "$candidate" ] && [ "$(basename "$candidate")" = "Cap.app" ]; then
+	for candidate in "$MOUNT_DIR"/RocStarr VideoShare.app "$MOUNT_DIR"/*.app; do
+		if [ -d "$candidate" ] && [ "$(basename "$candidate")" = "RocStarr VideoShare.app" ]; then
 			SOURCE_APP="$candidate"
 			break
 		fi
 	done
 
 	if [ -z "$SOURCE_APP" ]; then
-		echo "Downloaded Cap Desktop image did not contain Cap.app." >&2
+		echo "Downloaded RocStarr VideoShare Desktop image did not contain RocStarr VideoShare.app." >&2
 		exit 1
 	fi
 
-	echo "Installing Cap Desktop to $APP_PATH..."
+	echo "Installing RocStarr VideoShare Desktop to $APP_PATH..."
 	rm -rf "$APP_TMP"
 	ditto "$SOURCE_APP" "$APP_TMP"
 	rm -rf "$APP_PATH"
@@ -292,16 +292,16 @@ install_cap_desktop_macos() {
 install_cap_desktop_linux_appimage() {
 	linux_require_supported_arch
 	APP_DIR="$(linux_app_data_dir)"
-	APPIMAGE_PATH="$APP_DIR/Cap.AppImage"
-	APPDIR_PATH="$APP_DIR/Cap.AppDir"
+	APPIMAGE_PATH="$APP_DIR/RocStarr VideoShare.AppImage"
+	APPDIR_PATH="$APP_DIR/RocStarr VideoShare.AppDir"
 	mkdir -p "$APP_DIR"
 
-	echo "Downloading Cap Desktop AppImage..."
+	echo "Downloading RocStarr VideoShare Desktop AppImage..."
 	curl --proto '=https' --tlsv1.2 --retry 3 --retry-delay 1 -fL "https://cap.so/download/linux-appimage" -o "$APPIMAGE_PATH"
 	chmod +x "$APPIMAGE_PATH"
 
 	if ! prepare_appimage_cli; then
-		echo "This Cap Desktop AppImage does not include the CLI." >&2
+		echo "This RocStarr VideoShare Desktop AppImage does not include the CLI." >&2
 		exit 1
 	fi
 }
@@ -309,10 +309,10 @@ install_cap_desktop_linux_appimage() {
 install_cap_desktop_linux_deb() {
 	linux_require_supported_arch
 	TMP_ROOT="$(mktemp -d "$TMP_BASE/cap-cli-install.XXXXXX")"
-	DEB_PATH="$TMP_ROOT/Cap.deb"
+	DEB_PATH="$TMP_ROOT/RocStarr VideoShare.deb"
 	trap cleanup_desktop_install EXIT HUP INT TERM
 
-	echo "Downloading Cap Desktop Debian package..."
+	echo "Downloading RocStarr VideoShare Desktop Debian package..."
 	curl --proto '=https' --tlsv1.2 --retry 3 --retry-delay 1 -fL "https://cap.so/download/linux-deb" -o "$DEB_PATH"
 
 	if command -v apt-get >/dev/null 2>&1; then
@@ -329,7 +329,7 @@ install_cap_desktop_linux_deb() {
 	trap - EXIT HUP INT TERM
 
 	if ! find_linux_cli_target; then
-		echo "This Cap Desktop package does not include the CLI." >&2
+		echo "This RocStarr VideoShare Desktop package does not include the CLI." >&2
 		exit 1
 	fi
 }
@@ -337,10 +337,10 @@ install_cap_desktop_linux_deb() {
 install_cap_desktop_linux_rpm() {
 	linux_require_supported_arch
 	TMP_ROOT="$(mktemp -d "$TMP_BASE/cap-cli-install.XXXXXX")"
-	RPM_PATH="$TMP_ROOT/Cap.rpm"
+	RPM_PATH="$TMP_ROOT/RocStarr VideoShare.rpm"
 	trap cleanup_desktop_install EXIT HUP INT TERM
 
-	echo "Downloading Cap Desktop RPM package..."
+	echo "Downloading RocStarr VideoShare Desktop RPM package..."
 	curl --proto '=https' --tlsv1.2 --retry 3 --retry-delay 1 -fL "https://cap.so/download/linux-rpm" -o "$RPM_PATH"
 
 	if command -v dnf >/dev/null 2>&1; then
@@ -361,7 +361,7 @@ install_cap_desktop_linux_rpm() {
 	trap - EXIT HUP INT TERM
 
 	if ! find_linux_cli_target; then
-		echo "This Cap Desktop package does not include the CLI." >&2
+		echo "This RocStarr VideoShare Desktop package does not include the CLI." >&2
 		exit 1
 	fi
 }
@@ -398,7 +398,7 @@ install_cap_desktop() {
 			install_cap_desktop_linux
 			;;
 		*)
-			echo "Cap Desktop auto-install is only supported on macOS and Linux. Install Cap from https://cap.so/download, then run this script again." >&2
+			echo "RocStarr VideoShare Desktop auto-install is only supported on macOS and Linux. Install RocStarr VideoShare from https://cap.so/download, then run this script again." >&2
 			exit 1
 			;;
 	esac
@@ -412,7 +412,7 @@ resolve_cli_target() {
 					install_cap_desktop
 				fi
 			elif [ ! -d "$APP_PATH" ]; then
-				echo "Cap Desktop was not found at $APP_PATH." >&2
+				echo "RocStarr VideoShare Desktop was not found at $APP_PATH." >&2
 				exit 1
 			fi
 
@@ -423,7 +423,7 @@ resolve_cli_target() {
 			CLI_TARGET="$APP_PATH/Contents/MacOS/cap-cli"
 
 			if [ ! -x "$CLI_TARGET" ]; then
-				echo "This Cap Desktop install does not include the CLI. Reinstalling Cap Desktop..."
+				echo "This RocStarr VideoShare Desktop install does not include the CLI. Reinstalling RocStarr VideoShare Desktop..."
 				install_cap_desktop
 				CLI_TARGET="$APP_PATH/Contents/MacOS/cap-cli"
 			fi
@@ -442,7 +442,7 @@ resolve_cli_target() {
 	esac
 
 	if [ ! -x "$CLI_TARGET" ]; then
-		echo "This Cap Desktop install does not include the CLI." >&2
+		echo "This RocStarr VideoShare Desktop install does not include the CLI." >&2
 		exit 1
 	fi
 }
@@ -467,17 +467,17 @@ mkdir -p "$INSTALL_DIR"
 
 if [ -e "$SHIM_PATH" ] || [ -L "$SHIM_PATH" ]; then
 	if [ ! -L "$SHIM_PATH" ]; then
-		echo "$SHIM_PATH already exists and is not managed by Cap. Remove it or set CAP_CLI_INSTALL_DIR, then run this script again." >&2
+		echo "$SHIM_PATH already exists and is not managed by RocStarr VideoShare. Remove it or set CAP_CLI_INSTALL_DIR, then run this script again." >&2
 		exit 1
 	fi
 
 	EXISTING_TARGET="$(readlink "$SHIM_PATH" || true)"
 
 	case "$EXISTING_TARGET" in
-		"$CLI_TARGET"|*/Cap.app/Contents/MacOS/cap-cli|*/cap-cli|*/cap-cli-*linux*)
+		"$CLI_TARGET"|*/RocStarr VideoShare.app/Contents/MacOS/cap-cli|*/cap-cli|*/cap-cli-*linux*)
 			;;
 		*)
-			echo "$SHIM_PATH already exists and is not managed by Cap. Remove it or set CAP_CLI_INSTALL_DIR, then run this script again." >&2
+			echo "$SHIM_PATH already exists and is not managed by RocStarr VideoShare. Remove it or set CAP_CLI_INSTALL_DIR, then run this script again." >&2
 			exit 1
 			;;
 	esac
@@ -508,7 +508,7 @@ case ":$PATH:" in
 
 			if [ -f "$PROFILE" ] && grep -qsF "$INSTALL_DIR" "$PROFILE"; then
 				echo "cap is on your PATH via $PROFILE; restart your terminal to use it."
-			elif printf '\n# Added by the Cap CLI installer\n%s\n' "$EXPORT_LINE" >> "$PROFILE" 2>/dev/null; then
+			elif printf '\n# Added by the RocStarr VideoShare CLI installer\n%s\n' "$EXPORT_LINE" >> "$PROFILE" 2>/dev/null; then
 				echo "Added cap to your PATH in $PROFILE."
 				echo "Restart your terminal, or run: $EXPORT_LINE"
 			else

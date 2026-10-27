@@ -1,5 +1,6 @@
 "use client";
 
+import { isUserCancellationError } from "@cap/recorder-core/recorder-utils";
 import {
 	Button,
 	Dialog,
@@ -8,7 +9,7 @@ import {
 	DialogTrigger,
 } from "@cap/ui";
 import { AnimatePresence, motion } from "framer-motion";
-import { MonitorIcon } from "lucide-react";
+import { Camera, MonitorIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { useDashboardContext } from "../../../Contexts";
@@ -26,10 +27,16 @@ import {
 import { SettingsButton } from "./SettingsButton";
 import { SettingsPanel } from "./SettingsPanel";
 import { SystemAudioToggle } from "./SystemAudioToggle";
+import { takeAndShareScreenshot } from "./screenshot-capture";
 import { useCameraDevices } from "./useCameraDevices";
 import { useDevicePreferences } from "./useDevicePreferences";
 import { useDialogInteractions } from "./useDialogInteractions";
 import { useMicrophoneDevices } from "./useMicrophoneDevices";
+import {
+	COUNTDOWN_SECONDS,
+	qualityDimensions,
+	useRecorderOptions,
+} from "./useRecorderOptions";
 import { useWebRecorder } from "./useWebRecorder";
 import {
 	dialogVariants,
@@ -117,6 +124,9 @@ export const WebRecorderDialog = () => {
 	});
 
 	const micEnabled = selectedMicId !== null;
+	const [isCapturingScreenshot, setIsCapturingScreenshot] = useState(false);
+	const { options: recorderOptions, update: updateRecorderOption } =
+		useRecorderOptions();
 
 	useEffect(() => {
 		if (
@@ -130,6 +140,7 @@ export const WebRecorderDialog = () => {
 
 	const {
 		phase,
+		countdown,
 		durationMs,
 		hasAudioTrack,
 		chunkUploads,
@@ -166,6 +177,9 @@ export const WebRecorderDialog = () => {
 		},
 		onRecordingStart: handleRecordingStartSound,
 		onRecordingStop: handleRecordingStopSound,
+		noiseSuppression: recorderOptions.noiseFilter,
+		captureSize: qualityDimensions(recorderOptions.quality),
+		countdownSeconds: recorderOptions.countdown ? COUNTDOWN_SECONDS : 0,
 	});
 
 	useEffect(() => {
@@ -193,7 +207,7 @@ export const WebRecorderDialog = () => {
 	const handleOpenChange = (next: boolean) => {
 		if (next && supportCheckCompleted && !isBrowserSupported) {
 			toast.error(
-				"This browser isn't compatible with Cap's web recorder. We recommend Google Chrome or other Chromium-based browsers.",
+				"This browser isn't compatible with RocStarr VideoShare's web recorder. We recommend Google Chrome or other Chromium-based browsers.",
 			);
 			return;
 		}
@@ -211,6 +225,28 @@ export const WebRecorderDialog = () => {
 			setHowItWorksOpen(false);
 		}
 		setOpen(next);
+	};
+
+	const handleScreenshot = async () => {
+		if (!organisationId) {
+			toast.error("Select an organization first.");
+			return;
+		}
+		setIsCapturingScreenshot(true);
+		try {
+			const { copied } = await takeAndShareScreenshot(organisationId);
+			toast.success(
+				copied ? "Screenshot saved. Link copied." : "Screenshot saved.",
+			);
+		} catch (error) {
+			if (!isUserCancellationError(error)) {
+				toast.error(
+					error instanceof Error ? error.message : "Screenshot failed",
+				);
+			}
+		} finally {
+			setIsCapturingScreenshot(false);
+		}
 	};
 
 	const handleStopClick = () => {
@@ -275,6 +311,23 @@ export const WebRecorderDialog = () => {
 									rememberDevices={rememberDevices}
 									onClose={() => setSettingsOpen(false)}
 									onRememberDevicesChange={handleRememberDevicesChange}
+									countdown={recorderOptions.countdown}
+									onCountdownChange={(value) =>
+										updateRecorderOption("countdown", value)
+									}
+									noiseFilter={recorderOptions.noiseFilter}
+									onNoiseFilterChange={(value) =>
+										updateRecorderOption("noiseFilter", value)
+									}
+									quality={recorderOptions.quality}
+									onQualityChange={(value) =>
+										updateRecorderOption("quality", value)
+									}
+									speakerNotes={recorderOptions.speakerNotes}
+									onSpeakerNotesChange={(value) =>
+										updateRecorderOption("speakerNotes", value)
+									}
+									disabled={isBusy}
 								/>
 								<HowItWorksPanel
 									open={howItWorksOpen}
@@ -338,6 +391,19 @@ export const WebRecorderDialog = () => {
 									onStart={startRecording}
 									onStop={handleStopClick}
 								/>
+								{!isRecording && !isBusy && supportsDisplayRecording && (
+									<button
+										type="button"
+										onClick={handleScreenshot}
+										disabled={isCapturingScreenshot}
+										className="flex gap-2 justify-center items-center h-9 text-sm rounded-lg border transition-colors border-gray-4 text-gray-12 hover:bg-gray-3 disabled:opacity-50"
+									>
+										<Camera className="size-4" aria-hidden />
+										{isCapturingScreenshot
+											? "Saving screenshot…"
+											: "Take a screenshot"}
+									</button>
+								)}
 								{!isBrowserSupported && unsupportedReason && (
 									<div className="rounded-md border border-red-6 bg-red-3/70 px-3 py-2 text-xs leading-snug text-red-12">
 										{unsupportedReason}
@@ -427,12 +493,27 @@ export const WebRecorderDialog = () => {
 					onResume={resumeRecording}
 					onRestart={restartRecording}
 					isRestarting={isRestarting}
+					speakerNotes={recorderOptions.speakerNotes}
 				/>
+			)}
+			{countdown !== null && (
+				<div
+					className="flex fixed inset-0 z-[700] justify-center items-center pointer-events-none"
+					aria-live="assertive"
+				>
+					<div className="flex flex-col gap-2 justify-center items-center rounded-full size-40 bg-black/70 text-white shadow-2xl">
+						<span className="text-6xl font-semibold tabular-nums">
+							{countdown}
+						</span>
+						<span className="text-xs text-white/70">Recording starts</span>
+					</div>
+				</div>
 			)}
 			{selectedCameraId && (
 				<CameraPreviewWindow
 					cameraId={selectedCameraId}
 					onClose={() => handleCameraChange(null)}
+					countdown={countdown}
 				/>
 			)}
 		</>

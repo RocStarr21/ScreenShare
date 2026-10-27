@@ -57,7 +57,7 @@ describe("LinkifiedText", () => {
 		expect(html).toContain("https://evil.test/path");
 	});
 
-	it("renders trusted Cap links directly with opener and referrer protections", () => {
+	it("renders trusted RocStarr VideoShare links directly with opener and referrer protections", () => {
 		const html = renderLinkifiedText("Visit https://cap.so/s/demo");
 
 		expect(html).toContain('href="https://cap.so/s/demo"');

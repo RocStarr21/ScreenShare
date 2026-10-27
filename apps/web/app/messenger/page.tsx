@@ -52,7 +52,7 @@ export default async function MessengerPage() {
 						</svg>
 					</div>
 					<h1 className="text-2xl font-bold tracking-tight text-white">
-						Cap Support
+						RocStarr VideoShare Support
 					</h1>
 					<p className="mt-1.5 text-sm text-blue-100/80">
 						How can we help you today?

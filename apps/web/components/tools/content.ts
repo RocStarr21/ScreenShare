@@ -7,14 +7,14 @@ export const webmToMp4Content: ToolPageContent = {
 		"Convert WEBM to MP4 online for free. No watermark, no registration required.",
 	publishedAt: "2023-11-19",
 	category: "Tool",
-	author: "Cap",
+	author: "RocStarr VideoShare",
 	tags: ["webm to mp4", "video converter", "free", "online"],
 
 	cta: {
 		title: "Need advanced screen recording with effects?",
 		description:
-			"Cap is a free open-source screen recorder with editing, GIFs, and annotations.",
-		buttonText: "Download Cap Free",
+			"RocStarr VideoShare is a free open-source screen recorder with editing, GIFs, and annotations.",
+		buttonText: "Download RocStarr VideoShare Free",
 	},
 
 	featuresTitle: "Why Use Our WEBM to MP4 Converter?",
@@ -84,14 +84,14 @@ export const mp4ToWebmContent: ToolPageContent = {
 		"Convert MP4 to WEBM online for free. No watermark, no registration required.",
 	publishedAt: "2023-11-19",
 	category: "Tool",
-	author: "Cap",
+	author: "RocStarr VideoShare",
 	tags: ["mp4 to webm", "video converter", "free", "online"],
 
 	cta: {
 		title: "Need advanced screen recording with effects?",
 		description:
-			"Cap is a free open-source screen recorder with editing, GIFs, and annotations.",
-		buttonText: "Download Cap Free",
+			"RocStarr VideoShare is a free open-source screen recorder with editing, GIFs, and annotations.",
+		buttonText: "Download RocStarr VideoShare Free",
 	},
 
 	featuresTitle: "Why Use Our MP4 to WEBM Converter?",
@@ -161,7 +161,7 @@ export const videoSpeedControllerContent: ToolPageContent = {
 		"Speed up or slow down videos online for free. No watermark, no quality loss.",
 	publishedAt: "2023-11-20",
 	category: "Tool",
-	author: "Cap",
+	author: "RocStarr VideoShare",
 	tags: [
 		"video speed control",
 		"speed up video",
@@ -173,8 +173,8 @@ export const videoSpeedControllerContent: ToolPageContent = {
 	cta: {
 		title: "Need advanced screen recording with effects?",
 		description:
-			"Cap is a free open-source screen recorder with editing, GIFs, and annotations.",
-		buttonText: "Download Cap Free",
+			"RocStarr VideoShare is a free open-source screen recorder with editing, GIFs, and annotations.",
+		buttonText: "Download RocStarr VideoShare Free",
 	},
 
 	featuresTitle: "Why Use Our Video Speed Controller?",
@@ -244,17 +244,17 @@ export const trimVideoContent: ToolPageContent = {
 		"Cut unwanted sections from MP4, WebM, MOV and more. Instantly in your browser with zero quality loss.",
 	publishedAt: "2023-11-21",
 	category: "Tools",
-	author: "Cap",
+	author: "RocStarr VideoShare",
 	tags: ["Video Trimming", "Online Tools", "Browser", "Free"],
 
 	cta: {
 		title: "The open source Loom alternative",
 		description:
-			"Cap is lightweight, powerful, and cross-platform. Record and share securely in seconds with custom S3 bucket support..",
-		buttonText: "Download Cap Free",
+			"RocStarr VideoShare is lightweight, powerful, and cross-platform. Record and share securely in seconds with custom S3 bucket support..",
+		buttonText: "Download RocStarr VideoShare Free",
 	},
 
-	featuresTitle: "Why Use Cap's Online Video Trimmer?",
+	featuresTitle: "Why Use RocStarr VideoShare's Online Video Trimmer?",
 	featuresDescription:
 		"Our local-first trimmer does one thing stupid-fast: cut video. No sign-ups, no waiting.",
 	features: [
